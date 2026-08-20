@@ -52,7 +52,14 @@
   function forceReady() {
     document.documentElement.classList.add('apex-am-force-visible');
     $('.cs-preloader, .cs-preloader_in').stop(true, true).hide();
-    $('.wow').css({ visibility: 'visible', opacity: 1 });
+    /* setProperty with 'important' — a running animate.css animation outranks a
+       plain inline style, so the previous version could not actually rescue an
+       element mid-animation. */
+    $('.wow').each(function () {
+      this.style.setProperty('visibility', 'visible', 'important');
+      this.style.setProperty('opacity', '1', 'important');
+      this.style.setProperty('animation', 'none', 'important');
+    });
   }
 
   window.setTimeout(forceReady, 2600);
@@ -88,7 +95,24 @@
     fullScreenSwiperSlider();
     ecommerce();
     if (window.WOW && $.exists('.wow')) {
-      new WOW().init();
+      /* WOW initialises on window.load (~2s in) and its first act is to hide
+         every .wow element it has not animated yet. But animate.css has ALREADY
+         run the entrance on page load, because the animation class sits in the
+         markup from the start. So an above-the-fold element animates in, gets
+         blanked at ~2s, and animates a second time — a visible flash on the
+         hero headline, which is also the LCP element.
+         Elements already inside the first viewport have therefore had their
+         entrance; drop the .wow class so WOW leaves them alone. Everything
+         below the fold still animates on scroll. */
+      $('.wow').each(function () {
+        var r = this.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          $(this).removeClass('wow').css({ visibility: 'visible' });
+        }
+      });
+      if ($.exists('.wow')) {
+        new WOW().init();
+      }
     }
   });
 

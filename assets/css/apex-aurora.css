@@ -955,3 +955,46 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
 @media screen and (max-height: 780px) {
   .cs-page_heading.cs-style1 { padding-top: 130px; padding-bottom: 70px; }
 }
+
+/* --------------------------------------------------------------------------
+   21. PORTFOLIO LABELS ON TOUCH DEVICES
+   --------------------------------------------------------------------------
+   The portfolio grid keeps its project title and subtitle at opacity:0 and
+   reveals them only on :hover, together with the circular badge behind them.
+   A touch device never fires hover, so on every phone and tablet the grid was
+   a wall of unlabelled images with no way to tell the projects apart without
+   tapping through each one. Where hover is unavailable, the labelled state is
+   simply the default state.
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+  .cs-portfolio.cs-style1.cs-type1 .cs-portfolio_title,
+  .cs-portfolio.cs-style1.cs-type1 .cs-portfolio_subtitle,
+  .cs-portfolio.cs-style1.cs-type2 .cs-portfolio_title,
+  .cs-portfolio.cs-style1.cs-type2 .cs-portfolio_subtitle {
+    top: 0;
+    opacity: 1;
+  }
+
+  .cs-portfolio.cs-style1.cs-type1 .cs-portfolio_info_bg {
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+
+  .cs-portfolio.cs-style1 .cs-portfolio_hover { opacity: 1; }
+
+  /* Team-card social links are scaled to 0 and faded out until the card is
+     hovered, so on touch they are unreachable. The member name and role are
+     already visible; the links should be too. */
+  .cs-team.cs-style1 .cs-member_social a {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  /* Same treatment for the alternate portfolio card style. */
+  .cs-portfolio.cs-style1.cs-type2 .cs-portfolio_info_bg {
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+}

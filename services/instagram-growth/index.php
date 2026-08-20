@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags -->
   <?php
-  $seo_title = 'Instagram Growth Services – Expand Your Reach | Apex Marketings';
+  $seo_title = 'Instagram Growth Services – Expand Your Reach';
   $seo_desc = 'Grow your Instagram audience and engagement with Apex Marketings. We use proven strategies to boost your brand\'s presence and results.';
   ?>
   <?php include_once('../../include/head2.php'); ?>
@@ -16,7 +16,7 @@
 <body>
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->

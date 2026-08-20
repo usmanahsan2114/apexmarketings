@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags -->
   <?php
-  $seo_title = 'Digital Marketing Strategy – Boost Your Brand | Apex Marketings';
+  $seo_title = 'Digital Marketing Strategy – Boost Your Brand';
   $seo_desc = 'Grow your business with custom digital marketing strategies from Apex Marketings. We specialize in SEO, brand building, and data-driven campaigns to maximize ROI.';
   ?>
   <?php include_once('../../include/head2.php'); ?>
@@ -16,7 +16,7 @@
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <!-- Start Header Section -->

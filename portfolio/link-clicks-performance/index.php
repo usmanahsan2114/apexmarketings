@@ -8,13 +8,40 @@
   $seo_desc = 'Apex Marketings drove high link click rates and engagement for an e-commerce store with a cost-efficient digital ad campaign.';
   ?>
   <?php include_once('../../include/head2.php'); ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://apexmarketings.com/portfolio/link-clicks-performance/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://apexmarketings.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://apexmarketings.com/portfolio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Link Clicks Performance",
+          "item": "https://apexmarketings.com/portfolio/link-clicks-performance/"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
  
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->
@@ -25,7 +52,7 @@
   <div class="cs-height_150 cs-height_lg_80"></div>
   <div class="container">
     <div class="cs-portfolio_details">
-      <img width="872" height="500" src="../../assets/img/portfolio/marketing/submarketing/9.webp" alt="Illustration" class="cs-radius_15 w-100" loading="lazy">
+      <img width="872" height="500" src="../../assets/img/portfolio/marketing/submarketing/9.webp" alt="Illustration" class="cs-radius_15 w-100" loading="lazy" decoding="async">
       <div class="cs-height_90 cs-height_lg_40"></div>
       <div class="row">
         <div class="col-lg-6">

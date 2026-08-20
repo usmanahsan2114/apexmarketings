@@ -16,7 +16,7 @@
  
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->
@@ -34,7 +34,7 @@
       </h1>
     </div>
     <div class="cs-height_90 cs-height_lg_45"></div>
-    <img width="1320" height="650" src="../../assets/img/casestudy/casestudy-banners/delivrex.webp" alt="Case study illustration" class="w-100 cs-radius_15" loading="lazy">
+    <img width="1320" height="650" src="../../assets/img/casestudy/casestudy-banners/delivrex.webp" alt="Case study illustration" class="w-100 cs-radius_15" loading="lazy" decoding="async">
     <div class="cs-height_140 cs-height_lg_80"></div>
     <h2 class="cs-font_38 text-center cs-m0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Case Study
       Overview</h2>
@@ -48,11 +48,11 @@
     <div class="cs-height_65 cs-height_lg_45"></div>
     <div class="row">
       <div class="col-sm-6">
-        <img width="648" height="580" src="../../assets/img/casestudy/casestudy-main/apex.webp" alt="Case study illustration" class="w-100 cs-radius_5" loading="lazy">
+        <img width="648" height="580" src="../../assets/img/casestudy/casestudy-main/apex.webp" alt="Case study illustration" class="w-100 cs-radius_5" loading="lazy" decoding="async">
         <div class="cs-height_25 cs-height_lg_25"></div>
       </div>
       <div class="col-sm-6">
-        <img width="648" height="580" src="../../assets/img/casestudy/casestudy-main/delivrex.webp" alt="Case study illustration" class="w-100 cs-radius_5" loading="lazy">
+        <img width="648" height="580" src="../../assets/img/casestudy/casestudy-main/delivrex.webp" alt="Case study illustration" class="w-100 cs-radius_5" loading="lazy" decoding="async">
         <div class="cs-height_25 cs-height_lg_25"></div>
       </div>
     </div>
@@ -91,7 +91,7 @@
         </div>
         <div class="col-lg-6 offset-lg-1 text-center">
           <div class="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
-            <img width="647" height="647" src="../../assets/img/casestudy/casestudy-main/case_study_img_4.webp" alt="Case study" class="w-100" loading="lazy">
+            <img width="647" height="647" src="../../assets/img/casestudy/casestudy-main/case_study_img_4.webp" alt="Case study" class="w-100" loading="lazy" decoding="async">
           </div>
           <div class="cs-height_0 cs-height_lg_40"></div>
         </div>
@@ -100,7 +100,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 text-center">
           <div class="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
-            <img width="647" height="647" src="../../assets/img/casestudy/casestudy-main/case_study_img_5.webp" alt="Case study" class="w-100" loading="lazy">
+            <img width="647" height="647" src="../../assets/img/casestudy/casestudy-main/case_study_img_5.webp" alt="Case study" class="w-100" loading="lazy" decoding="async">
           </div>
           <div class="cs-height_0 cs-height_lg_40"></div>
         </div>

@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Google Ads vs Meta Ads: Which Platform Converts Better in 2026? | Apex Marketings";
+$seo_title = "Google Ads vs Meta Ads: Which Platform Converts Better in 2026?";
 $seo_desc = "Honest 2026 comparison of Google Ads and Meta Ads: when each converts better, real CPC and CPA benchmarks, and how to allocate budget between them.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "Honest 2026 comparison of Google Ads and Meta Ads: when each conver
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>
@@ -75,37 +75,37 @@ $seo_desc = "Honest 2026 comparison of Google Ads and Meta Ads: when each conver
       <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="../../services/google-ads-management/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/google-ads-management/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Google Ads Management</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Our Google Ads service</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/meta-ads-management/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/meta-ads-management/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Meta Ads Management</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Our Meta service</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/performance-marketing/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/performance-marketing/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Performance Marketing</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Full paid service</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../blogs/seo-vs-paid-ads-which-growth-channel/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../blogs/seo-vs-paid-ads-which-growth-channel/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">SEO vs Paid Ads</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Channel decision framework</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../blogs/ecommerce-marketing-strategy-traffic-repeat-customers/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../blogs/ecommerce-marketing-strategy-traffic-repeat-customers/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">E-Commerce Marketing</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">E-commerce playbook</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../quote/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Free estimate</p>
           </a>

@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "PPC Management Services — Google & Meta Ads | Apex Marketings";
+$seo_title = "PPC Management Services — Google & Meta Ads";
 $seo_desc = "One strategist managing Google Ads and Meta Ads together with shared budget logic. Management from USD 600/month per platform + your ad spend. Pakistan, USA, UK, UAE.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "One strategist managing Google Ads and Meta Ads together with share
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

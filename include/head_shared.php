@@ -3,7 +3,7 @@
    paths so there is ONE head to maintain. $seo_title/$seo_desc are set by each page
    BEFORE its head include. Entity JSON-LD lives in schema-org.php. */
 if (!isset($p)) { $p = ''; }
-$asset_version = '20260706-repair1';
+$asset_version = '20260820-aurora1';
 ?>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -14,8 +14,9 @@ $asset_version = '20260706-repair1';
 <meta name="geo.placename" content="Rawalpindi, Pakistan">
 <meta name="geo.position" content="33.5973;73.0479">
 <meta name="ICBM" content="33.5973, 73.0479">
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <?php
 $current_url = "https://apexmarketings.com" . preg_replace('~(index\.php)?([?#].*)?$~', '', $_SERVER['REQUEST_URI']);
 $current_url = strtok($current_url, '?');
@@ -60,10 +61,12 @@ $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Market
 <link rel="stylesheet" href="<?php echo $p; ?>assets/css/style.css?v=<?php echo rawurlencode($asset_version); ?>">
 <link rel="stylesheet" href="<?php echo $p; ?>assets/css/motion-system.css?v=<?php echo rawurlencode($asset_version); ?>">
 <link rel="stylesheet" href="<?php echo $p; ?>assets/css/plugins/boxicons.min.css">
+<link rel="stylesheet" href="<?php echo $p; ?>assets/css/apex-aurora.css?v=<?php echo rawurlencode($asset_version); ?>">
 
 <!-- WebVitals real-user monitoring (uses GA4) -->
 <script src="<?php echo $p; ?>assets/js/web-vitals.js" defer></script>
 <script src="<?php echo $p; ?>assets/js/interaction-system.js" defer></script>
+<script src="<?php echo $p; ?>assets/js/apex-aurora.js?v=<?php echo rawurlencode($asset_version); ?>" defer></script>
 <script type="module" src="<?php echo $p; ?>assets/js/webgl-showpiece.js"></script>
 
 <style>

@@ -13,7 +13,7 @@ $seo_desc = "How Apex Marketings handles NDAs, data privacy, account access, adv
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../include/header1.php'); ?>
@@ -74,37 +74,37 @@ $seo_desc = "How Apex Marketings handles NDAs, data privacy, account access, adv
       <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="../process/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../process/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Our Process</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">How engagements run</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../pricing/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../pricing/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Pricing</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Transparent rates</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../privacy-policy/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../privacy-policy/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Privacy Policy</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Personal data handling</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../team/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../team/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Team</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Who you'll work with</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../quote/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Free 30-min call</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../contact/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../contact/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Contact</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Speak with our team</p>
           </a>

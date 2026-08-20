@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "How to Lower Your Cost Per Lead Without Losing Quality | Apex Marketings";
+$seo_title = "How to Lower Your Cost Per Lead Without Losing Quality";
 $seo_desc = "A practical guide to lowering cost per lead without losing quality: diagnose high CPL, fix landing pages and offers, sharpen targeting, rebalance channels.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "A practical guide to lowering cost per lead without losing quality:
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>
@@ -83,37 +83,37 @@ $seo_desc = "A practical guide to lowering cost per lead without losing quality:
       <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="../../services/lead-generation/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/lead-generation/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Lead Generation</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Done-for-you lead gen</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/conversion-rate-optimization/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/conversion-rate-optimization/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Conversion Rate Optimization</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Turn more traffic into leads</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/ppc-management/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/ppc-management/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">PPC Management</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Lower cost per click and lead</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../glossary/cpa/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../glossary/cpa/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">CPA Glossary</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">What is cost per acquisition</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/content-marketing/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/content-marketing/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Content Marketing</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Compounding, low-cost leads</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../quote/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Free 30-minute consultation</p>
           </a>

@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "SEO Services in Pakistan for Local & Global Clients | Apex Marketings";
+$seo_title = "SEO Services in Pakistan for Local & Global Clients";
 $seo_desc = "Technical, local, and content SEO retainers from USD 800/month. Honest timelines, monthly reporting, and no lock-in fluff. Serving Pakistan, USA, UK, UAE.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "Technical, local, and content SEO retainers from USD 800/month. Hon
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags -->
   <?php
-  $seo_title = 'Homesware E-Commerce Transformation Case Study | Apex Marketings';
+  $seo_title = 'Homesware E-Commerce Transformation Case Study';
   $seo_desc = 'How Apex Marketings helped a homeware retailer move to a modern e-commerce experience. Problem, approach, and results.';
   ?>
   <?php include_once('../../include/head2.php'); ?>
@@ -16,7 +16,7 @@
  
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->

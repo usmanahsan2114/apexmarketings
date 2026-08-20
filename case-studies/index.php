@@ -2,42 +2,26 @@
 <html class="no-js" lang="en">
 
 <head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Apex Marketings">
-  <meta name="description" content="Discover real-world results with Apex Marketings. Read our case studies on digital marketing, SEO, and e-commerce growth.">
-  <!-- Favicon Icon -->
-  <link rel="icon" href="../assets/img/favicon.png">
-  <!-- Site Title -->
-  <title>Case Studies – Real Results from Apex Marketings</title>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apexmarketings.com/"},{"@type":"ListItem","position":2,"name":"Case Studies","item":"https://apexmarketings.com/case-studies/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://apexmarketings.com/case-studies/#webpage","name":"Case Studies","url":"https://apexmarketings.com/case-studies/","description":"Real client results from Apex Marketings across SEO, paid ads, and e-commerce growth.","isPartOf":{"@type":"WebSite","url":"https://apexmarketings.com"}}</script>
-  <link rel="canonical" href="https://apexmarketings.com/case-studies/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Case Studies – Real Results from Apex Marketings">
-  <meta property="og:description" content="Discover real-world results with Apex Marketings. Read our case studies on digital marketing, SEO, and e-commerce growth.">
-  <meta property="og:url" content="https://apexmarketings.com/case-studies/">
-  <meta property="og:site_name" content="Apex Marketings">
-  <meta property="og:image" content="https://apexmarketings.com/assets/img/icons/apexlogo.svg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Case Studies – Real Results from Apex Marketings">
-  <meta name="twitter:description" content="Discover real-world results with Apex Marketings. Read our case studies on digital marketing, SEO, and e-commerce growth.">
-  <link rel="stylesheet" href="../assets/css/plugins/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/css/plugins/fontawesome.min.css">
-  <link rel="stylesheet" href="../assets/css/plugins/slick.css">
-  <link rel="stylesheet" href="../assets/css/plugins/lightgallery.min.css">
-  <link rel="stylesheet" href="../assets/css/plugins/animate.css">
+  <?php
+  /* This page previously carried a hand-rolled <head>, which meant it was the
+     one hub on the site with no GA4, no Organization/LocalBusiness schema and
+     none of the shared motion/aurora assets. It now goes through the shared
+     head like every other page; only the page-specific schema stays inline. */
+  $seo_title = 'Case Studies – Real Results from Apex Marketings';
+  $seo_desc  = 'Real client work from Apex Marketings: websites, SEO, paid campaigns and e-commerce growth, each with the brief, the build and a live link you can check.';
+  include_once('../include/head1.php');
+  ?>
+  <!-- Swiper powers this page's fullscreen case slider; it is not in the shared head. -->
   <link rel="stylesheet" href="../assets/css/plugins/swiper.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://apexmarketings.com/case-studies/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apexmarketings.com/"},{"@type":"ListItem","position":2,"name":"Case Studies","item":"https://apexmarketings.com/case-studies/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://apexmarketings.com/case-studies/#webpage","name":"Case Studies","url":"https://apexmarketings.com/case-studies/","description":"Real client work from Apex Marketings across websites, SEO, paid ads and e-commerce growth.","isPartOf":{"@id":"https://apexmarketings.com/#website"},"about":{"@id":"https://apexmarketings.com/#organization"}}</script>
 </head>
 
 <body>
  
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <?php include_once('../include/header1.php'); ?>
@@ -107,7 +91,7 @@
         <div class="swiper-slide">
           <div class="cs-hero cs-style5">
             <figure class="cs-swiper_parallax_bg" data-src="../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp"><img width="1600" height="1000"
-                src="../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group premium case study mockup" class="cs-entity_img"></figure>
+                src="../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group premium case study mockup" class="cs-entity_img" decoding="async" loading="lazy"></figure>
             <div class="cs-hero_text">
               <h2 class="cs-hero_title">
                 <span style="color: #e6ad02;">ALTR Group</span> Enhancing Global Reach
@@ -163,6 +147,43 @@
   </div>
   <!-- End Hero -->
 
+  <section class="apex-am-case-intro">
+    <div class="container">
+      <div class="cs-height_90 cs-height_lg_50"></div>
+      <div class="cs-section_heading cs-style1 text-center">
+        <h3 class="cs-section_subtitle">Case Studies</h3>
+        <h1 class="cs-section_title">Marketing and Website Case Studies</h1>
+      </div>
+      <div class="cs-height_45 cs-height_lg_30"></div>
+      <div class="aur-answer" style="max-width:920px;margin:0 auto;">
+        <span class="aur-answer__label">What you will find here</span>
+        <p>Every project below is real client work delivered by Apex Marketings: the brief,
+          what we built or ran, and how it is presented. The slider at the top covers our
+          in-depth engagements &mdash; junk removal, logistics, technical services, home decor
+          and e-commerce &mdash; and the grid underneath collects the wider set of website
+          projects with their live URLs so you can check the work yourself.</p>
+        <p>We publish outcomes we can stand behind rather than headline percentages we
+          cannot evidence. If you want the numbers behind a specific engagement, ask on a
+          call and we will walk you through the account.</p>
+      </div>
+      <div class="cs-height_50 cs-height_lg_30"></div>
+      <div class="aur-table-wrap" style="max-width:920px;margin:0 auto;">
+        <table class="aur-table">
+          <caption>How to read these case studies</caption>
+          <thead>
+            <tr><th scope="col">Section</th><th scope="col">What it shows</th><th scope="col">Best for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Featured slider</td><td>Deep-dive engagements with full write-ups</td><td>Understanding our process end to end</td></tr>
+            <tr><td>Website grid</td><td>Delivered sites with live links and mockups</td><td>Judging design and build quality</td></tr>
+            <tr><td>Portfolio</td><td>Campaign and performance screenshots</td><td>Seeing paid and organic work in context</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cs-height_70 cs-height_lg_40"></div>
+    </div>
+  </section>
+
   <section class="apex-am-case-library">
     <div class="container">
       <div class="cs-section_heading cs-style1 text-center">
@@ -171,28 +192,28 @@
       </div>
       <div class="cs-height_70 cs-height_lg_40"></div>
       <div class="apex-am-visual-grid apex-am-case-list">
-        <a href="apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Apex IT Solutions case study mockup" loading="lazy"><span>Apex IT Solutions</span></a>
-        <a href="apexmarketings-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexmarketings-com/hero-mockup-1600x1000.webp" alt="Apex Marketings case study mockup" loading="lazy"><span>Apex Marketings</span></a>
-        <a href="usman-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/usman-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Usman Founder Portfolio case study mockup" loading="lazy"><span>Usman Founder Portfolio</span></a>
-        <a href="inventory-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/inventory-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Inventory Platform case study mockup" loading="lazy"><span>Inventory Platform</span></a>
-        <a href="devops-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/devops-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="DevOps Apex case study mockup" loading="lazy"><span>DevOps Apex</span></a>
-        <a href="readkhanabadosh-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/readkhanabadosh-com/hero-mockup-1600x1000.webp" alt="Read Khanabadosh case study mockup" loading="lazy"><span>Read Khanabadosh</span></a>
-        <a href="pakgusu-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/pakgusu-com/hero-mockup-1600x1000.webp" alt="Pakgusu case study mockup" loading="lazy"><span>Pakgusu</span></a>
-        <a href="rekrutify-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/rekrutify-com/hero-mockup-1600x1000.webp" alt="Rekrutify case study mockup" loading="lazy"><span>Rekrutify</span></a>
-        <a href="helpfoundationintl-org/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/helpfoundationintl-org/hero-mockup-1600x1000.webp" alt="Help Foundation International case study mockup" loading="lazy"><span>Help Foundation International</span></a>
-        <a href="malikusamashafiq-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/malikusamashafiq-com/hero-mockup-1600x1000.webp" alt="Malik Usama Shafiq case study mockup" loading="lazy"><span>Malik Usama Shafiq</span></a>
-        <a href="leadershiphike-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/leadershiphike-com/hero-mockup-1600x1000.webp" alt="Leadership Hike case study mockup" loading="lazy"><span>Leadership Hike</span></a>
-        <a href="zuvoluxury-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/zuvoluxury-com/hero-mockup-1600x1000.webp" alt="Zuvo Luxury case study mockup" loading="lazy"><span>Zuvo Luxury</span></a>
-        <a href="thedarulquran-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/thedarulquran-com/hero-mockup-1600x1000.webp" alt="The Darul Quran case study mockup" loading="lazy"><span>The Darul Quran</span></a>
-        <a href="acrofitness-pk/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/acrofitness-pk/hero-mockup-1600x1000.webp" alt="Acrofitness case study mockup" loading="lazy"><span>Acrofitness</span></a>
-        <a href="rtmdispatch-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/rtmdispatch-com/hero-mockup-1600x1000.webp" alt="RTM Dispatch case study mockup" loading="lazy"><span>RTM Dispatch</span></a>
-        <a href="familyandfellowsfoundation-org/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/familyandfellowsfoundation-org/hero-mockup-1600x1000.webp" alt="Family and Fellows Foundation case study mockup" loading="lazy"><span>Family and Fellows Foundation</span></a>
-        <a href="altr/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group case study mockup" loading="lazy"><span>ALTR Group</span></a>
-        <a href="educonsultancy-site/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/educonsultancy-site/hero-mockup-1600x1000.webp" alt="Edu Consultancy case study mockup" loading="lazy"><span>Edu Consultancy</span></a>
-        <a href="tyremart-site/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/tyremart-site/hero-mockup-1600x1000.webp" alt="Tyremart case study mockup" loading="lazy"><span>Tyremart</span></a>
-        <a href="apexitsolutions-co-websites-starlabs/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-starlabs/hero-mockup-1600x1000.webp" alt="StarLabs Demo case study mockup" loading="lazy"><span>StarLabs Demo</span></a>
-        <a href="apexitsolutions-co-websites-zerohnyx/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-zerohnyx/hero-mockup-1600x1000.webp" alt="Zerohnyx Demo case study mockup" loading="lazy"><span>Zerohnyx Demo</span></a>
-        <a href="apexitsolutions-co-websites-cloverly/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-cloverly/hero-mockup-1600x1000.webp" alt="Cloverly Demo case study mockup" loading="lazy"><span>Cloverly Demo</span></a>
+        <a href="apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Apex IT Solutions case study mockup" loading="lazy" decoding="async"><span>Apex IT Solutions</span></a>
+        <a href="apexmarketings-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexmarketings-com/hero-mockup-1600x1000.webp" alt="Apex Marketings case study mockup" loading="lazy" decoding="async"><span>Apex Marketings</span></a>
+        <a href="usman-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/usman-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Usman Founder Portfolio case study mockup" loading="lazy" decoding="async"><span>Usman Founder Portfolio</span></a>
+        <a href="inventory-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/inventory-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="Inventory Platform case study mockup" loading="lazy" decoding="async"><span>Inventory Platform</span></a>
+        <a href="devops-apexitsolutions-co/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/devops-apexitsolutions-co/hero-mockup-1600x1000.webp" alt="DevOps Apex case study mockup" loading="lazy" decoding="async"><span>DevOps Apex</span></a>
+        <a href="readkhanabadosh-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/readkhanabadosh-com/hero-mockup-1600x1000.webp" alt="Read Khanabadosh case study mockup" loading="lazy" decoding="async"><span>Read Khanabadosh</span></a>
+        <a href="pakgusu-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/pakgusu-com/hero-mockup-1600x1000.webp" alt="Pakgusu case study mockup" loading="lazy" decoding="async"><span>Pakgusu</span></a>
+        <a href="rekrutify-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/rekrutify-com/hero-mockup-1600x1000.webp" alt="Rekrutify case study mockup" loading="lazy" decoding="async"><span>Rekrutify</span></a>
+        <a href="helpfoundationintl-org/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/helpfoundationintl-org/hero-mockup-1600x1000.webp" alt="Help Foundation International case study mockup" loading="lazy" decoding="async"><span>Help Foundation International</span></a>
+        <a href="malikusamashafiq-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/malikusamashafiq-com/hero-mockup-1600x1000.webp" alt="Malik Usama Shafiq case study mockup" loading="lazy" decoding="async"><span>Malik Usama Shafiq</span></a>
+        <a href="leadershiphike-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/leadershiphike-com/hero-mockup-1600x1000.webp" alt="Leadership Hike case study mockup" loading="lazy" decoding="async"><span>Leadership Hike</span></a>
+        <a href="zuvoluxury-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/zuvoluxury-com/hero-mockup-1600x1000.webp" alt="Zuvo Luxury case study mockup" loading="lazy" decoding="async"><span>Zuvo Luxury</span></a>
+        <a href="thedarulquran-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/thedarulquran-com/hero-mockup-1600x1000.webp" alt="The Darul Quran case study mockup" loading="lazy" decoding="async"><span>The Darul Quran</span></a>
+        <a href="acrofitness-pk/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/acrofitness-pk/hero-mockup-1600x1000.webp" alt="Acrofitness case study mockup" loading="lazy" decoding="async"><span>Acrofitness</span></a>
+        <a href="rtmdispatch-com/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/rtmdispatch-com/hero-mockup-1600x1000.webp" alt="RTM Dispatch case study mockup" loading="lazy" decoding="async"><span>RTM Dispatch</span></a>
+        <a href="familyandfellowsfoundation-org/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/familyandfellowsfoundation-org/hero-mockup-1600x1000.webp" alt="Family and Fellows Foundation case study mockup" loading="lazy" decoding="async"><span>Family and Fellows Foundation</span></a>
+        <a href="altr/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group case study mockup" loading="lazy" decoding="async"><span>ALTR Group</span></a>
+        <a href="educonsultancy-site/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/educonsultancy-site/hero-mockup-1600x1000.webp" alt="Edu Consultancy case study mockup" loading="lazy" decoding="async"><span>Edu Consultancy</span></a>
+        <a href="tyremart-site/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/tyremart-site/hero-mockup-1600x1000.webp" alt="Tyremart case study mockup" loading="lazy" decoding="async"><span>Tyremart</span></a>
+        <a href="apexitsolutions-co-websites-starlabs/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-starlabs/hero-mockup-1600x1000.webp" alt="StarLabs Demo case study mockup" loading="lazy" decoding="async"><span>StarLabs Demo</span></a>
+        <a href="apexitsolutions-co-websites-zerohnyx/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-zerohnyx/hero-mockup-1600x1000.webp" alt="Zerohnyx Demo case study mockup" loading="lazy" decoding="async"><span>Zerohnyx Demo</span></a>
+        <a href="apexitsolutions-co-websites-cloverly/"><img width="1600" height="1000" src="../assets/img/portfolio/mockups/apexitsolutions-co-websites-cloverly/hero-mockup-1600x1000.webp" alt="Cloverly Demo case study mockup" loading="lazy" decoding="async"><span>Cloverly Demo</span></a>
       </div>
     </div>
   </section>

@@ -11,7 +11,7 @@ $seo_desc = "Free, no-signup marketing tools from Apex Marketings — including 
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Free Marketing Tools","url":"https://apexmarketings.com/tools/","description":"Free marketing tools from Apex Marketings.","isPartOf":{"@type":"WebSite","url":"https://apexmarketings.com"}}</script>
 </head>
 <body>
-  <div class="cs-preloader cs-center"><div class="cs-preloader_in"><img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" /></div></div>
+  <div class="cs-preloader cs-center"><div class="cs-preloader_in"><img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" /></div></div>
   <?php include_once('../include/header1.php'); ?>
 
   <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 300px; background-color: #111;">

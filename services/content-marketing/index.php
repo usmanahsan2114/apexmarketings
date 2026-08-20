@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Content Marketing Services — SEO Content That Sells | Apex Marketings";
+$seo_title = "Content Marketing Services — SEO Content That Sells";
 $seo_desc = "Content marketing from Apex Marketings: keyword-mapped strategy, writing, on-page optimization, and refreshes. Included in SEO retainers from USD 800/month.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "Content marketing from Apex Marketings: keyword-mapped strategy, wr
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags -->
   <?php
-  $seo_title = 'Digital Marketing Blog – SEO, Ads & Growth Guides | Apex Marketings';
+  $seo_title = 'Digital Marketing Blog – SEO, Ads & Growth Guides';
   $seo_desc = 'Practical guides on SEO, Google Ads, Meta Ads, social media, and e-commerce growth from the Apex Marketings team.';
 
   $apex_posts = array(
@@ -89,13 +89,34 @@
   );
   ?>
   <?php include_once('../include/head1.php'); ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://apexmarketings.com/blogs/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://apexmarketings.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://apexmarketings.com/blogs/"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->

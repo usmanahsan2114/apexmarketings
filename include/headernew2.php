@@ -5,7 +5,7 @@
             <div class="cs-main_header_in">
                 <div class="cs-main_header_left">
                     <a class="cs-site_branding" href="../../">
-                        <img src="../../assets/img/icons/logo.svg" alt="Apex Marketings logo">
+                        <img src="../../assets/img/icons/logo.svg" alt="Apex Marketings logo" width="350" height="350" decoding="async" loading="lazy">
                     </a>
                 </div>
                 <div class="cs-main_header_center">
@@ -55,7 +55,7 @@
     <div class="cs-side_header_in">
         <div class="cs-side_header_shape"></div>
         <a class="cs-site_branding" href="../../">
-            <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo">
+            <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo" width="400" height="400" decoding="async" loading="lazy">
         </a>
         <div class="cs-side_header_box">
             <h2 class="cs-side_header_heading">Do you have a project in your <br> mind? Stay Connected.</h2>

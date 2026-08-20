@@ -24,15 +24,71 @@ $apex_mockup_cases = [
     "apexitsolutions-co-websites-cloverly" => ["title" => "Cloverly Demo", "url" => "https://www.apexitsolutions.co/websites/cloverly/", "category" => "Demo Website", "industry" => "Technology / Recruitment", "location" => "Global", "summary" => "A conversion-ready demo website focused on service explanation, clean UI, responsive sections, and polished product visuals."],
 ];
 
+if (!function_exists('apex_img_dims')) {
+/* Emit real width/height for the mockup gallery so those images reserve their
+   box and stop contributing to CLS. Heights differ per case (full-page scroll
+   captures run to several thousand pixels), so they are read from the file
+   header rather than hard-coded; getimagesize() only reads the first bytes.
+   Results are memoised per request. */
+function apex_img_dims($file, $caseKey = null) {
+    static $memo = [];
+    static $currentKey = null;
+    if ($caseKey !== null) { $currentKey = $caseKey; return ''; }
+    if ($currentKey === null) { return ''; }
+    $rel = $currentKey . '/' . $file;
+    if (array_key_exists($rel, $memo)) { return $memo[$rel]; }
+    $abs = realpath(__DIR__ . '/../assets/img/portfolio/mockups/' . $rel);
+    $out = '';
+    if ($abs && is_file($abs)) {
+        $d = @getimagesize($abs);
+        if ($d) { $out = ' width="' . (int)$d[0] . '" height="' . (int)$d[1] . '"'; }
+    }
+    $memo[$rel] = $out;
+    return $out;
+}
+}
+
 $caseKey = $apex_mockup_case_key ?? basename(dirname($_SERVER["SCRIPT_NAME"]));
 if (!isset($apex_mockup_cases[$caseKey])) {
     http_response_code(404);
     $caseKey = "apexmarketings-com";
 }
 $case = $apex_mockup_cases[$caseKey];
+apex_img_dims(null, $caseKey); // bind the gallery-dimension helper to this case
 $seo_title = $case["title"] . " Growth Case Study - Apex Marketings";
 $seo_desc = "See how Apex Marketings presents " . $case["title"] . " with premium website visuals, conversion positioning, and responsive proof for portfolio and sales use.";
 $mockupBase = "../../assets/img/portfolio/mockups/" . $caseKey . "/";
+$caseUrl = "https://apexmarketings.com/case-studies/" . $caseKey . "/";
+$caseOgImage = "https://apexmarketings.com/assets/img/portfolio/mockups/" . $caseKey . "/hero-mockup-1200x630.webp";
+
+/* Answer-first FAQ, built from the case record above. No claimed metric or
+   result appears here that we cannot stand behind. */
+$caseFaq = [
+    [
+        "What kind of project is " . $case["title"] . "?",
+        $case["title"] . " is a " . strtolower($case["category"]) . " in the " . strtolower($case["industry"]) . " sector, serving " . $case["location"] . ". " . $case["summary"],
+    ],
+    [
+        "What did Apex Marketings deliver for this project?",
+        "A conversion-focused web presence: responsive layout, clear service and offer positioning, optimised imagery, structured content sections, and measurable paths to enquiry that later SEO and paid campaigns can build on.",
+    ],
+    [
+        "Can Apex Marketings do the same for my brand?",
+        "Yes. Apex Marketings works on " . strtolower($case["category"]) . " projects alongside SEO, Google and Meta ads, social media and conversion work for brands in Pakistan, the US, UK and UAE. Published starting prices are on the pricing page; anything bespoke is scoped after a call.",
+    ],
+    [
+        "How do you measure whether a project like this is working?",
+        "Through the numbers that map to revenue rather than vanity metrics: qualified enquiries, cost per lead, organic impressions and clicks in Search Console, and assisted conversions in GA4, reviewed on a monthly cycle.",
+    ],
+];
+
+$caseFacts = [
+    "Project"      => $case["title"],
+    "Project type" => $case["category"],
+    "Industry"     => $case["industry"],
+    "Market"       => $case["location"],
+    "Delivered by" => "Apex Marketings",
+];
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -41,20 +97,51 @@ $mockupBase = "../../assets/img/portfolio/mockups/" . $caseKey . "/";
   <script type="application/ld+json">
   <?php echo json_encode([
       "@context" => "https://schema.org",
-      "@type" => "Article",
-      "headline" => $seo_title,
-      "description" => $seo_desc,
-      "url" => "https://apexmarketings.com/case-studies/" . $caseKey . "/",
-      "image" => "https://apexmarketings.com/assets/img/portfolio/mockups/" . $caseKey . "/hero-mockup-1200x630.webp",
-      "author" => ["@type" => "Organization", "name" => "Apex Marketings"],
-      "publisher" => ["@type" => "Organization", "name" => "Apex Marketings"]
+      "@graph" => [
+          [
+              "@type" => "BreadcrumbList",
+              "@id" => $caseUrl . "#breadcrumb",
+              "itemListElement" => [
+                  ["@type" => "ListItem", "position" => 1, "name" => "Home",         "item" => "https://apexmarketings.com/"],
+                  ["@type" => "ListItem", "position" => 2, "name" => "Case Studies", "item" => "https://apexmarketings.com/case-studies/"],
+                  ["@type" => "ListItem", "position" => 3, "name" => $case["title"] . " Case Study", "item" => $caseUrl],
+              ],
+          ],
+          [
+              "@type" => "Article",
+              "@id" => $caseUrl . "#article",
+              "headline" => $seo_title,
+              "description" => $seo_desc,
+              "url" => $caseUrl,
+              "mainEntityOfPage" => ["@type" => "WebPage", "@id" => $caseUrl],
+              "isPartOf" => ["@id" => "https://apexmarketings.com/#website"],
+              "image" => ["@type" => "ImageObject", "url" => $caseOgImage, "width" => 1200, "height" => 630],
+              "about" => ["@type" => "Thing", "name" => $case["title"], "description" => $case["summary"]],
+              "articleSection" => $case["category"],
+              "keywords" => [$case["category"], $case["industry"], "digital marketing case study", "website design proof"],
+              "author"    => ["@id" => "https://apexmarketings.com/#organization"],
+              "publisher" => ["@id" => "https://apexmarketings.com/#organization"],
+              "inLanguage" => "en-US",
+          ],
+          [
+              "@type" => "FAQPage",
+              "@id" => $caseUrl . "#faq",
+              "mainEntity" => array_map(function ($qa) {
+                  return [
+                      "@type" => "Question",
+                      "name" => $qa[0],
+                      "acceptedAnswer" => ["@type" => "Answer", "text" => $qa[1]],
+                  ];
+              }, $caseFaq),
+          ],
+      ],
   ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT); ?>
   </script>
 </head>
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="lazy" />
     </div>
   </div>
   <?php include_once(__DIR__ . '/header2.php'); ?>
@@ -77,7 +164,31 @@ $mockupBase = "../../assets/img/portfolio/mockups/" . $caseKey . "/";
       <div class="cs-height_55 cs-height_lg_35"></div>
       <div class="apex-am-case-copy">
         <h2>Case Study Overview</h2>
-        <p><?php echo htmlspecialchars($case["summary"]); ?></p>
+        <div class="aur-answer">
+                                <span class="aur-answer__label">At a glance</span>
+                                <p><?php echo htmlspecialchars($case["summary"]); ?></p>
+                            </div>
+                            <div class="aur-table-wrap">
+                                <table class="aur-table">
+                                    <caption><?php echo htmlspecialchars($case["title"]); ?> &mdash; project facts</caption>
+                                    <tbody>
+                                    <?php foreach ($caseFacts as $factKey => $factVal): ?>
+                                        <tr><th scope="row"><?php echo htmlspecialchars($factKey); ?></th><td><?php echo htmlspecialchars($factVal); ?></td></tr>
+                                    <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="apex-generated-faq">
+                                <h2>Frequently asked questions</h2>
+                                <div class="aur-faq">
+                                    <?php foreach ($caseFaq as $faqIndex => $qa): ?>
+                                    <details<?php echo $faqIndex === 0 ? ' open' : ''; ?>>
+                                        <summary><?php echo htmlspecialchars($qa[0]); ?></summary>
+                                        <div class="aur-faq__a"><?php echo htmlspecialchars($qa[1]); ?></div>
+                                    </details>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
       </div>
       <div class="apex-am-case-grid">
         <article><h3>Marketing Goal</h3><p>Present the brand with enough clarity and polish that prospects can understand the offer, trust the business, and move toward an inquiry without friction.</p></article>
@@ -86,9 +197,9 @@ $mockupBase = "../../assets/img/portfolio/mockups/" . $caseKey . "/";
       </div>
       <div class="cs-height_70 cs-height_lg_45"></div>
       <div class="apex-am-visual-grid">
-        <img src="<?php echo $mockupBase; ?>responsive-combo-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> responsive mockup" loading="lazy">
-        <img src="<?php echo $mockupBase; ?>fullpage-scroll.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> full-page scroll mockup" loading="lazy">
-        <img src="<?php echo $mockupBase; ?>clean-desktop.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> clean desktop screenshot" loading="lazy">
+        <img src="<?php echo $mockupBase; ?>responsive-combo-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> responsive mockup" loading="lazy"<?php echo apex_img_dims("responsive-combo-1600x1000.webp"); ?>>
+        <img src="<?php echo $mockupBase; ?>fullpage-scroll.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> full-page scroll mockup" loading="lazy"<?php echo apex_img_dims("fullpage-scroll.webp"); ?>>
+        <img src="<?php echo $mockupBase; ?>clean-desktop.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> clean desktop screenshot" loading="lazy"<?php echo apex_img_dims("clean-desktop.webp"); ?>>
       </div>
       <div class="apex-am-case-cta">
         <h2>Want this level of presentation for your brand?</h2>

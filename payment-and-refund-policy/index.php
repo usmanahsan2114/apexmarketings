@@ -8,12 +8,33 @@
   $seo_desc = 'Read Apex Marketings\' payment and refund policy. We value transparency and customer satisfaction in all our services.';
   ?>
   <?php include_once('../include/head1.php'); ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://apexmarketings.com/payment-and-refund-policy/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://apexmarketings.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Payment and Refund Policy",
+          "item": "https://apexmarketings.com/payment-and-refund-policy/"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <!-- Start Header Section -->

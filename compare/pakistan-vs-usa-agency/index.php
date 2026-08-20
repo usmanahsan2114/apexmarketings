@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Pakistan vs USA Marketing Agency: Honest Comparison | Apex Marketings";
+$seo_title = "Pakistan vs USA Marketing Agency: Honest Comparison";
 $seo_desc = "When a US marketing agency is genuinely the better choice, when a Pakistani agency wins, and the real risks of offshore — an honest both-ways comparison.";
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $seo_desc = "When a US marketing agency is genuinely the better choice, when a P
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

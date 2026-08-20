@@ -14,7 +14,7 @@ $seo_desc = "How to rank a technical industrial exporter in the GCC: answer-firs
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>
@@ -39,7 +39,7 @@ $seo_desc = "How to rank a technical industrial exporter in the GCC: answer-firs
             <style>article a {color:rgb(20,120,190);text-decoration:underline;} article h2 {margin-top:48px;} article h3 {margin-top:32px;}</style>
 
             <figure style="margin:0 0 36px;">
-              <img src="../../assets/img/portfolio/mockups/pakgusu-com/hero-mockup-1600x1000.webp" alt="Pak Gusu cleanroom export website — a B2B SEO case study by Apex Marketings" width="1600" height="1000" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+              <img src="../../assets/img/portfolio/mockups/pakgusu-com/hero-mockup-1600x1000.webp" alt="Pak Gusu cleanroom export website — a B2B SEO case study by Apex Marketings" width="1600" height="1000" loading="lazy" style="width:100%;height:auto;border-radius:12px;" decoding="async" />
               <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">A modular cleanroom manufacturer exporting to the GCC — the client behind this case study.</figcaption>
             </figure>
 
@@ -89,37 +89,37 @@ $seo_desc = "How to rank a technical industrial exporter in the GCC: answer-firs
       <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
-          <a href="../../services/seo-services/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/seo-services/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">SEO Services</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Apex <a href="/services/seo-services/" style="text-decoration:underline;">SEO</a> retainer</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../blogs/international-seo-guide-2026/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../blogs/international-seo-guide-2026/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">International SEO</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Ranking across countries</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../blogs/optimizing-for-ai-search-answer-engines-2026/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../blogs/optimizing-for-ai-search-answer-engines-2026/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Answer Engine Optimization</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Getting cited by AI</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../services/local-seo/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../services/local-seo/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Local SEO</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Citations &amp; authority</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../blogs/google-business-profile-optimization-guide/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../blogs/google-business-profile-optimization-guide/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Business Profile Guide</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Verified profile playbook</p>
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="../../quote/" class="d-block" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 16px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+          <a href="../../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Scoped to your markets</p>
           </a>

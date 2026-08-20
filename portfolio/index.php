@@ -8,13 +8,34 @@
   $seo_desc = 'See how Apex Marketings delivers results. Explore our portfolio of digital marketing, SEO, and e-commerce success stories.';
   ?>
   <?php include_once('../include/head1.php'); ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://apexmarketings.com/portfolio/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://apexmarketings.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://apexmarketings.com/portfolio/"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
  
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->

@@ -85,7 +85,7 @@
           <div class="cs-footer_item">
             <div class="cs-text_widget">
               <a href="../">
-                <img src="../assets/img/footer/footer_logo.svg" alt="Footer Logo">
+                <img src="../assets/img/footer/footer_logo.svg" alt="Footer Logo" width="120" height="120" decoding="async" loading="lazy">
               </a>
             </div>
             <div class="cs-social_btns cs-style1">

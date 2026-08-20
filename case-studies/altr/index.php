@@ -15,7 +15,7 @@
 <body>
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->
@@ -33,7 +33,7 @@
       </h1>
     </div>
     <div class="cs-height_90 cs-height_lg_45"></div>
-    <img src="../../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group premium website mockup" class="w-100 cs-radius_15 apex-am-mockup-img" loading="lazy" width="1600" height="1000">
+    <img src="../../assets/img/portfolio/mockups/altrgroup-com/hero-mockup-1600x1000.webp" alt="ALTR Group premium website mockup" class="w-100 cs-radius_15 apex-am-mockup-img" loading="lazy" width="1600" height="1000" decoding="async">
     <div class="cs-height_140 cs-height_lg_80"></div>
     <h2 class="cs-font_38 text-center cs-m0 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Case Study
       Overview</h2>
@@ -48,11 +48,11 @@
     <div class="cs-height_65 cs-height_lg_45"></div>
     <div class="row">
       <div class="col-sm-6">
-        <img src="../../assets/img/portfolio/mockups/altrgroup-com/responsive-combo-1600x1000.webp" alt="ALTR Group responsive desktop and mobile mockup" class="w-100 cs-radius_5 apex-am-mockup-img" loading="lazy" width="1600" height="1000">
+        <img src="../../assets/img/portfolio/mockups/altrgroup-com/responsive-combo-1600x1000.webp" alt="ALTR Group responsive desktop and mobile mockup" class="w-100 cs-radius_5 apex-am-mockup-img" loading="lazy" width="1600" height="1000" decoding="async">
         <div class="cs-height_25 cs-height_lg_25"></div>
       </div>
       <div class="col-sm-6">
-        <img width="1200" height="3696" src="../../assets/img/portfolio/mockups/altrgroup-com/fullpage-scroll.webp" alt="ALTR Group full-page scroll mockup" class="w-100 cs-radius_5 apex-am-mockup-img" loading="lazy">
+        <img width="1200" height="3696" src="../../assets/img/portfolio/mockups/altrgroup-com/fullpage-scroll.webp" alt="ALTR Group full-page scroll mockup" class="w-100 cs-radius_5 apex-am-mockup-img" loading="lazy" decoding="async">
         <div class="cs-height_25 cs-height_lg_25"></div>
       </div>
     </div>

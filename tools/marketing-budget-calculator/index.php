@@ -31,7 +31,7 @@ $seo_desc = "Free marketing budget calculator: pick the services you need and ge
   </style>
 </head>
 <body>
-  <div class="cs-preloader cs-center"><div class="cs-preloader_in"><img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" /></div></div>
+  <div class="cs-preloader cs-center"><div class="cs-preloader_in"><img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" /></div></div>
   <?php include_once('../../include/headernew2.php'); ?>
 
   <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 300px; background-color: #111;">

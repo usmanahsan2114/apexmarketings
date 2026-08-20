@@ -13,7 +13,7 @@ $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/mon
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>
@@ -38,7 +38,7 @@ $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/mon
             <style>article a {color:rgb(20,120,190);text-decoration:underline;} article h2 {margin-top:48px;} article h3 {margin-top:32px;}</style>
 
             <figure style="margin:0 0 36px;">
-              <img src="../../assets/img/pakgusu-results/stats_strip.png" alt="Pak Gusu two-month results: 0 to 124 organic sessions/month, page-1 GCC rankings, cited by AI answer engines" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+              <img src="../../assets/img/pakgusu-results/stats_strip.png" alt="Pak Gusu two-month results: 0 to 124 organic sessions/month, page-1 GCC rankings, cited by AI answer engines" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2600" height="400" decoding="async" />
               <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Two months, from zero: the verified GA4 and Search Console results.</figcaption>
             </figure>
 
@@ -59,7 +59,7 @@ $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/mon
               </ul>
               <p>The payoff showed up fast: GA4 recorded referral and assisted traffic from <strong>ChatGPT, Bing Copilot and Google Gemini</strong>.</p>
 <figure style="margin:0 0 30px;">
-  <img src="../../assets/img/pakgusu-results/ai_citations.png" alt="Pak Gusu cited by ChatGPT, Bing Copilot and Google Gemini in GA4 referral and assisted traffic" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+  <img src="../../assets/img/pakgusu-results/ai_citations.png" alt="Pak Gusu cited by ChatGPT, Bing Copilot and Google Gemini in GA4 referral and assisted traffic" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="900" decoding="async" />
   <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Cited by ChatGPT, Bing Copilot and Google Gemini (GA4 referral / assisted).</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/mon
               </ul>
               <p>Result: indexation climbed from <strong>0 to about 55 pages</strong> (of ~85), and impressions began compounding as more pages entered the index.</p>
 <figure style="margin:0 0 30px;">
-  <img src="../../assets/img/pakgusu-results/indexation.png" alt="Indexation grew from 0 to roughly 55 of the 85 rebuilt pages, with 21 legacy 404s fixed via 301 redirects" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+  <img src="../../assets/img/pakgusu-results/indexation.png" alt="Indexation grew from 0 to roughly 55 of the 85 rebuilt pages, with 21 legacy 404s fixed via 301 redirects" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1040" decoding="async" />
   <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Indexation: 0 &rarr; ~55 of ~85 pages (GSC).</figcaption>
 </figure>
 
@@ -100,15 +100,15 @@ $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/mon
                 <li style="margin-bottom:10px;"><strong>Cited by ChatGPT, Bing Copilot and Google Gemini.</strong></li>
               </ul>
               <figure style="margin:0 0 30px;">
-                <img src="../../assets/img/pakgusu-results/organic_growth.png" alt="Organic sessions growth from 0 to 124 per month: 78, 91, 99, 124" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+                <img src="../../assets/img/pakgusu-results/organic_growth.png" alt="Organic sessions growth from 0 to 124 per month: 78, 91, 99, 124" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1120" decoding="async" />
                 <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Organic sessions: 78 &rarr; 91 &rarr; 99 &rarr; 124 per month (GA4, Google organic).</figcaption>
               </figure>
               <figure style="margin:0 0 30px;">
-                <img src="../../assets/img/pakgusu-results/rankings.png" alt="Page-1 Google average positions across GCC buyer queries" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+                <img src="../../assets/img/pakgusu-results/rankings.png" alt="Page-1 Google average positions across GCC buyer queries" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2080" height="1280" decoding="async" />
                 <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Page-1 average positions across GCC buyer queries (GSC).</figcaption>
               </figure>
               <figure style="margin:0 0 30px;">
-                <img src="../../assets/img/pakgusu-results/impressions.png" alt="Impressions rising from 0 to roughly 4,600 per month" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+                <img src="../../assets/img/pakgusu-results/impressions.png" alt="Impressions rising from 0 to roughly 4,600 per month" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1040" decoding="async" />
                 <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Impressions: 0 &rarr; ~4,600/month, up 86% half-over-half (1,617 &rarr; 3,005).</figcaption>
               </figure>
 

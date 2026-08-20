@@ -1,6 +1,6 @@
 ﻿<?php
 $seo_title = "Conversion Rate Optimization (CRO) Services | Apex Marketings";
-$seo_desc = "CRO audits and optimization from Apex Marketings: funnel analysis, form friction, landing-page rebuilds, and honest measurement. The multiplier on your SEO and ads spend.";
+$seo_desc = "CRO audits and optimization from Apex Marketings: funnel analysis, form friction, landing-page rebuilds, and honest measurement.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -14,7 +14,7 @@ $seo_desc = "CRO audits and optimization from Apex Marketings: funnel analysis, 
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

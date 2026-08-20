@@ -1,0 +1,945 @@
+/* ==========================================================================
+   APEX AURORA — premium design & interaction layer (Apex Marketings)
+   --------------------------------------------------------------------------
+   Loaded site-wide AFTER style.css / motion-system.css / apex-motion.css so it
+   can decorate the existing "cs-*" theme without rewriting it.
+
+   Rules this file plays by:
+     · Decoration only — it never changes box-model layout of existing blocks,
+       so nothing reflows and CLS stays at 0.
+     · Every animation is transform/opacity/filter (compositor-only).
+     · Everything degrades: no-JS shows content, reduced-motion kills motion,
+       old browsers fall back through @supports.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  --aur-brand: #e6ad02;
+  --aur-brand-rgb: 230, 173, 2;
+  --aur-glow: #ffd34d;
+  --aur-glow-rgb: 255, 211, 77;
+  --aur-gold: #ff8a3d;
+  --aur-gold-rgb: 255, 138, 61;
+  --aur-ink: #101010;
+  --aur-ink-rgb: 16, 16, 16;
+
+  /* Glass */
+  --aur-glass-bg: rgba(255, 255, 255, 0.045);
+  --aur-glass-bg-strong: rgba(255, 255, 255, 0.075);
+  --aur-glass-border: rgba(255, 255, 255, 0.14);
+  --aur-glass-blur: 18px;
+  --aur-glass-shadow: 0 18px 48px -20px rgba(0, 0, 0, 0.85), 0 2px 8px -4px rgba(0, 0, 0, 0.6);
+
+  /* Light-surface glass (for the white sections of the theme) */
+  --aur-glass-light-bg: rgba(255, 255, 255, 0.72);
+  --aur-glass-light-border: rgba(10, 20, 35, 0.10);
+  --aur-glass-light-shadow: 0 20px 45px -28px rgba(6, 22, 42, 0.45);
+
+  /* Motion */
+  --aur-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --aur-ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --aur-fast: 0.22s;
+  --aur-base: 0.5s;
+  --aur-slow: 0.9s;
+
+  /* Radii */
+  --aur-r-sm: 10px;
+  --aur-r-md: 16px;
+  --aur-r-lg: 22px;
+}
+
+@supports (color: color-mix(in srgb, red, blue)) {
+  :root {
+    --aur-brand-soft: color-mix(in srgb, var(--aur-brand) 22%, transparent);
+  }
+}
+
+/* Rotating conic borders need an animatable custom property. */
+@supports (background: paint(x)) {
+  @property --aur-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL POLISH — selection, scrollbar, focus, media defaults
+   -------------------------------------------------------------------------- */
+::selection {
+  background: rgba(var(--aur-brand-rgb), 0.85);
+  color: #fff;
+}
+
+html {
+  scrollbar-color: rgba(var(--aur-brand-rgb), 0.85) rgba(255, 255, 255, 0.06);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.28); }
+::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: linear-gradient(180deg, rgba(var(--aur-glow-rgb), 0.9), rgba(var(--aur-brand-rgb), 0.95));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--aur-glow), var(--aur-brand));
+  background-clip: padding-box;
+}
+
+/* Images should never overflow their column or shift the page.
+   Intrinsic width/height attributes are now set on every <img> so the browser
+   can reserve the box, and `height:auto` keeps the aspect ratio when CSS scales
+   the width. It is wrapped in :where() so it carries ZERO specificity — any
+   component rule that deliberately sets a fixed height (slider thumbs, avatars)
+   still wins. */
+:where(img, svg, video) { max-width: 100%; }
+:where(img[width][height]) { height: auto; }
+
+/* --------------------------------------------------------------------------
+   3. READING-PROGRESS BAR (JS toggles .is-on)
+   -------------------------------------------------------------------------- */
+.aur-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.aur-progress.is-on { opacity: 1; }
+.aur-progress__bar {
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--aur-brand), var(--aur-glow) 55%, var(--aur-gold));
+  box-shadow: 0 0 14px rgba(var(--aur-glow-rgb), 0.65);
+  will-change: transform;
+}
+
+/* --------------------------------------------------------------------------
+   4. AMBIENT BACKGROUNDS — aurora blobs, bubble canvas, grid, grain
+   Injected by JS into dark sections; also usable by hand via the classes.
+   -------------------------------------------------------------------------- */
+.aur-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+  /* Contain paint so the big blurs never repaint the whole page. Size
+     containment is deliberately NOT used — the layer is inset-positioned and
+     must keep taking its box from the section. */
+  contain: layout paint style;
+}
+
+/* Drifting aurora blobs */
+.aur-ambient__blob {
+  position: absolute;
+  width: 46vmax;
+  height: 46vmax;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+.aur-ambient__blob--a {
+  top: -16%;
+  left: -10%;
+  background: radial-gradient(circle at 40% 40%, rgba(var(--aur-brand-rgb), 0.55), transparent 68%);
+  animation: aur-drift-a 26s var(--aur-ease) infinite alternate;
+}
+.aur-ambient__blob--b {
+  bottom: -22%;
+  right: -12%;
+  background: radial-gradient(circle at 55% 45%, rgba(var(--aur-glow-rgb), 0.34), transparent 66%);
+  animation: aur-drift-b 32s var(--aur-ease) infinite alternate;
+}
+.aur-ambient__blob--c {
+  top: 34%;
+  left: 46%;
+  width: 32vmax;
+  height: 32vmax;
+  background: radial-gradient(circle at 50% 50%, rgba(var(--aur-gold-rgb), 0.16), transparent 70%);
+  animation: aur-drift-c 38s var(--aur-ease) infinite alternate;
+}
+
+@keyframes aur-drift-a {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(14vw, 10vh, 0) scale(1.18); }
+}
+@keyframes aur-drift-b {
+  0%   { transform: translate3d(0, 0, 0) scale(1.1); }
+  100% { transform: translate3d(-16vw, -8vh, 0) scale(0.92); }
+}
+@keyframes aur-drift-c {
+  0%   { transform: translate3d(-6vw, 4vh, 0) scale(0.9); }
+  100% { transform: translate3d(8vw, -10vh, 0) scale(1.25); }
+}
+
+/* Fine engineering grid, masked to fade out at the edges */
+.aur-ambient__grid {
+  position: absolute;
+  inset: -1px;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 78%);
+  animation: aur-grid-pan 40s linear infinite;
+}
+@keyframes aur-grid-pan {
+  to { background-position: 56px 56px, 56px 56px; }
+}
+
+/* Film grain — a 1-tile SVG noise, negligible weight */
+.aur-ambient__grain {
+  position: absolute;
+  inset: -50%;
+  opacity: 0.028;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: aur-grain 8s steps(6) infinite;
+}
+@keyframes aur-grain {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-3%, 4%, 0); }
+  40% { transform: translate3d(4%, -2%, 0); }
+  60% { transform: translate3d(-2%, -4%, 0); }
+  80% { transform: translate3d(3%, 3%, 0); }
+}
+
+/* Legibility scrim. The theme's own scrim sits at z-index 1, BELOW the hero
+   particle canvas, so headline contrast needs a second pass that is painted
+   above every decorative layer but still under the content (z-index 3). */
+.aur-ambient__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 56% at 50% 44%, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.18) 68%, transparent 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0.42) 100%);
+}
+
+/* The theme's decorative scene canvas paints at the same depth as the ambient
+   layer and later in the DOM, so it can't be scrimmed from inside. This hero is
+   centre-aligned, so the mask fades the motion out of the middle instead of one
+   column — headline stays crisp, the edges keep their movement. */
+.cs-hero .interactive-scene,
+.cs-hero .apex-webgl-canvas {
+  -webkit-mask-image: radial-gradient(ellipse 58% 54% at 50% 50%, transparent 18%, rgba(0, 0, 0, 0.5) 62%, #000 88%);
+  mask-image: radial-gradient(ellipse 58% 54% at 50% 50%, transparent 18%, rgba(0, 0, 0, 0.5) 62%, #000 88%);
+}
+/* Inner banners centre their text, so the scrim is centre-weighted there. */
+.cs-page_heading .aur-ambient__scrim {
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 50%, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.34) 70%, transparent 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2) 45%, rgba(0, 0, 0, 0.55));
+}
+
+/* Light-surface ambient: brand-tinted washes only. No screen blend (invisible
+   on white), no grain, no scrim — the section keeps its contrast. */
+.aur-ambient--light .aur-ambient__blob {
+  mix-blend-mode: normal;
+  opacity: 0.55;
+  filter: blur(70px);
+}
+.aur-ambient--light .aur-ambient__blob--a {
+  background: radial-gradient(circle at 40% 40%, rgba(var(--aur-brand-rgb), 0.20), transparent 68%);
+}
+.aur-ambient--light .aur-ambient__blob--b {
+  background: radial-gradient(circle at 55% 45%, rgba(var(--aur-glow-rgb), 0.16), transparent 66%);
+}
+.aur-ambient--light .aur-ambient__blob--c {
+  background: radial-gradient(circle at 50% 50%, rgba(var(--aur-gold-rgb), 0.12), transparent 70%);
+}
+.aur-ambient--light .aur-ambient__grid {
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(10, 22, 40, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 22, 40, 0.05) 1px, transparent 1px);
+}
+
+/* Bubble/orb canvas */
+.aur-bubbles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.4s var(--aur-ease);
+}
+.aur-bubbles.is-visible { opacity: 1; }
+
+/* CSS-only floating bubbles (used where a canvas would be overkill) */
+.aur-bubble-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.aur-bubble-field i {
+  position: absolute;
+  bottom: -14%;
+  display: block;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.06) 42%, transparent 62%),
+    radial-gradient(circle at 68% 76%, rgba(var(--aur-glow-rgb), 0.32), transparent 60%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: inset 0 0 18px rgba(var(--aur-glow-rgb), 0.22), 0 0 22px rgba(var(--aur-brand-rgb), 0.18);
+  animation: aur-rise linear infinite;
+  will-change: transform, opacity;
+}
+@keyframes aur-rise {
+  0%   { transform: translate3d(0, 0, 0) scale(0.65); opacity: 0; }
+  10%  { opacity: 0.85; }
+  85%  { opacity: 0.5; }
+  100% { transform: translate3d(var(--aur-drift, 30px), -118vh, 0) scale(1.12); opacity: 0; }
+}
+
+/* Ambient layers live only inside the hero shells, whose stacking is known:
+   the theme scrim sits at z-index 1 and the content wrapper at z-index 3, so
+   the ambient slots in at 2. JS lifts any *static* sibling to z-index 3 — it
+   never rewrites `position` on elements that are already positioned, which is
+   what keeps the absolutely-positioned .mi-invert-fix overlay intact. */
+.aur-has-ambient { position: relative; isolation: isolate; }
+
+.cs-hero > .aur-ambient,
+.cs-hero > .aur-bubble-field,
+.cs-page_heading > .aur-ambient,
+.cs-page_heading > .aur-bubble-field { z-index: 2; }
+
+.cs-hero > .aur-ambient .aur-ambient__blob { opacity: 0.62; filter: blur(78px); }
+.cs-hero > .aur-ambient .aur-ambient__grid { opacity: 0.45; }
+.cs-page_heading > .aur-ambient .aur-ambient__blob { opacity: 0.55; filter: blur(78px); }
+
+/* Light sections get a CSS-only ambient: painted straight onto the section's
+   own background layer, so no new element and no stacking-context change. */
+.cs-gray_bg,
+.cs-accent_5_bg,
+.cs-primary_bg {
+  background-image:
+    radial-gradient(38rem 26rem at 12% -10%, rgba(var(--aur-brand-rgb), 0.09), transparent 70%),
+    radial-gradient(32rem 24rem at 92% 108%, rgba(var(--aur-glow-rgb), 0.10), transparent 72%),
+    radial-gradient(26rem 20rem at 68% 30%, rgba(var(--aur-gold-rgb), 0.05), transparent 74%);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+/* --------------------------------------------------------------------------
+   5. GLASS SURFACES
+   -------------------------------------------------------------------------- */
+.aur-glass {
+  position: relative;
+  background: var(--aur-glass-bg);
+  border: 1px solid var(--aur-glass-border);
+  border-radius: var(--aur-r-md);
+  box-shadow: var(--aur-glass-shadow);
+  -webkit-backdrop-filter: blur(var(--aur-glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--aur-glass-blur)) saturate(150%);
+  overflow: hidden;
+}
+/* Browsers without backdrop-filter get a solid, still-handsome panel. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .aur-glass { background: rgba(12, 18, 28, 0.92); }
+}
+
+/* Top inner highlight — the thing that reads as "real glass". */
+.aur-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 42%);
+  opacity: 0.9;
+}
+
+.aur-glass--light {
+  background: var(--aur-glass-light-bg);
+  border-color: var(--aur-glass-light-border);
+  box-shadow: var(--aur-glass-light-shadow);
+}
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .aur-glass--light { background: #fff; }
+}
+
+/* --------------------------------------------------------------------------
+   6. SPOTLIGHT + TILT + GLARE  (JS supplies --aur-mx / --aur-my)
+   -------------------------------------------------------------------------- */
+.aur-spot { position: relative; }
+.aur-spot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--aur-base) var(--aur-ease);
+  background: radial-gradient(
+    340px circle at var(--aur-mx, 50%) var(--aur-my, 50%),
+    rgba(var(--aur-glow-rgb), 0.16),
+    rgba(var(--aur-brand-rgb), 0.09) 38%,
+    transparent 66%
+  );
+  z-index: 2;
+}
+.aur-spot:hover::after,
+.aur-spot:focus-within::after { opacity: 1; }
+
+.aur-tilt {
+  transform-style: preserve-3d;
+  transition: transform var(--aur-base) var(--aur-ease), box-shadow var(--aur-base) var(--aur-ease);
+  will-change: transform;
+}
+.aur-tilt.is-tilting { transition: transform 0.08s linear, box-shadow var(--aur-base) var(--aur-ease); }
+
+/* --------------------------------------------------------------------------
+   7. ANIMATED GRADIENT BORDER (hover) — for hero cards & CTAs
+   -------------------------------------------------------------------------- */
+.aur-ring {
+  position: relative;
+  isolation: isolate;
+}
+.aur-ring::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  opacity: 0;
+  transition: opacity var(--aur-base) var(--aur-ease);
+  background: conic-gradient(
+    from var(--aur-angle, 0deg),
+    transparent 0deg,
+    rgba(var(--aur-glow-rgb), 0.95) 60deg,
+    rgba(var(--aur-brand-rgb), 0.9) 130deg,
+    transparent 210deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.aur-ring:hover::before,
+.aur-ring:focus-within::before {
+  opacity: 1;
+  animation: aur-spin 3.2s linear infinite;
+}
+@keyframes aur-spin { to { --aur-angle: 360deg; } }
+
+/* --------------------------------------------------------------------------
+   8. BUTTON POLISH — shine sweep, magnetic pull, ripple
+   -------------------------------------------------------------------------- */
+.aur-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.aur-shine::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -140%;
+  width: 60%;
+  height: 220%;
+  z-index: 1;
+  pointer-events: none;
+  transform: rotate(22deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  transition: left 0.75s var(--aur-ease);
+}
+.aur-shine:hover::after,
+.aur-shine:focus-visible::after { left: 150%; }
+
+.aur-magnetic {
+  transition: transform 0.35s var(--aur-ease-spring), box-shadow var(--aur-base) var(--aur-ease);
+  will-change: transform;
+}
+
+.aur-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.42);
+  animation: aur-ripple 0.62s var(--aur-ease) forwards;
+  z-index: 3;
+}
+@keyframes aur-ripple {
+  to { transform: scale(2.6); opacity: 0; }
+}
+
+/* Theme buttons pick the polish up automatically. */
+.cs-btn,
+.cs-newsletter_btn,
+.cs-text_btn,
+.cs-icon_btn,
+button.cs-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.35s var(--aur-ease-spring), box-shadow 0.4s var(--aur-ease), background-color 0.35s ease;
+}
+.cs-btn:hover,
+.cs-newsletter_btn:hover {
+  box-shadow: 0 14px 34px -12px rgba(var(--aur-brand-rgb), 0.72), 0 0 0 1px rgba(var(--aur-glow-rgb), 0.28) inset;
+}
+.cs-btn:active { transform: translateY(1px) scale(0.985); }
+
+/* --------------------------------------------------------------------------
+   9. LINK & TEXT TREATMENTS
+   -------------------------------------------------------------------------- */
+.aur-underline {
+  background-image: linear-gradient(90deg, var(--aur-glow), var(--aur-brand));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size 0.42s var(--aur-ease);
+}
+.aur-underline:hover,
+.aur-underline:focus-visible { background-size: 100% 2px; }
+
+.aur-gradient-text {
+  background: linear-gradient(100deg, #fff 6%, var(--aur-glow) 46%, var(--aur-brand) 74%, #fff 96%);
+  background-size: 220% 100%;
+  color: transparent;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .aur-gradient-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: aur-text-pan 7s var(--aur-ease) infinite;
+  }
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .aur-gradient-text { background: none; color: #fff; }
+}
+@keyframes aur-text-pan {
+  0% { background-position: 130% 0; }
+  60%, 100% { background-position: -30% 0; }
+}
+
+/* Word-by-word headline entrance */
+.aur-words > span {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 0.5em, 0) rotate(2deg);
+  transition: opacity 0.62s var(--aur-ease), transform 0.62s var(--aur-ease);
+}
+.aur-words.is-in > span { opacity: 1; transform: none; }
+
+/* --------------------------------------------------------------------------
+   10. SCROLL REVEALS  (html.aur-js gates the hidden state → no-JS is safe)
+   -------------------------------------------------------------------------- */
+html.aur-js [data-aur] {
+  opacity: 0;
+  transition:
+    opacity var(--aur-slow) var(--aur-ease),
+    transform var(--aur-slow) var(--aur-ease),
+    filter var(--aur-slow) var(--aur-ease);
+  transition-delay: var(--aur-delay, 0ms);
+  will-change: transform, opacity;
+}
+html.aur-js [data-aur="up"]    { transform: translate3d(0, 34px, 0); }
+html.aur-js [data-aur="down"]  { transform: translate3d(0, -28px, 0); }
+html.aur-js [data-aur="left"]  { transform: translate3d(38px, 0, 0); }
+html.aur-js [data-aur="right"] { transform: translate3d(-38px, 0, 0); }
+html.aur-js [data-aur="zoom"]  { transform: scale(0.92); }
+html.aur-js [data-aur="blur"]  { filter: blur(12px); transform: translate3d(0, 18px, 0); }
+html.aur-js [data-aur="flip"]  { transform: perspective(900px) rotateX(14deg) translate3d(0, 26px, 0); transform-origin: 50% 100%; }
+
+html.aur-js [data-aur].is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+html.aur-js [data-aur].is-in { will-change: auto; }
+
+/* Parallax layers */
+[data-aur-parallax] { will-change: transform; }
+
+/* --------------------------------------------------------------------------
+   11. COUNTERS / STAT TILES
+   -------------------------------------------------------------------------- */
+.aur-stat {
+  position: relative;
+  padding: 26px 22px;
+  border-radius: var(--aur-r-md);
+  overflow: hidden;
+}
+.aur-stat__num {
+  display: block;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(120deg, #fff, var(--aur-glow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .aur-stat__num { -webkit-text-fill-color: currentColor; color: #fff; }
+}
+.aur-stat__label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* --------------------------------------------------------------------------
+   12. THEME BRIDGE — map the existing cs-* components onto the new effects
+   Hover/decoration only; geometry is untouched.
+   -------------------------------------------------------------------------- */
+
+/* Cards ------------------------------------------------------------------ */
+.cs-iconbox,
+.cs-card,
+.cs-post,
+.cs-team,
+.cs-testimonial,
+.cs-funfact,
+.cs-pricing_table,
+.cs-service_card,
+.cs-sidebar_item,
+.cs-resource_card {
+  transition:
+    transform 0.5s var(--aur-ease),
+    box-shadow 0.5s var(--aur-ease),
+    border-color 0.5s var(--aur-ease),
+    background-color 0.5s var(--aur-ease);
+}
+.cs-iconbox:hover,
+.cs-card:hover,
+.cs-post:hover,
+.cs-team:hover,
+.cs-funfact:hover,
+.cs-pricing_table:hover,
+.cs-service_card:hover,
+.cs-resource_card:hover {
+  transform: translate3d(0, -6px, 0);
+  box-shadow: 0 26px 60px -30px rgba(var(--aur-brand-rgb), 0.6), 0 4px 14px -8px rgba(0, 0, 0, 0.45);
+}
+
+/* Icon boxes get a soft gold halo behind the glyph on hover. */
+.cs-iconbox .cs-iconbox_icon {
+  transition: transform 0.5s var(--aur-ease-spring), filter 0.4s var(--aur-ease);
+}
+.cs-iconbox:hover .cs-iconbox_icon {
+  transform: translateY(-3px) scale(1.08);
+  filter: drop-shadow(0 8px 18px rgba(var(--aur-brand-rgb), 0.5));
+}
+
+/* Partner logos: grey -> colour on hover. */
+.cs-partner_logo img,
+.cs-partner_logo {
+  filter: grayscale(1) brightness(1.5) contrast(0.9);
+  opacity: 0.6;
+  transition: filter 0.45s var(--aur-ease), opacity 0.45s var(--aur-ease), transform 0.45s var(--aur-ease);
+}
+.cs-partner_logo:hover img,
+.cs-partner_logo:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+/* Portfolio + post imagery: slow zoom and a warm lift on hover. */
+.cs-portfolio_bg,
+.cs-post_thumb img,
+.cs-card_thumb img,
+.cs-member_thumb img {
+  transition: transform 0.9s var(--aur-ease), filter 0.7s var(--aur-ease);
+  will-change: transform;
+}
+.cs-portfolio:hover .cs-portfolio_bg,
+.cs-post:hover .cs-post_thumb img,
+.cs-card:hover .cs-card_thumb img,
+.cs-team:hover .cs-member_thumb img {
+  transform: scale(1.07);
+  filter: saturate(1.14) brightness(1.05);
+}
+
+/* The portfolio hover panel gets real glass instead of a flat wash. */
+.cs-portfolio_info_bg {
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  backdrop-filter: blur(14px) saturate(150%);
+}
+
+/* Form fields: focus glow instead of the flat default. */
+.cs-form_field,
+.cs-newsletter_input,
+input[type="text"], input[type="email"], input[type="tel"], input[type="url"], select, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.cs-form_field:focus,
+.cs-newsletter_input:focus,
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(var(--aur-brand-rgb), 0.22), 0 0 22px -6px rgba(var(--aur-glow-rgb), 0.45);
+  border-color: rgba(var(--aur-brand-rgb), 0.75);
+  outline: none;
+}
+
+/* Floating action buttons. */
+.apex-wa-btn, .apex-call-btn, .cs-scrollup {
+  transition: transform 0.35s var(--aur-ease-spring), box-shadow 0.35s var(--aur-ease);
+}
+.apex-wa-btn:hover, .apex-call-btn:hover, .cs-scrollup:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Rating bars animate their fill in rather than appearing fully drawn. */
+.cs-rating_percentage { transition: width 1.1s var(--aur-ease); }
+
+/* Related-link cards. These used to carry inline onmouseover/onmouseout
+   handlers that set a black shadow on a near-black card (invisible) and gave
+   keyboard users no feedback at all. Same motion, now with a brand-tinted glow
+   and a real :focus-visible state. */
+.aur-linkcard {
+  position: relative;
+  transition:
+    transform 0.35s var(--aur-ease),
+    box-shadow 0.35s var(--aur-ease),
+    border-color 0.35s var(--aur-ease);
+}
+.aur-linkcard:hover,
+.aur-linkcard:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(var(--aur-brand-rgb), 0.55) !important;
+  box-shadow: 0 14px 34px -18px rgba(var(--aur-brand-rgb), 0.8), 0 2px 10px -6px rgba(0, 0, 0, 0.55);
+}
+
+/* --------------------------------------------------------------------------
+   13. AEO / ANSWER BLOCKS — styling for the new answer-first content
+   -------------------------------------------------------------------------- */
+.aur-answer {
+  position: relative;
+  margin: 0 0 34px;
+  padding: 26px 28px 26px 30px;
+  border-radius: var(--aur-r-md);
+  border: 1px solid rgba(var(--aur-brand-rgb), 0.28);
+  background: linear-gradient(135deg, rgba(var(--aur-brand-rgb), 0.10), rgba(var(--aur-glow-rgb), 0.04));
+  overflow: hidden;
+}
+.aur-answer::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--aur-glow), var(--aur-brand));
+}
+.aur-answer__label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aur-glow);
+}
+.aur-answer p { margin: 0; font-size: 1.04rem; line-height: 1.72; }
+.aur-answer p + p { margin-top: 12px; }
+
+/* Comparison tables (snippet bait) */
+.aur-table-wrap { overflow-x: auto; margin: 0 0 34px; -webkit-overflow-scrolling: touch; }
+.aur-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.aur-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 0 0 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(var(--aur-brand-rgb), 1);
+  opacity: 0.95;
+}
+.aur-table th, .aur-table td {
+  padding: 13px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(128, 145, 165, 0.22);
+  vertical-align: top;
+}
+.aur-table thead th {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+  border-bottom: 2px solid rgba(var(--aur-brand-rgb), 0.55);
+}
+.aur-table tbody tr { transition: background-color 0.25s ease; }
+.aur-table tbody tr:hover { background: rgba(var(--aur-brand-rgb), 0.07); }
+
+/* FAQ accordion */
+.aur-faq { border-top: 1px solid rgba(128, 145, 165, 0.22); }
+.aur-faq details {
+  border-bottom: 1px solid rgba(128, 145, 165, 0.22);
+  padding: 4px 0;
+}
+.aur-faq summary {
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 44px 18px 2px;
+  font-weight: 600;
+  font-size: 1.04rem;
+  transition: color 0.25s ease;
+}
+.aur-faq summary::-webkit-details-marker { display: none; }
+.aur-faq summary::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  margin-top: -7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.55;
+  transition: transform 0.35s var(--aur-ease), opacity 0.25s ease;
+}
+.aur-faq details[open] summary::after { transform: rotate(-135deg); opacity: 1; }
+.aur-faq details[open] summary { color: var(--aur-brand); }
+.aur-faq .aur-faq__a { padding: 0 6px 20px 2px; line-height: 1.75; opacity: 0.88; }
+
+/* --------------------------------------------------------------------------
+   14. MARQUEE (logo / keyword strips)
+   -------------------------------------------------------------------------- */
+.aur-marquee {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.aur-marquee__track {
+  display: flex;
+  width: max-content;
+  gap: 56px;
+  animation: aur-marquee var(--aur-marquee-dur, 34s) linear infinite;
+  will-change: transform;
+}
+.aur-marquee:hover .aur-marquee__track { animation-play-state: paused; }
+@keyframes aur-marquee { to { transform: translate3d(-50%, 0, 0); } }
+
+/* --------------------------------------------------------------------------
+   15. CURSOR GLOW (fine pointers only)
+   -------------------------------------------------------------------------- */
+.aur-cursor-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 460px;
+  height: 460px;
+  margin: -230px 0 0 -230px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.6s var(--aur-ease);
+  background: radial-gradient(circle, rgba(var(--aur-glow-rgb), 0.10), rgba(var(--aur-brand-rgb), 0.05) 40%, transparent 68%);
+  will-change: transform;
+}
+.aur-cursor-glow.is-on { opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   16. RESPONSIVE TRIMS
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .aur-ambient__grain, .aur-cursor-glow { display: none; }
+  .aur-ambient__blob { filter: blur(56px); opacity: 0.42; }
+  .aur-answer { padding: 20px 20px 20px 24px; }
+}
+
+@media (hover: none) {
+  /* Touch devices never get hover-only decoration stuck "on". */
+  .aur-spot::after, .aur-ring::before { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   17. REDUCED MOTION — one authoritative kill switch
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .aur-ambient__blob,
+  .aur-ambient__grid,
+  .aur-ambient__grain,
+  .aur-bubble-field i,
+  .aur-marquee__track,
+  .aur-gradient-text,
+  .apex-call-btn::after,
+  .aur-ring:hover::before { animation: none !important; }
+
+  .aur-bubbles, .aur-cursor-glow { display: none !important; }
+
+  html.aur-js [data-aur] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  .aur-words > span { opacity: 1 !important; transform: none !important; }
+  .aur-progress { display: none !important; }
+}
+
+/* Print: strip every decorative layer. */
+@media print {
+  .aur-ambient, .aur-bubbles, .aur-bubble-field, .aur-progress, .aur-cursor-glow { display: none !important; }
+  html.aur-js [data-aur] { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+
+/* --------------------------------------------------------------------------
+   18. HERO FIT — keep the headline and both CTAs above the fold
+   --------------------------------------------------------------------------
+   .cs-hero.cs-style1 ships as height:calc(100vh + 180px) with min-height:1000px
+   and 250px/170px padding, so on a real laptop window (~700-800px of usable
+   height) the CTAs land below the fold and the 105px headline crowds the top.
+   These tiers compact the hero's own rhythm; the height rule is left alone
+   because the slider inside it depends on a fixed box.
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 769px) and (max-height: 900px) {
+  .cs-hero.cs-style1 { min-height: 0; height: 100svh; padding: 150px 0 90px; }
+  .cs-hero.cs-style1 .cs-hero_title { font-size: clamp(2.4rem, 5.6vw, 4.2rem); line-height: 1.06; }
+  .cs-hero.cs-style1 .cs-hero_subtitle { font-size: 1rem; }
+  .cs-hero.cs-style1 .cs-hero_btns { margin-top: 26px !important; }
+}
+
+@media screen and (min-width: 769px) and (max-height: 760px) {
+  .cs-hero.cs-style1 { padding: 128px 0 70px; }
+  .cs-hero.cs-style1 .cs-hero_title { font-size: clamp(2rem, 4.6vw, 3.2rem); }
+  .cs-hero.cs-style1 .cs-hero_subtitle { font-size: 0.95rem; }
+  .cs-hero.cs-style1 .cs-hero_btns { margin-top: 20px !important; }
+  .cs-hero.cs-style1 .cs-hero_social_wrap { display: none; }
+}
+
+/* Page-heading banners on inner pages run tall for the same reason. */
+@media screen and (max-height: 780px) {
+  .cs-page_heading.cs-style1 { padding-top: 130px; padding-bottom: 70px; }
+}

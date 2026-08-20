@@ -13,7 +13,7 @@
 <body>
 <div class="cs-preloader cs-center">
   <div class="cs-preloader_in">
-    <img src="assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+    <img src="assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
   </div>
 </div>
   <!-- Start Header Section -->
@@ -602,22 +602,22 @@
     <h2 class="text-center">Trusted By Leading Professionals</h2>
     <div class="cs-partner_logo_wrap">
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/1.svg" alt="Partner">
+        <img src="assets/img/home/logo/1.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/2.svg" alt="Partner">
+        <img src="assets/img/home/logo/2.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/3.svg" alt="Partner">
+        <img src="assets/img/home/logo/3.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/4.svg" alt="Partner">
+        <img src="assets/img/home/logo/4.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/5.svg" alt="Partner">
+        <img src="assets/img/home/logo/5.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/6.svg" alt="Partner">
+        <img src="assets/img/home/logo/6.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
       </div>
     </div>
   </div>

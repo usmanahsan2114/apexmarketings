@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Compare Your Options — Agencies, Freelancers, Markets | Apex Marketings";
+$seo_title = "Compare Your Options — Agencies, Freelancers, Markets";
 $seo_desc = "Honest decision guides: Pakistani agency vs US agency, Apex vs Fiverr/Upwork, agency vs in-house, Pakistan vs India. Both-ways comparisons with no sales spin.";
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $seo_desc = "Honest decision guides: Pakistani agency vs US agency, Apex vs Five
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../include/header1.php'); ?>

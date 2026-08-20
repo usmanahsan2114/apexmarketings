@@ -128,8 +128,22 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      /* threshold MUST stay 0. A `.row` wrapping a whole article can be many
+         times the viewport height, and its intersectionRatio then tops out at
+         viewportH/elementH — for a 6600px body in a 900px window that is 0.13,
+         so any threshold above it never fires and the article stays at
+         opacity:0 until the reader scrolls most of the way through it. With
+         threshold 0 the negative bottom margin alone decides the trigger
+         point: the element reveals as its top crosses 94% of the viewport. */
+    }, { threshold: 0, rootMargin: "0px 0px -6% 0px" });
     items.forEach(function (el) { observer.observe(el); });
+
+    /* Anything already inside the first viewport reveals immediately, so
+       above-the-fold content is never blank on arrival. */
+    items.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add("is-visible");
+    });
   }
 
   function analytics() {

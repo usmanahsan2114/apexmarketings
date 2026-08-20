@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Marketing Automation – CRM, Email & Lead Nurture | Apex Marketings";
+$seo_title = "Marketing Automation – CRM, Email & Lead Nurture";
 $seo_desc = "CRM setup, email sequences, lead scoring, and follow-up automation that stops leads going cold. Scoped per project. Pakistan, USA, UK, UAE.";
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $seo_desc = "CRM setup, email sequences, lead scoring, and follow-up automation 
 <body>
   <div class="cs-preloader cs-center">
     <div class="cs-preloader_in">
-      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" />
+      <img src="../../assets/img/icons/apexlogo.svg" alt="Apex Marketings logo preloader" class="cs-preloader_img" width="400" height="400" decoding="async" loading="eager" />
     </div>
   </div>
   <?php include_once('../../include/headernew2.php'); ?>

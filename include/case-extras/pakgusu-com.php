@@ -16,7 +16,7 @@
           <style>#pakgusu-results a {color:rgb(20,120,190);text-decoration:underline;} #pakgusu-results h2 {margin-top:48px;}</style>
 
           <figure style="margin:0 0 36px;">
-            <img src="../../assets/img/pakgusu-results/stats_strip.png" alt="Pak Gusu results: 0 to 124 organic sessions/month, 0 to ~4,600 impressions/month, page-1 GCC rankings, cited by AI answer engines" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+            <img src="../../assets/img/pakgusu-results/stats_strip.png" alt="Pak Gusu results: 0 to 124 organic sessions/month, 0 to ~4,600 impressions/month, page-1 GCC rankings, cited by AI answer engines" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2600" height="400" decoding="async" />
           </figure>
 
           <blockquote style="border-left:4px solid #e6ad02;padding:6px 0 6px 22px;margin:0 0 36px;color:#fff;font-style:italic;font-size:18px;">
@@ -38,7 +38,7 @@
           <p>That format does double duty. It earns classic Google rankings, and it makes the content easy for AI answer engines to quote. Apex Marketings reinforced this with a published <strong><code>llms.txt</code></strong> file and deliberate entity clarity, so machines understand exactly who Pak Gusu is and what it makes.</p>
           <p>The payoff shows in the data: GA4 now records <strong>referral and assisted traffic from ChatGPT, Bing Copilot, and Google Gemini</strong>. In a market shifting toward AI-assisted answers (AEO), Pak Gusu is already being cited — not just ranked.</p>
 <figure style="margin:0 0 30px;">
-  <img src="../../assets/img/pakgusu-results/ai_citations.png" alt="Pak Gusu cited by ChatGPT, Bing Copilot and Google Gemini in GA4 referral and assisted traffic" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+  <img src="../../assets/img/pakgusu-results/ai_citations.png" alt="Pak Gusu cited by ChatGPT, Bing Copilot and Google Gemini in GA4 referral and assisted traffic" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="900" decoding="async" />
   <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Cited by ChatGPT, Bing Copilot and Google Gemini (GA4 referral / assisted).</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@
           <p>The Gulf isn't one search market — it's six. A buyer in Oman searches differently from one in Kuwait, and a meaningful share of the region searches in Arabic. So the growth program built <strong>country-level landing pages targeting GCC buyer intent</strong> across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, plus <strong>native Arabic (RTL) pages</strong> connected by reciprocal hreflang.</p>
           <p>This is why the rankings read like a Gulf map rather than a single lucky keyword. Google Search Console now shows page-1 average positions for queries such as <strong>laf supplier ksa (#2.2), modular cleanroom qatar (#3.3), laf supplier oman (#3.3), laf supplier kuwait (#3.5), air shower supplier oman (#3.8), cleanroom companies in gcc (#4.5)</strong> and cleanroom equipment supplier in oman (#5.0) — with dozens more GCC queries sitting around positions 2–12, and brand searches at #1.</p>
           <figure style="margin:0 0 30px;">
-            <img src="../../assets/img/pakgusu-results/rankings.png" alt="Page-1 Google average positions across GCC buyer queries for Pak Gusu" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+            <img src="../../assets/img/pakgusu-results/rankings.png" alt="Page-1 Google average positions across GCC buyer queries for Pak Gusu" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2080" height="1280" decoding="async" />
             <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Page-1 average positions across GCC buyer queries (GSC).</figcaption>
           </figure>
 
@@ -54,11 +54,11 @@
           <p>A rebuilt site still has to be <em>found, crawled and indexed</em> — and this one started at zero indexed pages. Apex Marketings ran the crawl-health work to change that: <strong>fixing 21 legacy 404s with 301 redirects</strong>, keeping the site at <strong>0 broken links across 8,800+ internal references</strong>, and shipping a sitemap plus <strong>IndexNow</strong> to push new and updated URLs to search engines faster.</p>
           <p>The indexation curve tells the story. Google went from <strong>0 to roughly 55 indexed pages</strong> (of about 85), and impressions climbed from <strong>0 to about 4,600 per month</strong> and are still rising — up <strong>86% half-over-half</strong> (1,617 to 3,005 in the latest window). Getting pages indexed cleanly and quickly is the unglamorous work that makes every ranking above possible.</p>
           <figure style="margin:0 0 30px;">
-            <img src="../../assets/img/pakgusu-results/impressions.png" alt="Impressions rising from 0 to roughly 4,600 per month for Pak Gusu" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+            <img src="../../assets/img/pakgusu-results/impressions.png" alt="Impressions rising from 0 to roughly 4,600 per month for Pak Gusu" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1040" decoding="async" />
             <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Impressions: 0 &rarr; ~4,600/month, up 86% half-over-half (1,617 &rarr; 3,005).</figcaption>
           </figure>
 <figure style="margin:0 0 30px;">
-  <img src="../../assets/img/pakgusu-results/indexation.png" alt="Indexation grew from 0 to roughly 55 of the 85 rebuilt pages, with 21 legacy 404s fixed via 301 redirects" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+  <img src="../../assets/img/pakgusu-results/indexation.png" alt="Indexation grew from 0 to roughly 55 of the 85 rebuilt pages, with 21 legacy 404s fixed via 301 redirects" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1040" decoding="async" />
   <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Indexation: 0 &rarr; ~55 of ~85 pages (GSC).</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@
           <h2 class="cs-font_36 mb-4">The results — and an honest read on what's next</h2>
           <p><strong>In two months, from zero:</strong> organic search sessions grew <strong>0 &rarr; 124 per month</strong> (Google-organic, GA4), on a measured climb of 78 &rarr; 91 &rarr; 99 &rarr; 124 and consistently rising. Impressions went <strong>0 &rarr; ~4,600/month</strong> and are still climbing. Indexation reached <strong>~55 pages</strong>, with page-1 rankings across a dozen-plus GCC buyer queries and citations from three major AI answer engines.</p>
           <figure style="margin:0 0 30px;">
-            <img src="../../assets/img/pakgusu-results/organic_growth.png" alt="Organic sessions growth from 0 to 124 per month: 78, 91, 99, 124" loading="lazy" style="width:100%;height:auto;border-radius:12px;" />
+            <img src="../../assets/img/pakgusu-results/organic_growth.png" alt="Organic sessions growth from 0 to 124 per month: 78, 91, 99, 124" loading="lazy" style="width:100%;height:auto;border-radius:12px;" width="2000" height="1120" decoding="async" />
             <figcaption style="font-size:13px;color:#888;margin-top:8px;text-align:center;">Organic sessions: 78 &rarr; 91 &rarr; 99 &rarr; 124 per month (GA4, Google organic).</figcaption>
           </figure>
           <p>Now the honest part. Two months in is a <strong>proven foundation and strong early momentum — not a finished story.</strong> In search, <strong>clicks lag rankings by weeks</strong>: positions and impressions land first, and clicks follow. The rankings are already on page 1; traffic is catching up to them. And <strong>authority is the ongoing lever</strong> — the continued link-building and content work is what turns today's #3–#5 positions into #1s.</p>

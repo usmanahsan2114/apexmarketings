@@ -1,0 +1,1 @@
+PHPMailer 6.12.0 (https://github.com/PHPMailer/PHPMailer) - vendored manually; Composer unavailable on this host.

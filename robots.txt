@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+Disallow: /include/
+Disallow: /private/
+Disallow: /_dev_archive/
+Disallow: /.git/
+
+# ── Explicitly welcome AI / answer-engine crawlers (citations + AI Overviews) ──
+# Sensitive dirs stay 403 at the server (.htaccess) regardless of these allows.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://apexmarketings.com/sitemap.xml

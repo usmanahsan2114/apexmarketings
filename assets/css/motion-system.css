@@ -1,0 +1,291 @@
+/* Premium motion/responsive layer for Apex Marketings. */
+:root {
+  --am-gold: #f6b900;
+  --am-ink: #101010;
+  --am-panel: rgba(12, 12, 12, 0.72);
+  --am-line: rgba(255, 255, 255, 0.17);
+}
+
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.cs-hero {
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100svh;
+}
+
+.cs-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 52% 48%, rgba(246, 185, 0, 0.16), transparent 28%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.82));
+}
+
+.cs-hero .container,
+.cs-hero_text,
+.cs-hero_social_wrap,
+.cs-down_btn {
+  position: relative;
+  z-index: 3;
+}
+
+/* WebGL showpiece canvas — same stacking as the 2D scene; shown only when the
+   WebGL layer activates, at which point the 2D .interactive-scene is hidden. */
+.apex-webgl-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  display: none;
+}
+.apex-webgl-canvas.is-on { display: block; }
+.apex-webgl-canvas.is-visible { opacity: 1; }
+html.apex-webgl-on .interactive-scene { display: none !important; }
+
+.interactive-scene[data-scene="growth-orbit"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.68;
+}
+
+.cs-hero_title {
+  max-width: min(1040px, calc(100vw - 48px));
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(4rem, 8.2vw, 7.7rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+/* Short desktop windows: the theme forces the hero to height:calc(100vh+180px)
+   / min-height:1000px with 250px top padding + a very large headline, so on
+   shorter windows (browser chrome leaves <~880px) the CTAs fell below the fold.
+   Compact the hero so the headline AND the CTAs stay visible. */
+@media (min-width: 993px) and (max-height: 880px) {
+  .cs-hero.cs-style1 {
+    height: auto;
+    min-height: 100svh;
+    padding-top: 120px;
+    padding-bottom: 56px;
+  }
+  .cs-hero.cs-style1 .cs-hero_title {
+    font-size: clamp(2.6rem, 5.6vw, 4.4rem);
+    margin-bottom: 28px;
+  }
+  .cs-hero.cs-style1 .cs-hero_subtitle { margin-bottom: 28px; }
+}
+@media (min-width: 993px) and (max-height: 720px) {
+  .cs-hero.cs-style1 { padding-top: 104px; }
+  .cs-hero.cs-style1 .cs-hero_title { font-size: clamp(2.3rem, 4.8vw, 3.6rem); }
+}
+
+.cs-hero_subtitle {
+  max-width: min(760px, calc(100vw - 48px));
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.cs-hero_btns {
+  max-width: calc(100vw - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.am-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: min(820px, calc(100vw - 48px));
+  margin: 28px auto 0;
+}
+
+.am-proof-card {
+  border: 1px solid var(--am-line);
+  background: var(--am-panel);
+  backdrop-filter: blur(14px);
+  padding: 15px 16px;
+  color: #fff;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.am-proof-card b {
+  display: block;
+  color: var(--am-gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.am-proof-card span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.am-proof-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(246, 185, 0, 0.58);
+}
+
+[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+[data-motion="reveal"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+[data-motion="reveal"].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+
+  .cs-hero {
+    min-height: 760px;
+    text-align: left;
+  }
+
+  .slick-list,
+  .slick-slider,
+  .cs-slider {
+    max-width: 100vw;
+    overflow: hidden !important;
+  }
+
+  .cs-down_btn {
+    display: none !important;
+  }
+
+  .cs-hero .container {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .cs-hero_text {
+    width: min(100%, 326px);
+    max-width: 326px;
+    text-align: left;
+    padding-top: 178px;
+    overflow: visible;
+  }
+
+  .cs-hero_title {
+    max-width: 100%;
+    font-size: clamp(2.55rem, 12vw, 4rem);
+    line-height: 1.08;
+    text-align: left;
+  }
+
+  .cs-hero_title br {
+    display: none;
+  }
+
+  .cs-hero_subtitle {
+    box-sizing: border-box;
+    display: block !important;
+    width: min(100%, 302px);
+    max-width: 302px;
+    font-size: 1rem;
+    text-align: left;
+    white-space: normal !important;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .cs-hero_info {
+    box-sizing: border-box;
+    display: block !important;
+    width: min(100%, 302px);
+    max-width: 302px;
+  }
+
+  .cs-hero_btns {
+    justify-content: flex-start !important;
+    max-width: 100%;
+  }
+
+  .cs-hero_btns .cs-btn {
+    width: min(100%, 280px);
+    justify-content: center;
+  }
+
+  .am-proof-strip {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 22px;
+  }
+
+  .cs-hero_social_wrap {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-scene {
+    display: none !important;
+  }
+
+  [data-motion="reveal"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===========================================================================
+   Dark-theme content readability. Many content pages (glossary, locations,
+   blogs, etc.) set inline color:#333/#555 on article/paragraph text that sits
+   on the near-black (#181818) body — only ~2:1 contrast, failing WCAG AA.
+   Lift it to a readable light grey, but ONLY inside DARK .cs-spacing sections
+   (those without an inline light background), so the ~78 light #fafafa/#fff
+   reading sections keep their correct dark text. Scoped + tested, not blanket.
+   =========================================================================== */
+.cs-spacing:not([style*="background"]) [style*="color:#333"],
+.cs-spacing:not([style*="background"]) [style*="color: #333"] {
+  color: #e6e6e6 !important;
+}
+.cs-spacing:not([style*="background"]) [style*="color:#555"],
+.cs-spacing:not([style*="background"]) [style*="color: #555"] {
+  color: #cfcfcf !important;
+}
+/* Brand the inline body links (were unstyled default-blue) with the AM gold accent. */
+.cs-spacing:not([style*="background"]) article a,
+.cs-spacing:not([style*="background"]) p a {
+  color: #e6ad02;
+}
+.cs-spacing:not([style*="background"]) article a:hover,
+.cs-spacing:not([style*="background"]) p a:hover {
+  color: #ffce47;
+}

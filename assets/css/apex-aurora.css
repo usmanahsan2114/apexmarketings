@@ -718,6 +718,18 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
    handlers that set a black shadow on a near-black card (invisible) and gave
    keyboard users no feedback at all. Same motion, now with a brand-tinted glow
    and a real :focus-visible state. */
+.cs-filter_btn {
+  /* Was an <a href="#">; keep the link's appearance now that it is a button. */
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+}
+.cs-filter_btn[aria-pressed="true"] { color: var(--aur-brand); }
+
 .aur-linkcard {
   position: relative;
   transition:

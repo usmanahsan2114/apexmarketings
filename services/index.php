@@ -10,6 +10,63 @@
   <?php include_once('../include/head1.php'); ?>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apexmarketings.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://apexmarketings.com/services/"}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://apexmarketings.com/services/#webpage","name":"Digital Marketing Services","url":"https://apexmarketings.com/services/","description":"All digital marketing services offered by Apex Marketings.","isPartOf":{"@type":"WebSite","url":"https://apexmarketings.com"}}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://apexmarketings.com/services/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which marketing service should we start with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on how fast you need pipeline and how much you can invest up front. Paid ads produce enquiries within weeks but stop when the budget stops. SEO takes months to build and then compounds. If the website already converts badly, conversion rate optimisation beats sending more traffic to it. We recommend a starting channel on the discovery call rather than selling the largest retainer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do your services cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Real starting-from rates are published on the pricing page rather than hidden: SEO from USD 800/month, Google Ads and Meta Ads from USD 600/month plus ad spend, social media management from USD 500/month, lead generation from USD 1,200/month, and a full-service retainer from USD 2,000/month. A fixed quote follows a free 30-minute call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with businesses outside Pakistan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Apex Marketings works with brands in Pakistan, the United States, the United Kingdom and the UAE, delivered remotely with reporting and calls scheduled around your timezone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we hire you for one service instead of a full retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Single-channel engagements are normal, and so are one-off pieces of work such as an SEO audit, a landing-page build or a branding sprint. Nothing here requires a bundle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you report on results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Against the numbers that map to revenue: qualified enquiries, cost per lead, organic impressions and clicks from Search Console, and assisted conversions in GA4. You get a weekly written status report, a bi-weekly call and a monthly performance review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you also build the website, or only run campaigns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. We build and develop websites as well as running the campaigns that point at them, which removes the usual handoff where the agency cannot change the page the ad lands on."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -36,6 +93,37 @@
   </div>
   <!-- End Hero -->
   <div class="cs-height_150 cs-height_lg_80"></div>
+  <!-- Answer-first intro: definitional answer, a channel-selection table, then FAQ. -->
+  <div class="container">
+    <div class="aur-answer">
+      <span class="aur-answer__label">Quick answer</span>
+      <p>Apex Marketings runs the whole demand side of a business: SEO and local SEO, Google and Meta ads, LinkedIn ads, social media and Instagram growth, lead generation, conversion optimisation, marketing automation, content, branding, e-commerce and the websites underneath all of it. Most clients start with one channel and add others once it is producing, rather than buying a full retainer on day one.</p>
+    </div>
+    <div class="cs-height_50 cs-height_lg_30"></div>
+    <div class="aur-table-wrap">
+      <table class="aur-table">
+        <caption>Choosing a starting channel</caption>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">What it buys you</th>
+            <th scope="col">Time to results</th>
+            <th scope="col">Best fit</th>
+          </tr>
+        </thead>
+        <tbody>
+                <tr><th scope="row">SEO &amp; Local SEO</th><td>Compounding organic demand</td><td>Months, then compounds</td><td>Businesses that will still be here in a year</td></tr>
+                <tr><th scope="row">Google &amp; Meta Ads</th><td>Immediate, controllable traffic</td><td>Days to weeks</td><td>Proven offers that need volume now</td></tr>
+                <tr><th scope="row">Lead Generation</th><td>Qualified enquiries end to end</td><td>Weeks</td><td>Sales teams that need a filled calendar</td></tr>
+                <tr><th scope="row">Conversion Optimisation</th><td>More revenue from existing traffic</td><td>Weeks</td><td>Sites already getting visitors that do not convert</td></tr>
+                <tr><th scope="row">Social &amp; Instagram</th><td>Audience and brand demand</td><td>Months</td><td>Brands where trust precedes purchase</td></tr>
+                <tr><th scope="row">Branding &amp; Website</th><td>The asset everything else points at</td><td>Project-based</td><td>Anyone whose site undercuts the marketing</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="cs-height_70 cs-height_lg_40"></div>
+
   <!-- Start Service Section -->
   <section class="cs-shape_wrap_4 cs-parallax">
     <div class="cs-shape_4 cs-to_up"></div>
@@ -170,6 +258,44 @@
       </div>
     </div>
   </section>
+
+  <!-- Service FAQ (mirrors the FAQPage markup in the head) -->
+  <div class="container">
+    <div class="cs-height_70 cs-height_lg_40"></div>
+    <div class="cs-section_heading cs-style1">
+      <h3 class="cs-section_subtitle">Questions</h3>
+      <h2 class="cs-section_title">Frequently asked questions</h2>
+    </div>
+    <div class="cs-height_45 cs-height_lg_30"></div>
+    <div class="aur-faq">
+                  <details open>
+                    <summary>Which marketing service should we start with?</summary>
+                    <div class="aur-faq__a">It depends on how fast you need pipeline and how much you can invest up front. Paid ads produce enquiries within weeks but stop when the budget stops. SEO takes months to build and then compounds. If the website already converts badly, conversion rate optimisation beats sending more traffic to it. We recommend a starting channel on the discovery call rather than selling the largest retainer.</div>
+                  </details>
+                  <details>
+                    <summary>How much do your services cost?</summary>
+                    <div class="aur-faq__a">Real starting-from rates are published on the pricing page rather than hidden: SEO from USD 800/month, Google Ads and Meta Ads from USD 600/month plus ad spend, social media management from USD 500/month, lead generation from USD 1,200/month, and a full-service retainer from USD 2,000/month. A fixed quote follows a free 30-minute call.</div>
+                  </details>
+                  <details>
+                    <summary>Do you work with businesses outside Pakistan?</summary>
+                    <div class="aur-faq__a">Yes. Apex Marketings works with brands in Pakistan, the United States, the United Kingdom and the UAE, delivered remotely with reporting and calls scheduled around your timezone.</div>
+                  </details>
+                  <details>
+                    <summary>Can we hire you for one service instead of a full retainer?</summary>
+                    <div class="aur-faq__a">Yes. Single-channel engagements are normal, and so are one-off pieces of work such as an SEO audit, a landing-page build or a branding sprint. Nothing here requires a bundle.</div>
+                  </details>
+                  <details>
+                    <summary>How do you report on results?</summary>
+                    <div class="aur-faq__a">Against the numbers that map to revenue: qualified enquiries, cost per lead, organic impressions and clicks from Search Console, and assisted conversions in GA4. You get a weekly written status report, a bi-weekly call and a monthly performance review.</div>
+                  </details>
+                  <details>
+                    <summary>Do you also build the website, or only run campaigns?</summary>
+                    <div class="aur-faq__a">Both. We build and develop websites as well as running the campaigns that point at them, which removes the usual handoff where the agency cannot change the page the ad lands on.</div>
+                  </details>
+    </div>
+    <div class="cs-height_70 cs-height_lg_40"></div>
+  </div>
+
   <!-- End Service Section -->
 
   <!-- Full service directory (text links — includes services not shown in the cards above) -->

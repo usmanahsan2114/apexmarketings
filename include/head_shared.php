@@ -50,6 +50,15 @@ $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Market
 <?php include __DIR__ . '/schema-org.php'; ?>
 <link rel="alternate" type="application/rss+xml" title="Apex Marketings Blog" href="https://apexmarketings.com/blogs/feed.xml">
 <style>.apex-skip-link{position:absolute;left:0;top:0;z-index:100000;background:#e6ad02;color:#000;padding:12px 20px;font-weight:600;border-radius:0 0 8px 0;text-decoration:none;transform:translateX(-110%);transition:transform .2s ease;}.apex-skip-link:focus{transform:translateX(0);}</style>
+<!-- The brand webfont is pulled in by an @import inside style.css, which makes it a
+     three-hop serial fetch (HTML -> style.css -> Google CSS -> font file). The font
+     therefore swapped in long after first paint and reflowed the bottom-aligned hero.
+     Requesting it directly here starts it at parse time, in parallel; the @import then
+     resolves from cache because the URL is identical. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap">
+
 <!-- Favicon Icon -->
 <link rel="icon" href="<?php echo $p; ?>assets/img/favicon.png">
 <!-- Stylesheets -->

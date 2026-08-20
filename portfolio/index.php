@@ -65,10 +65,10 @@
       </div>
       <div class="cs-isotop_filter cs-style1">
         <ul class="cs-mp0 cs-center"> 
-            <li class="active"><a href="#" data-filter="*">All</a></li>
-            <li><a href="#" data-filter=".web">Website Development</a></li>
-            <li><a href="#" data-filter=".social">Social Media</a></li>
-            <li><a href="#" data-filter=".market">Marketing</a></li>
+            <li class="active"><button type="button" class="cs-filter_btn" data-filter="*" aria-pressed="true">All</button></li>
+            <li><button type="button" class="cs-filter_btn" data-filter=".web" aria-pressed="false">Website Development</button></li>
+            <li><button type="button" class="cs-filter_btn" data-filter=".social" aria-pressed="false">Social Media</button></li>
+            <li><button type="button" class="cs-filter_btn" data-filter=".market" aria-pressed="false">Marketing</button></li>
           </ul>
       </div>
     </div>

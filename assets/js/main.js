@@ -320,11 +320,14 @@
         event.preventDefault();
       });
       /*=== Portfolio filtering ===*/
-      $('.cs-isotop_filter ul').on('click', 'a', function () {
+      $('.cs-isotop_filter ul').on('click', 'a, button', function () {
         var filterElement = $(this).attr('data-filter');
         $('.cs-isotop').isotope({
           filter: filterElement,
         });
+        /* Keep the accessible pressed state in step with the visual one. */
+        $(this).closest('ul').find('[aria-pressed]').attr('aria-pressed', 'false');
+        $(this).attr('aria-pressed', 'true');
       });
     }
   }

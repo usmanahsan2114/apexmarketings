@@ -106,6 +106,6 @@ $seo_desc = "Marketing for Healthcare Clinics & Practitioners from Apex Marketin
   <?php include_once('../../include/footer2.php'); ?>
 
   <script src="../../assets/js/plugins/jquery-3.6.0.min.js"></script>
-  <script src="../../assets/js/main.js?v=20260706-repair1"></script>
+  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
 </body>
 </html>

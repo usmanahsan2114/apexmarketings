@@ -170,6 +170,6 @@ Enhanced customer acquisition and retention through targeted efforts.
   <script src="../../assets/js/plugins/lightgallery.min.js"></script>
   <script src="../../assets/js/plugins/wow.min.js"></script>
   <script src="../../assets/js/plugins/gsap.min.js"></script>
-  <script src="../../assets/js/main.js?v=20260706-repair1"></script>
+  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
 </body>
 </html>

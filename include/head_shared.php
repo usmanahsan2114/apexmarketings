@@ -74,7 +74,7 @@ $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Market
 
 <!-- WebVitals real-user monitoring (uses GA4) -->
 <script src="<?php echo $p; ?>assets/js/web-vitals.js" defer></script>
-<script src="<?php echo $p; ?>assets/js/interaction-system.js" defer></script>
+<script src="<?php echo $p; ?>assets/js/interaction-system.js?v=<?php echo rawurlencode($asset_version); ?>" defer></script>
 <script src="<?php echo $p; ?>assets/js/apex-aurora.js?v=<?php echo rawurlencode($asset_version); ?>" defer></script>
 <script type="module" src="<?php echo $p; ?>assets/js/webgl-showpiece.js"></script>
 

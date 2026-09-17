@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -8,6 +8,18 @@
   $seo_desc = 'Practical guides on SEO, Google Ads, Meta Ads, social media, and e-commerce growth from the Apex Marketings team.';
 
   $apex_posts = array(
+      array('slug' => 'performance-marketing-vs-traditional-digital-marketing', 'cat' => 'Performance Marketing', 'date' => 'September 2026',
+          'title' => 'Performance Marketing vs Traditional Digital Marketing: The 2026 ROI Playbook',
+          'desc' => 'Why traditional vanity metrics are failing, how to track true Blended MER, attribution modeling, and running high-accountability paid acquisition.'),
+      array('slug' => 'meta-ads-scaling-b2b-ecommerce', 'cat' => 'Paid Social', 'date' => 'September 2026',
+          'title' => 'Meta Ads Management for High-Ticket B2B & eCommerce: Scaling Beyond 4x ROAS in 2026',
+          'desc' => 'Advantage+ Shopping Campaigns, creative testing engines, broad algorithmic targeting, and lead qualification funnels that eliminate junk leads.'),
+      array('slug' => 'how-to-choose-digital-marketing-agency-pakistan-uae', 'cat' => 'Buyer Guide', 'date' => 'September 2026',
+          'title' => 'How to Choose a Digital Marketing Agency in Pakistan & UAE: 2026 Vetting Guide, Pricing & Red Flags',
+          'desc' => 'Realistic pricing benchmarks in PKR, AED, and USD, 5 non-negotiable contract clauses to protect your budget, and questions every buyer must ask.'),
+      array('slug' => 'b2b-ecommerce-growth-strategy-wholesale-portals', 'cat' => 'E-Commerce', 'date' => 'September 2026',
+          'title' => 'B2B eCommerce Growth Strategy: Wholesale Portals & Lead Generation in 2026',
+          'desc' => 'Architecting gated customer pricing tiers, 1-click digital RFQ quote carts, and technical B2B SEO to capture high-volume commercial reorders.'),
       array('slug' => 'zero-to-page-one-gcc-2-month-b2b-seo-playbook', 'cat' => 'Case Study', 'date' => 'July 2026',
           'title' => 'From Zero to Page One in the GCC: The 2-Month B2B SEO Playbook (With Real Numbers)',
           'desc' => 'How a B2B exporter went from 0 organic visitors to 124 sessions/month and page-1 GCC rankings in two months — the answer-first SEO playbook, with real GA4 and GSC numbers.'),

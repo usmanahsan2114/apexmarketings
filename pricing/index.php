@@ -1,15 +1,163 @@
-﻿<?php
-$seo_title = "Pricing | Apex Marketings — Transparent Marketing Rates";
-$seo_desc = "Real starting-from prices for SEO, Google Ads, Meta Ads, social media, and full-service marketing retainers from Apex Marketings. PKR, USD, GBP rates.";
+<?php
+$seo_title = "Marketing Retainer Pricing | Transparent Rates in USD, PKR, AED, GBP | Apex Marketings";
+$seo_desc = "Transparent digital marketing pricing by Apex Marketings. Live currency switching across USD, PKR, AED, and GBP for SEO, Google Ads, Meta Ads, and e-commerce retainers.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
   <?php include_once('../include/head1.php'); ?>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apexmarketings.com/"},{"@type":"ListItem","position":2,"name":"Pricing","item":"https://apexmarketings.com/pricing/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"OfferCatalog","name":"Apex Marketings Service Pricing","url":"https://apexmarketings.com/pricing/","itemListElement":[{"@type":"Offer","name":"SEO Retainer","price":"800","priceCurrency":"USD"},{"@type":"Offer","name":"Google Ads Management","price":"600","priceCurrency":"USD"},{"@type":"Offer","name":"Meta Ads Management","price":"600","priceCurrency":"USD"},{"@type":"Offer","name":"Social Media Management","price":"500","priceCurrency":"USD"},{"@type":"Offer","name":"Full-Service Retainer","price":"2000","priceCurrency":"USD"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why don't most agencies publish pricing?","acceptedAnswer":{"@type":"Answer","text":"Two reasons: genuine scope variability and negotiation leverage. We publish starting-from numbers so you can budget honestly. Final quotes come after a 30-minute discovery call."}},{"@type":"Question","name":"Are these prices negotiable?","acceptedAnswer":{"@type":"Answer","text":"Yes, within reason. We discount 10-15% for 12-month commitments and repeat clients. We won't discount below sustainable rates \u2014 quality drops when teams are squeezed."}},{"@type":"Question","name":"Do you offer payment plans?","acceptedAnswer":{"@type":"Answer","text":"Yes for fixed-bid projects: 50/25/25 milestone-based. For retainers: monthly auto-charge or Net-15 invoicing."}},{"@type":"Question","name":"Do you require a deposit?","acceptedAnswer":{"@type":"Answer","text":"Yes \u2014 50% upfront on fixed-bid projects, first month upfront on retainers. No work begins before the deposit clears."}},{"@type":"Question","name":"Can you beat a competing quote?","acceptedAnswer":{"@type":"Answer","text":"Sometimes. We won't match quotes that are obviously below market (someone's losing money). We will match honest competitors and explain where each of us would do the work differently."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexmarketings.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://apexmarketings.com/pricing/"}
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Apex Marketings Transparent Service Pricing",
+        "url": "https://apexmarketings.com/pricing/",
+        "itemListElement": [
+          {"@type": "Offer", "name": "SEO & Organic Growth Retainer", "price": "800", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "Google Ads PPC Management", "price": "600", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "Meta Ads (FB & IG) Management", "price": "600", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "Social Media Content & Growth", "price": "500", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "E-Commerce Growth Retainer", "price": "2500", "priceCurrency": "USD"},
+          {"@type": "Offer", "name": "Full-Service Multi-Channel Retainer", "price": "2000", "priceCurrency": "USD"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why does Apex Marketings publish transparent pricing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most agencies conceal rates to maximize markups during sales negotiations. We publish baseline starting figures across USD, PKR, AED, and GBP so businesses can plan budgets realistically before engaging in a discovery call."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are digital marketing retainers negotiable?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, for long-term 6 or 12-month commitments and repeat clients, we offer 10% to 15% rate optimizations. We maintain firm standards against unsustainably discounted rates to ensure senior strategists manage your accounts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which currencies and payment channels do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We accept USD, GBP, EUR, AED, and PKR. International payments are processed via Wise Business, direct SWIFT wire, or Stripe Atlas corporate card invoicing. Pakistani clients can pay directly via local bank transfer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who owns our ad accounts and tracking data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You retain 100% ownership of your Meta Business Manager, Google Ads accounts, Google Analytics properties, and Tag Manager containers. We operate strictly as partner managers with administrative delegation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    .currency-selector-bar {
+      display: inline-flex;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 40px;
+      padding: 4px;
+      margin-bottom: 35px;
+    }
+    .curr-btn {
+      background: transparent;
+      border: none;
+      color: #999;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .curr-btn.active {
+      background: #1478be;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(20,120,190,0.4);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .price-card {
+      background: #161616;
+      border: 1px solid #282828;
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .price-card:hover {
+      transform: translateY(-4px);
+      border-color: #1478be;
+    }
+    .price-card.featured {
+      border-color: #e6ad02;
+      background: linear-gradient(180deg, rgba(230,173,2,0.06), #161616);
+      position: relative;
+    }
+    .badge-feat {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: #e6ad02;
+      color: #000;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .price-amount {
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+      margin: 12px 0 6px;
+    }
+    .price-period {
+      font-size: 13px;
+      color: #888;
+    }
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.8;
+    }
+    .feature-list li::before {
+      content: "✓ ";
+      color: #4ade80;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <div class="cs-preloader cs-center">
@@ -19,101 +167,283 @@ $seo_desc = "Real starting-from prices for SEO, Google Ads, Meta Ads, social med
   </div>
   <?php include_once('../include/header1.php'); ?>
 
-  <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 300px; background-color: #111;">
+  <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 320px; background-color: #111;">
     <div class="container">
       <div class="cs-page_heading_in">
-        <h1 class="cs-page_title cs-font_50 cs-white_color">Transparent Pricing</h1>
-        <ol class="breadcrumb" style="background:transparent;justify-content:center;color:rgba(255,255,255,0.7);font-size:14px;margin-top:14px;"><a href="../">Home</a> <span style="opacity:0.5;margin:0 8px;">/</span> <span aria-current="page">Pricing</span></ol>
+        <h1 class="cs-page_title cs-font_50 cs-white_color">Transparent Marketing Pricing</h1>
+        <p class="cs-white_color" style="opacity:0.8;max-width:680px;margin:12px auto 0;font-size:16px;">
+          Starting Rates Across Real Retainer Models. No Hidden Fees, No Hostage Accounts.
+        </p>
+        <ol class="breadcrumb" style="background:transparent;justify-content:center;color:rgba(255,255,255,0.7);font-size:14px;margin-top:14px;">
+          <a href="../">Home</a> <span style="opacity:0.5;margin:0 8px;">/</span> 
+          <span aria-current="page">Pricing</span>
+        </ol>
       </div>
     </div>
   </div>
 
-  <style>.cs-spacing article{color:#e8e8e8}.cs-spacing article .lead{color:#cfcfcf}.cs-spacing article a{color:#e6ad02;text-decoration:underline}.cs-spacing article a:hover{color:#ffce47}.cs-spacing article h2,.cs-spacing article h3,.cs-spacing article strong{color:#fff}</style>
   <section class="cs-spacing">
     <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
       <div class="row">
+        <div class="col-lg-12 text-center">
+          
+          <!-- Dynamic Currency Switcher -->
+          <div class="currency-selector-wrap">
+            <span style="display:block;font-size:13px;color:#aaa;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;">Select Currency</span>
+            <div class="currency-selector-bar">
+              <button class="curr-btn active" data-currency="USD">USD ($)</button>
+              <button class="curr-btn" data-currency="PKR">PKR (Rs)</button>
+              <button class="curr-btn" data-currency="AED">AED (AED)</button>
+              <button class="curr-btn" data-currency="GBP">GBP (£)</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          
+          <!-- Interactive Pricing Cards -->
+          <div class="pricing-grid">
+            
+            <!-- Card 1: SEO -->
+            <div class="price-card">
+              <div>
+                <h3 class="cs-font_22 cs-white_color" style="margin-top:0;">SEO &amp; Local Visibility</h3>
+                <p style="font-size:13px;color:#aaa;margin:0;">Technical audit, on-page optimization, and high-intent commercial rank acquisition.</p>
+                <div class="price-amount" data-usd="800" data-pkr="220000" data-aed="2950" data-gbp="650">$800</div>
+                <div class="price-period">per month (starting retainer)</div>
+                <ul class="feature-list">
+                  <li>Technical SEO &amp; Core Web Vitals audit</li>
+                  <li>Keyword intent mapping &amp; competitor gap analysis</li>
+                  <li>On-page schema markup deployment</li>
+                  <li>Monthly high-authority editorial backlink outreach</li>
+                  <li>Weekly Looker Studio KPI performance dashboard</li>
+                </ul>
+              </div>
+              <a href="../quote/?service=seo" class="cs-btn cs-style1" style="background:#1e1e1e;border:1px solid #444;color:#fff;text-align:center;padding:12px;border-radius:6px;text-decoration:none;display:block;">Get Scoped SEO Quote</a>
+            </div>
+
+            <!-- Card 2: Google Ads -->
+            <div class="price-card">
+              <div>
+                <h3 class="cs-font_22 cs-white_color" style="margin-top:0;">Google Ads PPC</h3>
+                <p style="font-size:13px;color:#aaa;margin:0;">High-intent Search, Performance Max, and Shopping campaigns that maximize ROAS.</p>
+                <div class="price-amount" data-usd="600" data-pkr="170000" data-aed="2200" data-gbp="490">$600</div>
+                <div class="price-period">per month + your ad spend</div>
+                <ul class="feature-list">
+                  <li>Full negative keyword filtering architecture</li>
+                  <li>Performance Max &amp; Shopping feed optimization</li>
+                  <li>Advanced server-side conversion tracking</li>
+                  <li>Landing page A/B headline &amp; CTA testing</li>
+                  <li>Bi-weekly strategy calls &amp; budget scaling</li>
+                </ul>
+              </div>
+              <a href="../quote/?service=google-ads" class="cs-btn cs-style1" style="background:#1e1e1e;border:1px solid #444;color:#fff;text-align:center;padding:12px;border-radius:6px;text-decoration:none;display:block;">Get Scoped PPC Quote</a>
+            </div>
+
+            <!-- Card 3: Meta Ads -->
+            <div class="price-card featured">
+              <span class="badge-feat">High Demand</span>
+              <div>
+                <h3 class="cs-font_22 cs-white_color" style="margin-top:0;">Meta Ads (FB &amp; IG)</h3>
+                <p style="font-size:13px;color:#aaa;margin:0;">Full-funnel creative testing and audience scaling for D2C brands and service leads.</p>
+                <div class="price-amount" data-usd="600" data-pkr="170000" data-aed="2200" data-gbp="490">$600</div>
+                <div class="price-period">per month + your ad spend</div>
+                <ul class="feature-list">
+                  <li>15–20 creative hook tests monthly (video, static, UGC)</li>
+                  <li>Advantage+ audience and catalog feed optimization</li>
+                  <li>CAPI (Conversions API) server-side integration</li>
+                  <li>Full retention &amp; abandoned cart remarketing</li>
+                  <li>Targeting 3.5x to 5.0x verified ROAS</li>
+                </ul>
+              </div>
+              <a href="../quote/?service=meta-ads" class="cs-btn cs-style1" style="background:#e6ad02;color:#000;font-weight:700;text-align:center;padding:12px;border-radius:6px;text-decoration:none;display:block;">Scale Meta Ads</a>
+            </div>
+
+            <!-- Card 4: Full-Service -->
+            <div class="price-card">
+              <div>
+                <h3 class="cs-font_22 cs-white_color" style="margin-top:0;">Full-Service Growth</h3>
+                <p style="font-size:13px;color:#aaa;margin:0;">Multi-channel growth retainer uniting SEO, Google Ads, Meta Ads, and CRO.</p>
+                <div class="price-amount" data-usd="2000" data-pkr="560000" data-aed="7350" data-gbp="1600">$2,000</div>
+                <div class="price-period">per month (multi-channel retainer)</div>
+                <ul class="feature-list">
+                  <li>Omnichannel marketing strategy (Search + Paid Social)</li>
+                  <li>Dedicated senior growth director on your account</li>
+                  <li>Conversion rate optimization &amp; landing page engineering</li>
+                  <li>Automated WhatsApp / Email retention flows</li>
+                  <li>Live Slack channel &amp; weekly performance sprint</li>
+                </ul>
+              </div>
+              <a href="../quote/?service=full-service" class="cs-btn cs-style1" style="background:#1478be;color:#fff;text-align:center;padding:12px;border-radius:6px;text-decoration:none;display:block;">Book Retainer Consultation</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <article style="font-size:16px;line-height:1.7;color:#e8e8e8;">
-            <div class="lead" style="font-size:19px;line-height:1.6;margin-bottom:32px;color:#cfcfcf;">
-              Most marketing agencies hide pricing. We don't. Below are real starting-from numbers for every service we offer, the engagement models we support, and the variables that move price up or down. For a fixed quote, <a href="../contact/">book a free 30-minute call</a> or <a href="../quote/">submit the quote form</a>.
+          <article style="font-size:16px;line-height:1.8;color:#ddd;margin-top:40px;">
+            
+            <h2 class="cs-font_36 mb-4 cs-white_color">What Is Included in Every Apex Marketings Retainer</h2>
+            <ul style="line-height:1.8;padding-left:20px;margin:20px 0;">
+              <li style="margin-bottom:10px;"><strong>Free 30-minute discovery call</strong> to understand your commercial margins and customer lifetime value.</li>
+              <li style="margin-bottom:10px;"><strong>Comprehensive initial audit:</strong> Full review of tracking pixels, Google Tag Manager, ad creative fatigue, and crawl health.</li>
+              <li style="margin-bottom:10px;"><strong>Named Senior Strategist:</strong> Direct collaboration with experienced specialists, not junior account coordinators.</li>
+              <li style="margin-bottom:10px;"><strong>Weekly sprint reports &amp; bi-weekly video calls:</strong> Full accountability with transparent KPI benchmarks.</li>
+              <li style="margin-bottom:10px;"><strong>100% Account Ownership:</strong> You retain ownership of all ad accounts, analytics properties, creative files, and data.</li>
+              <li style="margin-bottom:10px;"><strong>Flexible exit terms:</strong> 30-day cancellation notice after initial onboarding period — we earn your business each month.</li>
+            </ul>
+
+            <h2 class="cs-font_36 mb-4 mt-5 cs-white_color">Engagement Models</h2>
+            <div class="row" style="margin:25px 0;">
+              <div class="col-md-4 mb-3">
+                <div style="background:#161616;padding:20px;border-radius:8px;border:1px solid #282828;">
+                  <h3 class="cs-font_18 cs-white_color" style="margin-top:0;">Monthly Retainer</h3>
+                  <p style="font-size:14px;color:#aaa;line-height:1.6;margin:0;">
+                    Predictable monthly fee for ongoing campaigns, continuous creative testing, and technical search visibility. Best for businesses seeking consistent scale.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div style="background:#161616;padding:20px;border-radius:8px;border:1px solid #282828;">
+                  <h3 class="cs-font_18 cs-white_color" style="margin-top:0;">Fixed-Bid Sprint</h3>
+                  <p style="font-size:14px;color:#aaa;line-height:1.6;margin:0;">
+                    Clearly defined single deliverables such as comprehensive SEO audits, high-converting landing page builds, or tracking infrastructure overhauls.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <div style="background:#161616;padding:20px;border-radius:8px;border:1px solid #282828;">
+                  <h3 class="cs-font_18 cs-white_color" style="margin-top:0;">Hybrid Performance</h3>
+                  <p style="font-size:14px;color:#aaa;line-height:1.6;margin:0;">
+                    Lower baseline retainer combined with a performance bonus based on verified incremental ROAS or qualified lead thresholds.
+                  </p>
+                </div>
+              </div>
             </div>
-            <style>article a {color:rgb(20,120,190);text-decoration:underline;} article h2 {margin-top:48px;} article h3 {margin-top:32px;}</style>
-            <h2 class="cs-font_36 mb-4">Starting-from rates by service (2026)</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>SEO retainer:</strong> from USD 800 / PKR 2.2 lakhs per month</li><li style="margin-bottom:10px;"><strong>Google Ads management:</strong> from USD 600 / PKR 1.7 lakhs per month + your ad spend</li><li style="margin-bottom:10px;"><strong>Meta Ads (Facebook + Instagram):</strong> from USD 600 / PKR 1.7 lakhs per month + ad spend</li><li style="margin-bottom:10px;"><strong>Social media management:</strong> from USD 500 / PKR 1.4 lakhs per month (2 platforms)</li><li style="margin-bottom:10px;"><strong>Instagram growth specialist:</strong> from USD 700 / PKR 2 lakhs per month</li><li style="margin-bottom:10px;"><strong>Lead generation campaign:</strong> from USD 1,200 / PKR 3.4 lakhs per month</li><li style="margin-bottom:10px;"><strong>Full-service retainer (SEO + paid + social):</strong> from USD 2,000 / PKR 5.6 lakhs per month</li><li style="margin-bottom:10px;"><strong>E-commerce growth retainer:</strong> from USD 2,500 / PKR 7 lakhs per month</li><li style="margin-bottom:10px;"><strong>One-off SEO audit:</strong> USD 500-2,000</li><li style="margin-bottom:10px;"><strong>Landing-page build (copy + design + dev):</strong> USD 800-3,500</li><li style="margin-bottom:10px;"><strong>Branding sprint:</strong> from USD 1,500 / PKR 4.2 lakhs (logo, palette, basic style guide)</li></ul>
-              <h2 class="cs-font_36 mb-4">What's included in every retainer</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>Free 30-minute discovery call</strong> before you commit</li><li style="margin-bottom:10px;"><strong>Paid 1-2 week Discovery Sprint</strong> (USD 500-2,000) that produces written scope, KPIs, and a fixed plan — output is yours regardless of whether you proceed</li><li style="margin-bottom:10px;"><strong>Named senior strategist</strong> who owns your account end-to-end</li><li style="margin-bottom:10px;"><strong>Weekly written status report</strong> + bi-weekly 30-minute video call</li><li style="margin-bottom:10px;"><strong>Monthly performance review</strong> with KPI-mapped reporting</li><li style="margin-bottom:10px;"><strong>30-day exit clause</strong> for the first 90 days (build trust before commitment)</li><li style="margin-bottom:10px;"><strong>Direct access to specialists</strong> (not just the PM)</li><li style="margin-bottom:10px;"><strong>Your accounts stay yours</strong> — we never own the ad accounts or analytics</li></ul>
-              <h2 class="cs-font_36 mb-4">Engagement models</h2>
-              <h3 class="cs-font_24 mt-4 mb-3">Monthly retainer</h3>
-              <p>Best for: ongoing SEO, paid ads, social media. You pay a fixed monthly fee for an agreed scope of work. Most common — 80% of our clients use this model. Pricing scales with platforms, channels, and content volume.</p>
-              <h3 class="cs-font_24 mt-4 mb-3">Fixed-bid project</h3>
-              <p>Best for: well-defined one-off work (SEO audits, landing-page builds, branding sprints, campaign launches). Fixed price agreed in advance after Discovery. Lower flexibility but predictable cost.</p>
-              <h3 class="cs-font_24 mt-4 mb-3">Performance / Rev-share</h3>
-              <p>Best for: established e-commerce brands with USD 100K+ monthly revenue and clean attribution. We charge a smaller retainer + a percentage of incremental revenue we drive. Requires trust on both sides and a 6-month minimum commitment.</p>
-              <h2 class="cs-font_36 mb-4">What drives the price up</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>Additional platforms or channels:</strong> +20-40% per new channel</li><li style="margin-bottom:10px;"><strong>Custom photography / video / UGC production:</strong> +USD 500-2,000 / month</li><li style="margin-bottom:10px;"><strong>Multi-language campaigns (English + Urdu, or English + Arabic):</strong> +30-50% per language</li><li style="margin-bottom:10px;"><strong>Reporting depth:</strong> custom dashboards / weekly reports (vs monthly) +10-20%</li><li style="margin-bottom:10px;"><strong>Compliance overhead:</strong> healthcare, finance, legal advertising +15-30%</li><li style="margin-bottom:10px;"><strong>Geographic reach:</strong> single-city vs international shifts costs significantly</li></ul>
-              <h2 class="cs-font_36 mb-4">Payment methods</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>USD invoicing:</strong> Wise, SWIFT wire, Stripe Atlas</li><li style="margin-bottom:10px;"><strong>GBP / EUR:</strong> Wise, SWIFT</li><li style="margin-bottom:10px;"><strong>AED / SAR:</strong> SWIFT or local bank wire</li><li style="margin-bottom:10px;"><strong>PKR:</strong> HBL, MCB, UBL bank transfer</li><li style="margin-bottom:10px;"><strong>Payment terms:</strong> 50% upfront for fixed-bid; Net-15 for monthly retainers (auto-charge available)</li></ul>
-            <h2 class="cs-font_36 mb-4 mt-5">Frequently Asked Questions</h2>
-              <h3 class="cs-font_24 mt-4 mb-2">Why don't most agencies publish pricing?</h3><p>Two reasons: genuine scope variability and negotiation leverage. We publish starting-from numbers so you can budget honestly. Final quotes come after a 30-minute discovery call.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Are these prices negotiable?</h3><p>Yes, within reason. We discount 10-15% for 12-month commitments and repeat clients. We won't discount below sustainable rates — quality drops when teams are squeezed.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Do you offer payment plans?</h3><p>Yes for fixed-bid projects: 50/25/25 milestone-based. For retainers: monthly auto-charge or Net-15 invoicing.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Do you require a deposit?</h3><p>Yes — 50% upfront on fixed-bid projects, first month upfront on retainers. No work begins before the deposit clears.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Can you beat a competing quote?</h3><p>Sometimes. We won't match quotes that are obviously below market (someone's losing money). We will match honest competitors and explain where each of us would do the work differently.</p>
-            <div style="margin-top:60px;padding-top:30px;border-top:1px solid #eee;">
-              <p><strong>Ready to talk?</strong> <a href="../contact/">Book a free 30-minute consultation</a> with Apex Marketings, or <a href="../quote/">request a project quote</a>.</p>
+
+            <h2 class="cs-font_36 mb-4 mt-5 cs-white_color">Frequently Asked Questions</h2>
+            <div style="margin-top:24px;">
+              <h3 class="cs-font_22 mb-2 cs-white_color">Why does Apex Marketings publish transparent pricing?</h3>
+              <p>
+                Most agencies conceal rates to maximize markups during sales negotiations. We publish baseline starting figures across USD, PKR, AED, and GBP so businesses can plan budgets realistically before engaging in a discovery call.
+              </p>
+
+              <h3 class="cs-font_22 mb-2 cs-white_color">Are digital marketing retainers negotiable?</h3>
+              <p>
+                Yes, for long-term 6 or 12-month commitments and repeat clients, we offer 10% to 15% rate optimizations. We maintain firm standards against unsustainably discounted rates to ensure senior strategists manage your accounts.
+              </p>
+
+              <h3 class="cs-font_22 mb-2 cs-white_color">Which currencies and payment channels do you accept?</h3>
+              <p>
+                We accept USD, GBP, EUR, AED, and PKR. International payments are processed via Wise Business, direct SWIFT wire, or Stripe Atlas corporate card invoicing. Pakistani clients can pay directly via local bank transfer.
+              </p>
+
+              <h3 class="cs-font_22 mb-2 cs-white_color">Who owns our ad accounts and tracking data?</h3>
+              <p>
+                You retain 100% ownership of your Meta Business Manager, Google Ads accounts, Google Analytics properties, and Tag Manager containers. We operate strictly as partner managers with administrative delegation.
+              </p>
             </div>
+
+            <div style="margin-top:60px;padding:30px;background:#151515;border-radius:12px;border:1px solid #262626;text-align:center;">
+              <h3 class="cs-font_28 cs-white_color" style="margin-top:0;margin-bottom:12px;">Get an Exact Quote for Your Business</h3>
+              <p style="max-width:600px;margin:0 auto 20px;color:#aaa;">
+                Every business has unique CAC targets and growth goals. Schedule a free 30-minute discovery call to receive a transparent, scoped proposal within 24 hours.
+              </p>
+              <a href="../contact/" class="cs-btn cs-style1" style="background:#1478be;color:#fff;padding:12px 30px;border-radius:6px;text-decoration:none;display:inline-block;margin-right:12px;">Book Discovery Call</a>
+              <a href="../quote/" class="cs-btn cs-style1" style="background:transparent;border:1px solid #444;color:#fff;padding:12px 30px;border-radius:6px;text-decoration:none;display:inline-block;">Request Scoped Quote</a>
+            </div>
+
           </article>
         </div>
       </div>
     </div>
   </section>
-  
-  <section class="cs-spacing" style="background:transparent;padding-top:60px;padding-bottom:60px;">
-    <div class="container">
-      <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <a href="../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Free estimate in 24 hours</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../process/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Our Process</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">How engagements run</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../blogs/digital-marketing-cost-pakistan-usa-uk-uae/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Marketing Cost Guide Blog</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Detailed pricing analysis</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../services/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Services</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">What we offer</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../trust/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Trust & Security</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">NDAs and confidentiality</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../contact/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Contact</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Free 30-minute call</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <!-- Currency Switcher JavaScript with Locale Auto-Detection & GA4 Event Tracking -->
+  <script>
+  (function() {
+    var currencySymbols = {
+      USD: '$',
+      PKR: 'Rs ',
+      AED: 'AED ',
+      GBP: '£'
+    };
+
+    function detectLocaleCurrency() {
+      try {
+        var tz = (Intl && Intl.DateTimeFormat) ? Intl.DateTimeFormat().resolvedOptions().timeZone : '';
+        if (/Karachi|Asia\/Karachi/i.test(tz)) return 'PKR';
+        if (/Dubai|Asia\/Dubai|Gulf/i.test(tz)) return 'AED';
+        if (/London|Europe\/London/i.test(tz)) return 'GBP';
+      } catch(e) {}
+      return 'USD';
+    }
+
+    function setCurrency(curr, isUserInitiated) {
+      var symbol = currencySymbols[curr] || '$';
+      document.querySelectorAll('.curr-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-currency') === curr) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      document.querySelectorAll('.price-amount').forEach(function(el) {
+        var attr = 'data-' + curr.toLowerCase();
+        var val = el.getAttribute(attr);
+        if (val) {
+          var num = parseInt(val, 10);
+          if (curr === 'PKR') {
+            if (num >= 100000) {
+              var lakhs = (num / 100000).toFixed(1).replace(/\.0$/, '');
+              el.textContent = 'Rs ' + lakhs + ' Lakh';
+            } else {
+              el.textContent = 'Rs ' + num.toLocaleString();
+            }
+          } else {
+            el.textContent = symbol + num.toLocaleString();
+          }
+        }
+      });
+
+      try {
+        localStorage.setItem('apex_preferred_currency', curr);
+      } catch(e) {}
+
+      if (isUserInitiated && typeof gtag === 'function') {
+        gtag('event', 'pricing_toggle_used', {
+          currency: curr,
+          page_location: window.location.href
+        });
+      }
+    }
+
+    // Initialize currency
+    var savedCurr = null;
+    try {
+      savedCurr = localStorage.getItem('apex_preferred_currency');
+    } catch(e) {}
+    var initialCurr = savedCurr || detectLocaleCurrency();
+    setCurrency(initialCurr, false);
+
+    // Bind click events
+    document.querySelectorAll('.curr-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var c = this.getAttribute('data-currency');
+        setCurrency(c, true);
+      });
+    });
+  })();
+  </script>
 
   <?php include_once('../include/footer1.php'); ?>
-
   <script src="../assets/js/plugins/jquery-3.6.0.min.js"></script>
   <script src="../assets/js/main.js?v=20260820-aurora1"></script>
 </body>

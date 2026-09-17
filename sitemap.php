@@ -1,15 +1,15 @@
 <?php
 /**
- * Self-healing sitemap generator (web-served).
+ * Self-healing Partitioned XML Sitemap & HTML Sitemap Generator.
+ * Conforms to Google Search Console XML Sitemap Index Specifications.
  *
- * Normally the static sitemap.xml / sitemap.html are served directly by Apache.
- * If those static files are ever missing from the deployed root (e.g. a File
- * Manager upload skipped them), .htaccess routes /sitemap.xml and /sitemap.html
- * here and this script generates them live from the filesystem — so the sitemap
- * URL never 404s and never goes stale when new pages are added.
- *
- * It also writes the static files back (best effort) so the fast path heals
- * itself on the first request.
+ * Partitions:
+ *   /sitemap.xml           -> Sitemap Index linking sub-sitemaps
+ *   /sitemap-pages.xml     -> Core corporate & marketing landing pages
+ *   /sitemap-services.xml  -> Service offerings (only canonical 200 OK endpoints)
+ *   /sitemap-locations.xml -> Geographic target pages
+ *   /sitemap-posts.xml     -> Blogs, guides & technical case studies
+ *   /sitemap.html          -> Human-navigable HTML sitemap
  */
 
 $DOMAIN = 'https://apexmarketings.com';
@@ -21,51 +21,63 @@ $excludeDirs = array(
     'assets', 'scss', 'node_modules', '.git', '.codex', 'sitemap-html',
     'thank-you', 'subscribe', 'search',
     'contact/downloads',
-    'case-studies/altrgroup-com',
-    'portfolio/e-commerce-store-performances',
+    'case-studies/altrgroup-com', // 301 redirected
+    'portfolio/e-commerce-store-performances', // 301 redirected
 );
 
 function apex_sm_excluded($rel, array $excludeDirs)
 {
+    $cleanRel = trim($rel, '/');
     foreach ($excludeDirs as $e) {
-        if ($rel === $e || strpos($rel, $e . '/') === 0) {
+        $cleanE = trim($e, '/');
+        if ($cleanRel === $cleanE || strpos($cleanRel, $cleanE . '/') === 0) {
             return true;
         }
     }
     return false;
 }
 
-$urls = array();
-if (is_file($ROOT . '/index.php')) {
-    $urls['/'] = filemtime($ROOT . '/index.php');
-}
-
-$dirIter = new RecursiveIteratorIterator(
-    new RecursiveCallbackFilterIterator(
-        new RecursiveDirectoryIterator($ROOT, FilesystemIterator::SKIP_DOTS),
-        function ($file, $key, $iter) use ($ROOT, $excludeDirs) {
-            $rel = str_replace('\\', '/', substr($file->getPathname(), strlen($ROOT) + 1));
-            if ($file->isDir()) {
-                return !apex_sm_excluded($rel, $excludeDirs);
-            }
-            return $file->getFilename() === 'index.php';
-        }
-    )
-);
-foreach ($dirIter as $file) {
-    $relDir = str_replace('\\', '/', substr($file->getPath(), strlen($ROOT)));
-    if ($relDir === '' || $relDir === false) {
-        continue;
+/**
+ * Scan $scanRoot for index.php endpoints
+ */
+function apex_sm_pages($scanRoot, $urlBase, array $excludeDirs, $applyExclude)
+{
+    $urls = array();
+    if (is_file($scanRoot . '/index.php')) {
+        $urls[$urlBase . '/'] = filemtime($scanRoot . '/index.php');
     }
-    $urls[$relDir . '/'] = $file->getMTime();
+    if (is_dir($scanRoot)) {
+        $iter = new RecursiveIteratorIterator(
+            new RecursiveCallbackFilterIterator(
+                new RecursiveDirectoryIterator($scanRoot, FilesystemIterator::SKIP_DOTS),
+                function ($file, $key, $it) use ($scanRoot, $excludeDirs, $applyExclude) {
+                    $rel = str_replace('\\', '/', substr($file->getPathname(), strlen($scanRoot) + 1));
+                    if ($file->isDir()) {
+                        return $applyExclude ? !apex_sm_excluded($rel, $excludeDirs) : true;
+                    }
+                    return $file->getFilename() === 'index.php';
+                }
+            )
+        );
+        foreach ($iter as $file) {
+            $relDir = str_replace('\\', '/', substr($file->getPath(), strlen($scanRoot)));
+            if ($relDir === '' || $relDir === false) {
+                continue;
+            }
+            if ($applyExclude && apex_sm_excluded($relDir, $excludeDirs)) {
+                continue;
+            }
+            $urls[$urlBase . $relDir . '/'] = $file->getMTime();
+        }
+    }
+    ksort($urls);
+    return $urls;
 }
-ksort($urls);
 
 function apex_sm_priority($path)
 {
     if ($path === '/') return '1.0';
     $top = explode('/', trim($path, '/'))[0];
-    $depth = substr_count(trim($path, '/'), '/');
     switch ($top) {
         case 'services': return '0.9';
         case 'contact':
@@ -97,59 +109,142 @@ function apex_sm_changefreq($path)
     return 'monthly';
 }
 
-// ---- build sitemap.xml ----
-$xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
-$xml .= "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
-foreach ($urls as $path => $mtime) {
-    $xml .= '<url><loc>' . htmlspecialchars($DOMAIN . $path, ENT_XML1)
-        . '</loc><lastmod>' . date('Y-m-d', $mtime)
-        . '</lastmod><changefreq>' . apex_sm_changefreq($path)
-        . '</changefreq><priority>' . apex_sm_priority($path)
-        . "</priority></url>\n";
-}
-$xml .= "</urlset>\n";
-
-// ---- build sitemap.html ----
-$groups = array();
-foreach ($urls as $path => $mtime) {
-    $top = $path === '/' ? 'Main' : ucwords(str_replace('-', ' ', explode('/', trim($path, '/'))[0]));
-    $groups[$top][] = $path;
-}
-ksort($groups);
-if (isset($groups['Main'])) {
-    $main = $groups['Main'];
-    unset($groups['Main']);
-    $groups = array_merge(array('Main' => $main), $groups);
-}
-$html = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n"
-    . "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
-    . '<title>HTML Sitemap | ' . htmlspecialchars($BRAND) . "</title>\n"
-    . '<meta name="description" content="Complete list of pages on ' . htmlspecialchars($BRAND) . '.">' . "\n"
-    . '<link rel="canonical" href="' . htmlspecialchars($DOMAIN) . '/sitemap.html">' . "\n"
-    . "<style>body{font-family:Arial,Helvetica,sans-serif;max-width:960px;margin:0 auto;padding:32px 20px;color:#222;line-height:1.6}h1{font-size:28px}h2{font-size:20px;margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}ul{columns:2;column-gap:40px;padding-left:20px}@media(max-width:640px){ul{columns:1}}a{color:#0b62a4}a:focus-visible{outline:3px solid #0b62a4;outline-offset:2px}</style>\n"
-    . "</head>\n<body>\n<main>\n<h1>" . htmlspecialchars($BRAND) . " — HTML Sitemap</h1>\n"
-    . '<p><a href="/">&#8592; Back to homepage</a> &middot; ' . count($urls) . " pages</p>\n";
-foreach ($groups as $name => $paths) {
-    $html .= '<h2>' . htmlspecialchars($name) . "</h2>\n<ul>\n";
-    foreach ($paths as $p) {
-        $label = $p === '/' ? 'Homepage' : trim($p, '/');
-        $html .= '<li><a href="' . htmlspecialchars($p) . '">' . htmlspecialchars($label) . "</a></li>\n";
+function apex_sm_urlset_xml($urls, $DOMAIN)
+{
+    $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    $xml .= "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+    foreach ($urls as $path => $mtime) {
+        $xml .= '<url><loc>' . htmlspecialchars($DOMAIN . $path, ENT_XML1)
+            . '</loc><lastmod>' . date('Y-m-d', $mtime)
+            . '</lastmod><changefreq>' . apex_sm_changefreq($path)
+            . '</changefreq><priority>' . apex_sm_priority($path)
+            . "</priority></url>\n";
     }
-    $html .= "</ul>\n";
+    $xml .= "</urlset>\n";
+    return $xml;
 }
-$html .= "</main>\n</body>\n</html>\n";
 
-// ---- heal the static files (best effort; ignore permission failures) ----
-@file_put_contents($ROOT . '/sitemap.xml', $xml);
-@file_put_contents($ROOT . '/sitemap.html', $html);
+function apex_sm_index_xml($sitemaps, $DOMAIN)
+{
+    $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    $xml .= "<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+    foreach ($sitemaps as $file => $mtime) {
+        $xml .= "  <sitemap>\n";
+        $xml .= '    <loc>' . htmlspecialchars($DOMAIN . '/' . $file, ENT_XML1) . "</loc>\n";
+        $xml .= '    <lastmod>' . date('Y-m-d', $mtime) . "</lastmod>\n";
+        $xml .= "  </sitemap>\n";
+    }
+    $xml .= "</sitemapindex>\n";
+    return $xml;
+}
 
-// ---- serve the requested format ----
-$reqHtml = (isset($_GET['format']) && $_GET['format'] === 'html')
-    || (stripos($_SERVER['REQUEST_URI'] ?? '', 'sitemap.html') !== false);
-if ($reqHtml) {
-    header('Content-Type: text/html; charset=UTF-8');
-    echo $html;
-} else {
+function apex_sm_html($urls, $DOMAIN, $BRAND)
+{
+    $groups = array();
+    foreach ($urls as $path => $mtime) {
+        $top = $path === '/' ? 'Main' : ucwords(str_replace('-', ' ', explode('/', trim($path, '/'))[0]));
+        $groups[$top][] = $path;
+    }
+    ksort($groups);
+    if (isset($groups['Main'])) {
+        $main = $groups['Main'];
+        unset($groups['Main']);
+        $groups = array_merge(array('Main' => $main), $groups);
+    }
+    $html = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n"
+        . "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+        . '<title>HTML Sitemap | ' . htmlspecialchars($BRAND) . "</title>\n"
+        . '<meta name="description" content="Complete list of pages on ' . htmlspecialchars($BRAND) . '.">' . "\n"
+        . '<link rel="canonical" href="' . htmlspecialchars($DOMAIN) . '/sitemap.html">' . "\n"
+        . "<style>body{font-family:Arial,Helvetica,sans-serif;max-width:960px;margin:0 auto;padding:32px 20px;color:#222;line-height:1.6}h1{font-size:28px}h2{font-size:20px;margin-top:32px;border-bottom:1px solid #eee;padding-bottom:6px}ul{columns:2;column-gap:40px;padding-left:20px}@media(max-width:640px){ul{columns:1}}a{color:#0b62a4}a:focus-visible{outline:3px solid #0b62a4;outline-offset:2px}</style>\n"
+        . "</head>\n<body>\n<main>\n<h1>" . htmlspecialchars($BRAND) . " — HTML Sitemap</h1>\n"
+        . '<p><a href="/">&#8592; Back to homepage</a> &middot; ' . count($urls) . " pages</p>\n";
+    foreach ($groups as $name => $paths) {
+        $html .= '<h2>' . htmlspecialchars($name) . "</h2>\n<ul>\n";
+        foreach ($paths as $p) {
+            $label = $p === '/' ? 'Homepage' : trim($p, '/');
+            $html .= '<li><a href="' . htmlspecialchars($p) . '">' . htmlspecialchars($label) . "</a></li>\n";
+        }
+        $html .= "</ul>\n";
+    }
+    $html .= "</main>\n</body>\n</html>\n";
+    return $html;
+}
+
+// Gather all clean pages
+$allUrls = apex_sm_pages($ROOT, '', $excludeDirs, true);
+
+// Partition URLs by taxonomy
+$partitionPages = array();
+$partitionServices = array();
+$partitionLocations = array();
+$partitionPosts = array();
+
+foreach ($allUrls as $path => $mtime) {
+    if (strpos($path, '/services/') === 0) {
+        $partitionServices[$path] = $mtime;
+    } elseif (strpos($path, '/locations/') === 0) {
+        $partitionLocations[$path] = $mtime;
+    } elseif (strpos($path, '/blogs/') === 0 || strpos($path, '/case-studies/') === 0) {
+        $partitionPosts[$path] = $mtime;
+    } else {
+        $partitionPages[$path] = $mtime;
+    }
+}
+
+// Generate XML content
+$now = time();
+$xmlPages = apex_sm_urlset_xml($partitionPages, $DOMAIN);
+$xmlServices = apex_sm_urlset_xml($partitionServices, $DOMAIN);
+$xmlLocations = apex_sm_urlset_xml($partitionLocations, $DOMAIN);
+$xmlPosts = apex_sm_urlset_xml($partitionPosts, $DOMAIN);
+
+$sitemapIndexList = array(
+    'sitemap-pages.xml' => $now,
+    'sitemap-services.xml' => $now,
+    'sitemap-locations.xml' => $now,
+    'sitemap-posts.xml' => $now,
+);
+$xmlIndex = apex_sm_index_xml($sitemapIndexList, $DOMAIN);
+$mainHtml = apex_sm_html($allUrls, $DOMAIN, $BRAND);
+
+// Heal/write all static files to root
+@file_put_contents($ROOT . '/sitemap.xml', $xmlIndex);
+@file_put_contents($ROOT . '/sitemap-pages.xml', $xmlPages);
+@file_put_contents($ROOT . '/sitemap-services.xml', $xmlServices);
+@file_put_contents($ROOT . '/sitemap-locations.xml', $xmlLocations);
+@file_put_contents($ROOT . '/sitemap-posts.xml', $xmlPosts);
+@file_put_contents($ROOT . '/sitemap.html', $mainHtml);
+
+// Handle request routing if called via web
+$reqUri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+$type = isset($_GET['type']) ? $_GET['type'] : '';
+
+if ($type === 'pages' || stripos($reqUri, 'sitemap-pages.xml') !== false) {
     header('Content-Type: application/xml; charset=UTF-8');
-    echo $xml;
+    echo $xmlPages;
+    exit;
 }
+if ($type === 'services' || stripos($reqUri, 'sitemap-services.xml') !== false) {
+    header('Content-Type: application/xml; charset=UTF-8');
+    echo $xmlServices;
+    exit;
+}
+if ($type === 'locations' || stripos($reqUri, 'sitemap-locations.xml') !== false) {
+    header('Content-Type: application/xml; charset=UTF-8');
+    echo $xmlLocations;
+    exit;
+}
+if ($type === 'posts' || stripos($reqUri, 'sitemap-posts.xml') !== false) {
+    header('Content-Type: application/xml; charset=UTF-8');
+    echo $xmlPosts;
+    exit;
+}
+if ((isset($_GET['format']) && $_GET['format'] === 'html') || stripos($reqUri, 'sitemap.html') !== false) {
+    header('Content-Type: text/html; charset=UTF-8');
+    echo $mainHtml;
+    exit;
+}
+
+header('Content-Type: application/xml; charset=UTF-8');
+echo $xmlIndex;

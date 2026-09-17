@@ -38,14 +38,22 @@ $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Market
 <meta name="twitter:image" content="https://apexmarketings.com/assets/img/home/hero_bg_2.webp">
 <link rel="canonical" href="<?php echo htmlspecialchars($current_url); ?>">
 <link rel="alternate" hreflang="en" href="<?php echo htmlspecialchars($current_url); ?>" />
-<link rel="alternate" hreflang="x-default" href="<?php echo htmlspecialchars($current_url); ?>" />
-<!-- Google tag (gtag.js) — GA4, loaded sitewide -->
+<!-- Resource hints for performance -->
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+<!-- Google tag (gtag.js) — GA4 with cross-domain measurement -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFX6VELY63"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-NFX6VELY63');
+  gtag('config', 'G-NFX6VELY63', {
+    'linker': {
+      'domains': ['apexmarketings.com', 'www.apexmarketings.com', 'apexitsolutions.co', 'www.apexitsolutions.co']
+    }
+  });
 </script>
 <?php include __DIR__ . '/schema-org.php'; ?>
 <link rel="alternate" type="application/rss+xml" title="Apex Marketings Blog" href="https://apexmarketings.com/blogs/feed.xml">
@@ -87,18 +95,35 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 </style>
 
-<!-- GA4 engagement events: WhatsApp / phone / email clicks, lead thank-you views -->
+<!-- GA4 engagement & conversion events -->
 <script>
 document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('a') : null;
   if (!a || typeof gtag !== 'function') return;
   var h = a.getAttribute('href') || '';
-  if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp.com') > -1) { gtag('event', 'whatsapp_click', { link_url: h }); }
-  else if (h.indexOf('tel:') === 0) { gtag('event', 'phone_click', { link_url: h }); }
-  else if (h.indexOf('mailto:') === 0) { gtag('event', 'email_click', { link_url: h }); }
+  if (h.indexOf('wa.me') > -1 || h.indexOf('whatsapp.com') > -1) {
+    gtag('event', 'whatsapp_click', { link_url: h });
+  } else if (h.indexOf('tel:') === 0) {
+    gtag('event', 'phone_click', { link_url: h });
+  } else if (h.indexOf('mailto:') === 0) {
+    gtag('event', 'email_click', { link_url: h });
+  } else if (h.indexOf('calendly.com') > -1 || h.indexOf('/quote/') > -1 || h.indexOf('/contact/') > -1) {
+    gtag('event', 'booking_initiated', { destination: h });
+  }
 }, true);
+
+// Form submission tracking
+document.addEventListener('submit', function (e) {
+  if (typeof gtag === 'function') {
+    var form = e.target;
+    var formId = form.id || form.getAttribute('name') || 'lead_form';
+    gtag('event', 'lead_form_submission', { form_id: formId, page_location: window.location.href });
+  }
+}, true);
+
 if (location.pathname.indexOf('/thank-you/') > -1 && typeof gtag === 'function') {
   gtag('event', 'generate_lead', { form_type: (new URLSearchParams(location.search)).get('type') || 'contact' });
+  gtag('event', 'lead_form_submission', { form_type: (new URLSearchParams(location.search)).get('type') || 'contact' });
 }
 </script>
 

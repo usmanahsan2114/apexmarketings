@@ -58,10 +58,10 @@
             <img src="../../assets/img/footer/footer_logo.svg" alt="Apex Marketings logo" width="120" height="120" decoding="async" loading="lazy">
         </a>
         <div class="cs-side_header_box">
-            <h2 class="cs-side_header_heading">Do you have a project in your <br> mind? Stay Connected.</h2>
+            <div class="cs-side_header_heading">Do you have a project in your <br> mind? Stay Connected.</div>
         </div>
         <div class="cs-side_header_box">
-            <h3 class="cs-side_header_title cs-primary_color">Contact Us</h3>
+            <div class="cs-side_header_title cs-primary_color">Contact Us</div>
             <ul class="cs-contact_info cs-style1 cs-mp0">
             <li>
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@
             </ul>
         </div>
         <div class="cs-side_header_box">
-            <h3 class="cs-side_header_title cs-primary_color">Subscribe</h3>
+            <div class="cs-side_header_title cs-primary_color">Subscribe</div>
             <div class="cs-newsletter cs-style1">
                 <form method="post" action="../../subscribe/" class="cs-newsletter_form"><input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;"><input type="hidden" name="source" value="header">
                     <input type="email" name="email" required class="cs-newsletter_input" placeholder="you@company.com" aria-label="Email address for newsletter">

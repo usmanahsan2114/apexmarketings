@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $apex_mockup_cases = [
     "apexitsolutions-co" => ["title" => "Apex IT Solutions", "url" => "https://apexitsolutions.co/", "category" => "Software Company Website", "industry" => "B2B Technology", "location" => "Pakistan / Global", "summary" => "A full digital presence for a technical services company, built to communicate software, web, DevOps, and automation capabilities with enterprise credibility."],
     "apexmarketings-com" => ["title" => "Apex Marketings", "url" => "https://apexmarketings.com/", "category" => "Marketing Agency Website", "industry" => "Digital Marketing", "location" => "Pakistan / Global", "summary" => "A conversion-focused agency website designed to present marketing services, proof, pricing, resources, and local/international growth expertise."],
@@ -154,7 +154,7 @@ $caseFacts = [
         <h1 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php echo htmlspecialchars($case["title"]); ?> Growth Case Study</h1>
       </div>
       <div class="cs-height_70 cs-height_lg_40"></div>
-      <img src="<?php echo $mockupBase; ?>hero-mockup-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> premium website mockup" class="w-100 cs-radius_15 apex-am-mockup-img" loading="lazy" width="1600" height="1000">
+      <img src="<?php echo $mockupBase; ?>hero-mockup-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> premium website mockup" class="w-100 cs-radius_15 apex-am-mockup-img" fetchpriority="high" decoding="async" width="1600" height="1000">
       <div class="cs-height_70 cs-height_lg_45"></div>
       <div class="apex-am-case-meta">
         <span><?php echo htmlspecialchars($case["industry"]); ?></span>
@@ -197,9 +197,9 @@ $caseFacts = [
       </div>
       <div class="cs-height_70 cs-height_lg_45"></div>
       <div class="apex-am-visual-grid">
-        <img src="<?php echo $mockupBase; ?>responsive-combo-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> responsive mockup" loading="lazy"<?php echo apex_img_dims("responsive-combo-1600x1000.webp"); ?>>
-        <img src="<?php echo $mockupBase; ?>fullpage-scroll.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> full-page scroll mockup" loading="lazy"<?php echo apex_img_dims("fullpage-scroll.webp"); ?>>
-        <img src="<?php echo $mockupBase; ?>clean-desktop.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> clean desktop screenshot" loading="lazy"<?php echo apex_img_dims("clean-desktop.webp"); ?>>
+        <img src="<?php echo $mockupBase; ?>responsive-combo-1600x1000.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> responsive mockup" loading="lazy" decoding="async" width="1600" height="1000">
+        <img src="<?php echo $mockupBase; ?>fullpage-scroll.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> full-page scroll mockup" loading="lazy" decoding="async" width="1600" height="1000">
+        <img src="<?php echo $mockupBase; ?>clean-desktop.webp" alt="<?php echo htmlspecialchars($case["title"]); ?> clean desktop screenshot" loading="lazy" decoding="async" width="1600" height="1000">
       </div>
       <div class="apex-am-case-cta">
         <h2>Want this level of presentation for your brand?</h2>

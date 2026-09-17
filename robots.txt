@@ -4,9 +4,14 @@ Disallow: /include/
 Disallow: /private/
 Disallow: /_dev_archive/
 Disallow: /.git/
+Disallow: /cdn-cgi/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /*?fbclid=
+Disallow: /*?utm_*
 
 # ── Explicitly welcome AI / answer-engine crawlers (citations + AI Overviews) ──
-# Sensitive dirs stay 403 at the server (.htaccess) regardless of these allows.
 User-agent: GPTBot
 Allow: /
 User-agent: OAI-SearchBot

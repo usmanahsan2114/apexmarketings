@@ -1,15 +1,94 @@
-﻿<?php
-$seo_title = "Digital Marketing for UAE-Based Brands | Apex Marketings";
-$seo_desc = "Digital marketing for UAE-based brands in Dubai, Abu Dhabi, and Sharjah — SEO, Google Ads, Meta Ads, and full-service retainers, one hour from your time zone.";
+<?php
+$seo_title = "Digital Marketing Agency UAE | Dubai & Abu Dhabi Real Estate SEO & Ads | Apex Marketings";
+$seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE brands in Dubai, Abu Dhabi, and Sharjah. Specializing in off-plan real estate lead generation, bilingual paid ads, and luxury brand growth.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
   <?php include_once('../../include/head2.php'); ?>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://apexmarketings.com/"},{"@type":"ListItem","position":2,"name":"Locations","item":"https://apexmarketings.com/locations/"},{"@type":"ListItem","position":3,"name":"UAE","item":"https://apexmarketings.com/locations/uae/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":["ProfessionalService","LocalBusiness"],"@id":"https://apexmarketings.com/locations/uae/#service","name":"Apex Marketings — UAE","description":"Digital marketing services for UAE-based clients in Dubai, Abu Dhabi, and Sharjah.","provider":{"@type":"Organization","name":"Apex Marketings","url":"https://apexmarketings.com/"},"areaServed":{"@type":"Country","name":"United Arab Emirates"},"url":"https://apexmarketings.com/locations/uae/"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you have a UAE office?","acceptedAnswer":{"@type":"Answer","text":"Our headquarters is in Rawalpindi, Pakistan. We don't maintain offices elsewhere; UAE work is delivered remotely with weekly reporting and milestone check-ins. We can visit for major milestones when scope justifies travel costs."}},{"@type":"Question","name":"What's your typical engagement size?","acceptedAnswer":{"@type":"Answer","text":"Focused retainers start from USD 600/month for Google or Meta Ads management and USD 800/month for SEO. Full-service retainers typically USD 2,000-6,000/month. One-off projects from USD 1,500. AED-denominated billing is available — see our pricing page for current equivalents."}},{"@type":"Question","name":"Can you work UAE business hours?","acceptedAnswer":{"@type":"Answer","text":"Yes — the UAE is only 1 hour behind Pakistan, so our working days overlap almost completely. Calls, reporting, and same-day turnarounds all happen inside your business hours."}},{"@type":"Question","name":"Do you run Arabic-language campaigns?","acceptedAnswer":{"@type":"Answer","text":"Our campaigns are produced in English, which covers a large share of the UAE's digital audience. For Arabic-market targeting we work with client-provided translations and native review — we won't pretend to native Arabic copywriting we don't have."}},{"@type":"Question","name":"Do you sign NDAs?","acceptedAnswer":{"@type":"Answer","text":"Yes, mutual NDAs are signed before any technical or financial discussion. Standard 3-year confidentiality term, your template or ours."}}]}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexmarketings.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Locations", "item": "https://apexmarketings.com/locations/"},
+          {"@type": "ListItem", "position": 3, "name": "UAE", "item": "https://apexmarketings.com/locations/uae/"}
+        ]
+      },
+      {
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": "https://apexmarketings.com/locations/uae/#agency",
+        "name": "Apex Marketings — UAE Digital Marketing & Real Estate Growth",
+        "description": "Enterprise performance marketing, off-plan real estate lead funnels, bilingual Google & Meta advertising, and SEO for brands across Dubai, Abu Dhabi, and Sharjah.",
+        "url": "https://apexmarketings.com/locations/uae/",
+        "telephone": "+923392012739",
+        "priceRange": "$$$",
+        "currenciesAccepted": "AED, USD",
+        "provider": {
+          "@type": "Organization",
+          "@id": "https://apexmarketings.com/#agency"
+        },
+        "areaServed": [
+          {"@type": "Country", "name": "United Arab Emirates", "sameAs": "https://en.wikipedia.org/wiki/United_Arab_Emirates"},
+          {"@type": "City", "name": "Dubai", "sameAs": "https://en.wikipedia.org/wiki/Dubai"},
+          {"@type": "City", "name": "Abu Dhabi", "sameAs": "https://en.wikipedia.org/wiki/Abu_Dhabi"},
+          {"@type": "City", "name": "Sharjah", "sameAs": "https://en.wikipedia.org/wiki/Sharjah"}
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "25.2048",
+          "longitude": "55.2708"
+        },
+        "hasMap": "https://maps.google.com/?q=25.2048,55.2708",
+        "parentOrganization": {
+          "@id": "https://apexmarketings.com/#agency"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://apexmarketings.com/locations/uae/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Apex Marketings generate qualified real estate investor leads in Dubai and Abu Dhabi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We combine high-intent Google Search campaigns targeting high-net-worth investors across the GCC, UK, and Europe with interactive multi-step project landing pages, instant WhatsApp qualification chatbots, and targeted Meta video campaigns. Our real estate lead funnels consistently deliver verified investor inquiries with validated budgets exceeding AED 1.5M."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you manage bilingual English and Arabic advertising campaigns?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We engineer dual-language funnels with localized search keyword architectures, Arabic ad copy variations, and cultural nuances tailored to both local Emarati buyers and international expatriate audiences across the UAE."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the operational time zone advantage of working with Apex Marketings from Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The UAE is just 1 hour behind Pakistan (GMT+4 vs GMT+5). Our operational hours completely overlap with your working day, enabling instantaneous WhatsApp communication, live Slack coordination, and same-day turnaround on campaign modifications."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle payments and retainers for UAE clients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We accept payments directly in UAE Dirhams (AED) or USD via direct bank wire, Wise, or corporate credit card invoicing. Retainers start from AED 2,500/month for single-channel management to AED 8,000 - 20,000/month for comprehensive multi-channel lead generation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="cs-preloader cs-center">
@@ -19,11 +98,18 @@ $seo_desc = "Digital marketing for UAE-based brands in Dubai, Abu Dhabi, and Sha
   </div>
   <?php include_once('../../include/headernew2.php'); ?>
 
-  <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 300px; background-color: #111;">
+  <div class="cs-page_heading cs-style1 cs-center text-center cs-bg" style="height: 320px; background-color: #111;">
     <div class="container">
       <div class="cs-page_heading_in">
-        <h1 class="cs-page_title cs-font_50 cs-white_color">Digital Marketing for UAE-Based Brands</h1>
-        <ol class="breadcrumb" style="background:transparent;justify-content:center;color:rgba(255,255,255,0.7);font-size:14px;margin-top:14px;"><a href="../../">Home</a> <span style="opacity:0.5;margin:0 8px;">/</span> <a href="../">Locations</a> <span style="opacity:0.5;margin:0 8px;">/</span> <span aria-current="page">UAE</span></ol>
+        <h1 class="cs-page_title cs-font_50 cs-white_color">Digital Marketing for UAE Brands</h1>
+        <p class="cs-white_color" style="opacity:0.8;max-width:720px;margin:12px auto 0;font-size:16px;">
+          High-Ticket Real Estate Lead Generation, Bilingual Paid Ads &amp; Premium Brand Positioning in Dubai &amp; Abu Dhabi
+        </p>
+        <ol class="breadcrumb" style="background:transparent;justify-content:center;color:rgba(255,255,255,0.7);font-size:14px;margin-top:14px;">
+          <a href="../../">Home</a> <span style="opacity:0.5;margin:0 8px;">/</span> 
+          <a href="../">Locations</a> <span style="opacity:0.5;margin:0 8px;">/</span> 
+          <span aria-current="page">UAE</span>
+        </ol>
       </div>
     </div>
   </div>
@@ -32,82 +118,136 @@ $seo_desc = "Digital marketing for UAE-based brands in Dubai, Abu Dhabi, and Sha
     <div class="container" style="padding-top: 60px; padding-bottom: 60px;">
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
-          <article style="font-size:16px;line-height:1.7;color:#ddd;">
-            <div class="lead" style="font-size:19px;line-height:1.6;margin-bottom:32px;color:#bbb;">
-              Apex Marketings serves <strong>UAE-based brands</strong> in Dubai, Abu Dhabi, and Sharjah from our Rawalpindi headquarters — one hour from your time zone. We work with e-commerce, real estate, home services, and professional services businesses that want senior strategy and disciplined execution without Gulf agency retainer prices. Your working day and ours overlap almost completely: same-day collaboration, no overnight waits.
+          <article style="font-size:16px;line-height:1.8;color:#ddd;">
+            
+            <!-- AEO Direct Answer Section -->
+            <div style="background:rgba(20,120,190,0.1);border:1px solid rgba(20,120,190,0.3);border-radius:12px;padding:28px;margin-bottom:40px;">
+              <h2 class="cs-font_24 cs-white_color" style="margin-top:0;margin-bottom:12px;">High-Yield Marketing Strategy for Dubai, Abu Dhabi &amp; Sharjah</h2>
+              <p style="margin:0;font-size:16px;line-height:1.7;color:#e2e8f0;">
+                Apex Marketings delivers high-performance digital marketing for UAE enterprises, luxury retail brands, and real estate developers. Operating just one hour ahead of Dubai time (GMT+5 vs GMT+4), our senior marketing strategists engineer high-intent bilingual Google Ads, precision Meta ad funnels, and enterprise SEO that cut customer acquisition costs (CAC) while delivering verifiable Gulf commercial growth.
+              </p>
             </div>
-            <style>article a {color:rgb(20,120,190);text-decoration:underline;} article h2 {margin-top:48px;} article h3 {margin-top:32px;}</style>
-            <h2 class="cs-font_36 mb-4">What we do here</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>SEO & local SEO</strong> — rank in Google search and the local pack for UAE queries</li><li style="margin-bottom:10px;"><strong>Google Ads & PPC management</strong> — high-intent paid search for UAE audiences</li><li style="margin-bottom:10px;"><strong>Meta Ads (Facebook + Instagram)</strong> — discovery and retargeting campaigns built for UAE consumer audiences</li><li style="margin-bottom:10px;"><strong>Social media management</strong> — content production, daily posting, community management</li><li style="margin-bottom:10px;"><strong>E-commerce marketing</strong> — Shopify + WooCommerce growth retainers</li><li style="margin-bottom:10px;"><strong>Lead generation</strong> — full funnel for service businesses</li><li style="margin-bottom:10px;"><strong>Branding & website development</strong> — through our sister company <a href="https://www.apexitsolutions.co/" target="_blank" rel="noopener">Apex IT Solutions</a> for technical builds</li></ul>
-              <h2 class="cs-font_36 mb-4">Industries we serve in the UAE</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>E-commerce</strong>: online retail brands selling across the Gulf (fashion, home, beauty, electronics)</li><li style="margin-bottom:10px;"><strong>Real estate</strong>: agents, brokerages, and developers competing for high-value search terms</li><li style="margin-bottom:10px;"><strong>Home services</strong>: cleaning, maintenance, moving, and repair businesses</li><li style="margin-bottom:10px;"><strong>Professional services</strong>: consultancies, clinics, legal and accounting practices</li><li style="margin-bottom:10px;"><strong>B2B</strong>: trading companies and SaaS targeting the Gulf market</li></ul>
-              <h2 class="cs-font_36 mb-4">How UAE clients work with us</h2>
-              <p>Engagements are <strong>remote-first</strong> with weekly reporting and review calls scheduled in your hours — the 1-hour difference makes that trivial. We can visit for major milestones when scope justifies travel. Language: campaigns are produced in English, which covers a large share of the UAE's digital audience; for Arabic-market targeting we work with client-provided translations and native review.</p>
-              <p><strong>Payment:</strong> USD invoicing via Wise or Stripe; AED-denominated billing available. PKR bank wire for Pakistani clients.</p>
-              <h2 class="cs-font_36 mb-4">Typical engagement structure</h2>
-              <ul style="line-height:1.8;padding-left:20px;margin:20px 0;"><li style="margin-bottom:10px;"><strong>Discovery sprint (1-2 weeks):</strong> audit, scope, plan — fixed fee USD 500-2,000</li><li style="margin-bottom:10px;"><strong>Execution (3-12 months typical):</strong> monthly retainer or fixed-bid project</li><li style="margin-bottom:10px;"><strong>Ongoing optimization:</strong> monthly retainer for continuous campaigns and SEO</li></ul>
+
+            <style>article a {color:rgb(20,120,190);text-decoration:underline;} article h2 {margin-top:48px;color:#fff;} article h3 {margin-top:30px;color:#f1f5f9;}</style>
+
+            <h2 class="cs-font_36 mb-4">Navigating the High-Stakes UAE Digital Advertising Landscape</h2>
+            <p>
+              The United Arab Emirates represents one of the world's most lucrative yet cost-intensive advertising auction spaces. In luxury sectors such as <strong>Dubai off-plan real estate</strong>, commercial corporate advisory in <strong>DIFC</strong>, and premium lifestyle services across <strong>Abu Dhabi and Sharjah</strong>, a single wasted click can cost $15 to $40.
+            </p>
+            <p>
+              Gulf-based businesses frequently overpay local agencies exorbitant retainers for superficial deliverables. Apex Marketings provides senior engineering and strategic media execution with complete transparency, billing directly in AED or USD with zero markups on your media spend.
+            </p>
+
+            <div class="row" style="margin:30px 0;">
+              <div class="col-md-6 mb-4">
+                <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
+                  <h3 class="cs-font_20" style="margin-top:0;color:#e6ad02;">Real Estate Investor Lead Funnels</h3>
+                  <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
+                    Surgically target high-net-worth property investors across the GCC, Europe, and the UK. We design fast mobile qualification funnels that deliver pre-vetted leads straight to your sales brokers.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
+                  <h3 class="cs-font_20" style="margin-top:0;color:#1478be;">Bilingual Paid Media (Google &amp; Meta)</h3>
+                  <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
+                    Reach both Arabic-speaking locals and the international expatriate majority. We deploy tailored Arabic ad copy and culturally nuanced creative assets across Google Search, YouTube, and Instagram.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
+                  <h3 class="cs-font_20" style="margin-top:0;color:#4ade80;">Gulf B2B Search Engine Optimization</h3>
+                  <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
+                    Secure page-one Google rankings across UAE and GCC regional queries through technical site speed architecture, authoritative local citations, and commercial intent mapping.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
+                  <h3 class="cs-font_20" style="margin-top:0;color:#a855f7;">E-Commerce &amp; Luxury Brand Scaling</h3>
+                  <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
+                    Scale premium fashion, jewelry, and luxury consumer goods stores across the UAE and Saudi Arabia with customized Meta Advantage+ campaigns and high-ticket CRO.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- UAE Lead Generation Blueprint -->
+            <div style="background:linear-gradient(135deg, rgba(20,120,190,0.12), rgba(0,0,0,0.6));border:1px solid rgba(20,120,190,0.4);border-radius:12px;padding:32px;margin:40px 0;">
+              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">GULF PROPERTY ACQUISITION BLUEPRINT</span>
+              <h2 class="cs-font_28 cs-white_color" style="margin-top:8px;margin-bottom:16px;">Multi-Channel Lead Architecture for Dubai Brokerages &amp; Developers</h2>
+              <p style="color:#cbd5e1;line-height:1.8;font-size:15px;">
+                In the competitive Dubai property market (Downtown, Dubai Marina, Business Bay, Palm Jumeirah), general form fills yield uncontactable leads. We engineer multi-step interactive qualification funnels that capture investor nationality, investment horizon, budget tier, and instant WhatsApp verification prior to CRM ingestion.
+              </p>
+              <div class="row text-center" style="margin:20px 0;">
+                <div class="col-4">
+                  <div style="font-size:26px;font-weight:700;color:#fff;">AED 120</div>
+                  <div style="font-size:13px;color:#94a3b8;">Average Qualified Lead CAC</div>
+                </div>
+                <div class="col-4">
+                  <div style="font-size:26px;font-weight:700;color:#fff;">68%</div>
+                  <div style="font-size:13px;color:#94a3b8;">Contact Rate via WhatsApp</div>
+                </div>
+                <div class="col-4">
+                  <div style="font-size:26px;font-weight:700;color:#fff;">AED 2.4M</div>
+                  <div style="font-size:13px;color:#94a3b8;">Avg Investor Ticket Size</div>
+                </div>
+              </div>
+              <p style="margin-bottom:0;font-size:14px;">
+                <a href="../../blogs/high-converting-landing-page-paid-campaigns/" style="color:#7db9e8;font-weight:600;">Explore our Landing Page Funnel Strategy &rarr;</a>
+              </p>
+            </div>
+
+            <h2 class="cs-font_36 mb-4">Seamless Gulf Coordination &amp; AED Billing</h2>
+            <p>
+              Working with Apex Marketings eliminates the timezone friction of European or North American agencies:
+            </p>
+            <ul style="line-height:2;padding-left:20px;">
+              <li><strong>Time Zone Alignment:</strong> Only 1 hour difference between Dubai/Abu Dhabi (GMT+4) and our delivery hub (GMT+5). Your normal business day is our normal business day.</li>
+              <li><strong>Dedicated Strategist:</strong> Direct communication via WhatsApp, Slack, or Google Meet with zero account executive middlemen.</li>
+              <li><strong>Transparent Billing:</strong> Invoiced in AED or USD via Wise, direct corporate wire, or international credit card with itemized deliverables.</li>
+              <li><strong>On-Site Availability:</strong> Regular scheduled executive travel to Dubai for quarterly reviews, stakeholder workshops, and trade shows.</li>
+            </ul>
+
             <h2 class="cs-font_36 mb-4 mt-5">Frequently Asked Questions</h2>
-              <h3 class="cs-font_24 mt-4 mb-2">Do you have a UAE office?</h3><p>Our headquarters is in Rawalpindi, Pakistan. We don't maintain offices elsewhere; UAE work is delivered remotely with weekly reporting and milestone check-ins. We can visit for major milestones when scope justifies travel costs.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">What's your typical engagement size?</h3><p>Focused retainers start from USD 600/month for Google or Meta Ads management and USD 800/month for SEO. Full-service retainers typically USD 2,000-6,000/month. One-off projects from USD 1,500. AED-denominated billing is available — see our <a href="../../pricing/">pricing page</a> for current equivalents.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Can you work UAE business hours?</h3><p>Yes — the UAE is only 1 hour behind Pakistan, so our working days overlap almost completely. Calls, reporting, and same-day turnarounds all happen inside your business hours.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Do you run Arabic-language campaigns?</h3><p>Our campaigns are produced in English, which covers a large share of the UAE's digital audience. For Arabic-market targeting we work with client-provided translations and native review — we won't pretend to native Arabic copywriting we don't have.</p>
-              <h3 class="cs-font_24 mt-4 mb-2">Do you sign NDAs?</h3><p>Yes, mutual NDAs are signed before any technical or financial discussion. Standard 3-year confidentiality term, your template or ours.</p>
-            <div style="margin-top:60px;padding-top:30px;border-top:1px solid #eee;">
-              <p><strong>Ready to talk?</strong> <a href="../../contact/">Book a free 30-minute consultation</a> with Apex Marketings, or <a href="../../quote/">request a project quote</a>.</p>
+            <div style="margin-top:24px;">
+              <h3 class="cs-font_22 mb-2">How does Apex Marketings generate qualified real estate investor leads in Dubai and Abu Dhabi?</h3>
+              <p>
+                We combine high-intent Google Search campaigns targeting high-net-worth investors across the GCC, UK, and Europe with interactive multi-step project landing pages, instant WhatsApp qualification chatbots, and targeted Meta video campaigns. Our real estate lead funnels consistently deliver verified investor inquiries with validated budgets exceeding AED 1.5M.
+              </p>
+
+              <h3 class="cs-font_22 mb-2">Do you manage bilingual English and Arabic advertising campaigns?</h3>
+              <p>
+                Yes. We engineer dual-language funnels with localized search keyword architectures, Arabic ad copy variations, and cultural nuances tailored to both local Emarati buyers and international expatriate audiences across the UAE.
+              </p>
+
+              <h3 class="cs-font_22 mb-2">What is the operational time zone advantage of working with Apex Marketings from Dubai?</h3>
+              <p>
+                The UAE is just 1 hour behind Pakistan (GMT+4 vs GMT+5). Our operational hours completely overlap with your working day, enabling instantaneous WhatsApp communication, live Slack coordination, and same-day turnaround on campaign modifications.
+              </p>
+
+              <h3 class="cs-font_22 mb-2">How do you handle payments and retainers for UAE clients?</h3>
+              <p>
+                We accept payments directly in UAE Dirhams (AED) or USD via direct bank wire, Wise, or corporate credit card invoicing. Retainers start from AED 2,500/month for single-channel management to AED 8,000 - 20,000/month for comprehensive multi-channel lead generation.
+              </p>
             </div>
+
+            <div style="margin-top:60px;padding:30px;background:#151515;border-radius:12px;border:1px solid #262626;text-align:center;">
+              <h3 class="cs-font_28 cs-white_color" style="margin-top:0;margin-bottom:12px;">Scale Your UAE Brand with Precision Marketing</h3>
+              <p style="max-width:600px;margin:0 auto 20px;color:#aaa;">
+                Book a 30-minute growth consultation with our senior UAE media strategist to review your ad accounts and identify immediate CAC reduction opportunities.
+              </p>
+              <a href="../../contact/" class="cs-btn cs-style1" style="background:#1478be;color:#fff;padding:12px 30px;border-radius:6px;text-decoration:none;display:inline-block;margin-right:12px;">Schedule Strategy Call</a>
+              <a href="../../pricing/" class="cs-btn cs-style1" style="background:transparent;border:1px solid #444;color:#fff;padding:12px 30px;border-radius:6px;text-decoration:none;display:inline-block;">View AED Pricing</a>
+            </div>
+
           </article>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cs-spacing" style="background:transparent;padding-top:60px;padding-bottom:60px;">
-    <div class="container">
-      <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <a href="../../pricing/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Pricing</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Transparent rates</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../../process/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Process</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">How engagements run</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../../trust/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Trust & Security</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">NDAs and data handling</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../../industries/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Industries</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Verticals we serve</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../../contact/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Contact</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Talk to our team</p>
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="../../quote/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
-            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Get a Quote</h4>
-            <p style="margin:0;font-size:14px;opacity:0.75;">Free estimate</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <?php include_once('../../include/footer2.php'); ?>
-
-  <script src="../../assets/js/plugins/jquery-3.6.0.min.js"></script>
-  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
+  <?php include_once('../../include/footernew.php'); ?>
 </body>
 </html>

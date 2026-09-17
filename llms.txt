@@ -67,8 +67,13 @@ Country pages: https://apexmarketings.com/locations/
 - Case studies with live client URLs: https://apexmarketings.com/case-studies/
 - Campaign and performance portfolio: https://apexmarketings.com/portfolio/
 - Blog: https://apexmarketings.com/blogs/
+  - Performance Marketing vs Traditional Marketing: https://apexmarketings.com/blogs/performance-marketing-vs-traditional-digital-marketing/
+  - Meta Ads Scaling Playbook (4x+ ROAS): https://apexmarketings.com/blogs/meta-ads-scaling-b2b-ecommerce/
+  - Agency Vetting Guide (Pakistan & UAE): https://apexmarketings.com/blogs/how-to-choose-digital-marketing-agency-pakistan-uae/
+  - B2B eCommerce Growth Strategy: https://apexmarketings.com/blogs/b2b-ecommerce-growth-strategy-wholesale-portals/
 - Glossary of the marketing terms used above: https://apexmarketings.com/glossary/
-- Free tools including the marketing budget calculator: https://apexmarketings.com/tools/
+- Free tools & interactive calculators: https://apexmarketings.com/tools/
+  - Interactive Marketing Budget & ROAS Calculator: https://apexmarketings.com/tools/marketing-budget-calculator/
 - Machine-readable index of every page: https://apexmarketings.com/sitemap.xml
 - Blog feed: https://apexmarketings.com/blogs/feed.xml
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -77,15 +77,15 @@
           </div>
         </div>
         <div class="col-lg-5 offset-xl-2">
-          <img loading="lazy" decoding="async" width="536" height="450" src="../assets/img/about/about_img_1.webp" alt="About Img 1" class="w-100 cs-radius_15">
+          <img loading="lazy" decoding="async" width="536" height="450" src="../assets/img/about/about_img_1.webp" alt="Apex Marketings digital campaign strategy and growth team" class="w-100 cs-radius_15">
           <div class="cs-height_25 cs-height_lg_25"></div>
         </div>
         <div class="col-lg-7">
-          <img loading="lazy" decoding="async" width="760" height="450" src="../assets/img/about/about_img_2.webp" alt="About Img 2" class="w-100 cs-radius_15">
+          <img loading="lazy" decoding="async" width="760" height="450" src="../assets/img/about/about_img_2.webp" alt="Performance marketing analytics, ROAS tracking, and revenue growth metrics" class="w-100 cs-radius_15">
           <div class="cs-height_25 cs-height_lg_25"></div>
         </div>
         <div class="col-lg-5">
-          <img loading="lazy" decoding="async" width="536" height="450" src="../assets/img/about/about_img_3.webp" alt="About Img 3" class="w-100 cs-radius_15">
+          <img loading="lazy" decoding="async" width="536" height="450" src="../assets/img/about/about_img_3.webp" alt="Creative brand identity and social media design strategists" class="w-100 cs-radius_15">
           <div class="cs-height_25 cs-height_lg_25"></div>
         </div>
       </div>

@@ -998,3 +998,56 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, in
     opacity: 1;
   }
 }
+
+/* ==========================================================================
+   Apex Marketings Universal 100% Responsive Architecture Standards (320px to 4K)
+   ========================================================================== */
+html, body {
+  overflow-x: clip;
+}
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+.table-responsive, .apex-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+pre, code {
+  max-width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}
+@media (max-width: 767px) {
+  a.cs-btn, button, .cs-text_btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cs-post_title, .cs-hero_title {
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .cs-page_title {
+    font-size: clamp(24px, 8vw, 34px) !important;
+    line-height: 1.25 !important;
+  }
+  .cs-font_36 {
+    font-size: clamp(22px, 7vw, 28px) !important;
+    line-height: 1.3 !important;
+  }
+  .cs-font_50 {
+    font-size: clamp(26px, 8vw, 36px) !important;
+    line-height: 1.25 !important;
+  }
+}
+

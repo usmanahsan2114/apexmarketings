@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags -->
   <?php
-  $seo_title = 'Digital Marketing & E-commerce Agency – Apex Marketings';
+  $seo_title = 'Digital Marketing Agency in Rawalpindi | SEO, PPC & Growth | Apex Marketings';
   $seo_desc = 'Boost your brand\'s online presence with Apex Marketings\' expert SEO, social media, and e-commerce marketing services.';
   ?>
   <?php include_once('include/head.php'); ?>
@@ -39,9 +39,7 @@
 
     <div class="container">
       <div class="cs-hero_text">
-        <h1 class="cs-hero_title wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">
-          Marketing That <span class="cs-accent_color">Grows</span> <br>Your Revenue
-        </h1>
+        <h1 class="cs-hero_title wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">Full-Funnel Digital Marketing &amp; <span class="cs-accent_color">Performance Growth</span> Agency</h1>
         <div class="cs-hero_info justify-content-center">
           <div class="cs-hero_subtitle">SEO, Google &amp; Meta Ads, and social media that turn clicks into customers &mdash; for brands in Pakistan, the US, UK &amp; UAE.</div>
         </div>
@@ -109,7 +107,7 @@
       <div class="row">
         <div class="col-lg-5 col-xl-4">
           <div class="cs-section_heading cs-style1">
-            <h3 class="cs-section_subtitle">Why Choose Us</h3>
+            <span class="cs-section_subtitle">Why Choose Us</span>
             <h2 class="cs-section_title">We're Your Perfect Digital Partner</h2>
             <div class="cs-height_45 cs-height_lg_20"></div>
             <a href="about/" class="cs-text_btn wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.2s">
@@ -196,8 +194,11 @@
     <div class="cs-height_145 cs-height_lg_75"></div>
     <div class="container">
       <div class="cs-section_heading cs-style1 text-center">
-        <h3 class="cs-section_subtitle">Services</h3>
-        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Our Core Services</h2>
+        <h3 class="cs-section_subtitle">Services &amp; Visibility</h3>
+        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Search Engine Optimization (SEO) &amp; Local Twin Cities Visibility</h2>
+        <div style="max-width:700px;margin:15px auto 0;font-size:15px;color:#bbb;line-height:1.7;">
+          Apex Marketings engineers technical search engine optimization, high-intent Google Ads PPC, and full-funnel paid social campaigns that dominate local and international B2B buyer queries.
+        </div>
       </div>
     </div>
     <div class="cs-height_90 cs-height_lg_45"></div>
@@ -218,8 +219,8 @@
               </svg>
             </span>
             <div class="cs-iconbox_in">
-              <h2 class="cs-iconbox_title">Brand Identity & Design </h2>
-              <div class="cs-iconbox_subtitle">Starting with <b>60,000 Rs</b>
+              <h4 class="cs-iconbox_title">Brand Identity & Design </h4>
+              <div class="cs-iconbox_subtitle">Starting from <b>$600 / PKR 60,000</b>
               </div>
             </div>
           </a>
@@ -239,8 +240,8 @@
               </svg>
             </span>
             <div class="cs-iconbox_in">
-              <h2 class="cs-iconbox_title"> Web Design & Development </h2>
-              <div class="cs-iconbox_subtitle">Starting with <b>50,000</b> Rs </div>
+              <h4 class="cs-iconbox_title"> Web Design & Development </h4>
+              <div class="cs-iconbox_subtitle">Starting from <b>$500 / PKR 50,000</b></div>
             </div>
           </a>
         </div>
@@ -259,8 +260,8 @@
               </svg>
             </span>
             <div class="cs-iconbox_in">
-              <h2 class="cs-iconbox_title">Digital Marketing & Growth </h2>
-              <div class="cs-iconbox_subtitle">Starting with <b>40,000 </b>Rs</div>
+              <h4 class="cs-iconbox_title">Digital Marketing & Growth </h4>
+              <div class="cs-iconbox_subtitle">Starting from <b>$400 / PKR 40,000</b></div>
             </div>
           </a>
         </div>
@@ -279,8 +280,8 @@
               </svg>
             </span>
             <div class="cs-iconbox_in">
-              <h2 class="cs-iconbox_title">E-Commerce Strategy & Management</h2>
-              <div class="cs-iconbox_subtitle">Starting with <b>60,000</b> Rs</div>
+              <h4 class="cs-iconbox_title">E-Commerce Strategy & Management</h4>
+              <div class="cs-iconbox_subtitle">Starting from <b>$600 / PKR 60,000</b></div>
             </div>
           </a>
         </div>
@@ -364,9 +365,9 @@
   <section>
     <div class="container">
       <div class="cs-section_heading cs-style1 text-center">
-        <h3 class="cs-section_subtitle">Latest Projects</h3>
-        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s"> Portfolio to explore
-        </h2>
+        <h3 class="cs-section_subtitle">Proven Client Outcomes</h3>
+        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Verifiable B2B Case Studies: Measurable Revenue &amp; Acquisition Growth</h2>
+        <h3 class="cs-font_18" style="color:#e6ad02;margin-top:10px;font-weight:600;">Industrial B2B Exporter: Scaling GCC Market Share from Ground Zero</h3>
       </div>
     </div>
     <div class="cs-height_90 cs-height_lg_45"></div>
@@ -380,7 +381,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/apex.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">IT Solutions Company</h2>
+                <div class="cs-portfolio_title">IT Solutions Company</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -392,7 +393,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/mellow.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">Food Industry</h2>
+                <div class="cs-portfolio_title">Food Industry</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -404,7 +405,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/golden.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">Men Salon</h2>
+                <div class="cs-portfolio_title">Men Salon</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -416,7 +417,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/star.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">Medicine Manufacturer</h2>
+                <div class="cs-portfolio_title">Medicine Manufacturer</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -428,7 +429,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/apex2.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">IT Solutions</h2>
+                <div class="cs-portfolio_title">IT Solutions</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -440,7 +441,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/herbicon.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">Herbicon</h2>
+                <div class="cs-portfolio_title">Herbicon</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -452,7 +453,7 @@
               <div class="cs-portfolio_bg" data-src="assets/img/home/delivrex.webp"></div>
               <div class="cs-portfolio_info">
                 <div class="cs-portfolio_info_bg cs-accent_bg"></div>
-                <h2 class="cs-portfolio_title">Trucking</h2>
+                <div class="cs-portfolio_title">Trucking</div>
                 <div class="cs-portfolio_subtitle">See Details</div>
               </div>
             </a>
@@ -477,7 +478,7 @@
             <div class="cs-funfact cs-style2 text-center">
               <div class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"><span data-count-to="100"
                   class="odometer"></span> <span class="cs-plus">+</span></div>
-              <h3 class="cs-funfact_title">Happy Clients</h3>
+              <span class="cs-funfact_title">Happy Clients</span>
               <br>
             </div>
           </div>
@@ -485,7 +486,7 @@
             <div class="cs-funfact cs-style2 text-center">
               <div class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"><span data-count-to="50"
                   class="odometer"></span> <span class="cs-plus">+</span></div>
-              <h3 class="cs-funfact_title">Global Projects</h3>
+              <span class="cs-funfact_title">Global Projects</span>
               <br>
             </div>
           </div>
@@ -493,7 +494,7 @@
             <div class="cs-funfact cs-style2 text-center">
               <div class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"><span data-count-to="10"
                   class="odometer"></span> <span class="cs-plus">+</span></div>
-              <h3 class="cs-funfact_title">Services</h3>
+              <span class="cs-funfact_title">Services</span>
               <br>
             </div>
           </div>
@@ -501,7 +502,7 @@
             <div class="cs-funfact cs-style2 text-center">
               <div class="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"><span data-count-to="20"
                   class="odometer"></span> <span class="cs-plus">+</span></div>
-              <h3 class="cs-funfact_title">Team members</h3>
+              <span class="cs-funfact_title">Team members</span>
               <br>
             </div>
           </div>
@@ -876,7 +877,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">Heath Martin</h2>
+                <div class="cs-testimonial_avatar_name">Heath Martin</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">678RidJunk (Junk Removal Company, USA)
                 </div>
               </div>
@@ -896,7 +897,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">Sheikh Hussein</h2>
+                <div class="cs-testimonial_avatar_name">Sheikh Hussein</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">Alpha Technical Services (Construction and Tech.)</div>
               </div>
             </div>
@@ -915,7 +916,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">Mehmood Ilyas</h2>
+                <div class="cs-testimonial_avatar_name">Mehmood Ilyas</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">Fatima Home Decor (E-commerce Store,
                   Pakistan)</div>
               </div>
@@ -935,7 +936,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">Mishaal Butt</h2>
+                <div class="cs-testimonial_avatar_name">Mishaal Butt</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">EduPak (Educational Consultancy)</div>
               </div>
             </div>
@@ -954,7 +955,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">Ajmal Abbas</h2>
+                <div class="cs-testimonial_avatar_name">Ajmal Abbas</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">SZK Technical Services (UAE)</div>
               </div>
             </div>
@@ -973,7 +974,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <h2 class="cs-testimonial_avatar_name">John Meune</h2>
+                <div class="cs-testimonial_avatar_name">John Meune</h2>
                 <div class="cs-testimonial_avatar_designation text-uppercase">678RidJunk (Business Consultant, USA)
                 </div>
               </div>
@@ -1111,6 +1112,20 @@
 
 
   <div class="cs-height_30 cs-height_lg_70"></div>
+  
+  <!-- Start Clear Commercial Pricing Section -->
+  <section style="background:#111;padding:80px 0;border-top:1px solid #222;border-bottom:1px solid #222;">
+    <div class="container text-center">
+      <h3 class="cs-section_subtitle">Transparent Investment</h3>
+      <h2 class="cs-section_title cs-white_color mb-3">Clear Commercial Pricing &amp; Engagement Retainers</h2>
+      <p style="max-width:650px;margin:0 auto 30px;color:#aaa;font-size:16px;">
+        Starting rates published in USD, PKR, AED, and GBP with complete transparency. Retainers managed by senior strategists with zero account lock-in.
+      </p>
+      <a href="pricing/" class="cs-btn cs-style1" style="background:#1478be;color:#fff;padding:14px 36px;border-radius:6px;text-decoration:none;display:inline-block;">View Live Currency Pricing Calculator</a>
+    </div>
+  </section>
+  <!-- End Clear Commercial Pricing Section -->
+
   <!-- Start CTA -->
   <section>
     <div class="container">
@@ -1119,7 +1134,7 @@
         <div class="cs-shape_1"></div>
         <div class="cs-shape_1"></div>
         <div class="cs-cta_in">
-          <h2 class="cs-cta_title cs-semi_bold cs-m0">Let's Discuss & Make <br>Something <i>Cool</i> Together</h2>
+          <div class="cs-cta_title cs-semi_bold cs-m0" style="font-size:42px;line-height:1.2;color:#fff;">Let's Discuss &amp; Make <br>Something <i>Cool</i> Together</div>
           <div class="cs-height_70 cs-height_lg_30"></div>
           <a href="contact/" class="cs-text_btn wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
             <span>Apply For Meeting</span>

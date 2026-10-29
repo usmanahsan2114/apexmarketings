@@ -385,7 +385,7 @@
             <div class="cs-height_30 cs-height_lg_30"></div>
             <div class="cs-separator cs-accent_bg"></div>
             <div class="cs-height_25 cs-height_lg_0"></div>
-            <a href="https://usmanahsan.site/" class="cs-text_btn">
+            <a href="https://www.apexitsolutions.co/usman/founder/" target="_blank" rel="noopener" class="cs-text_btn">
               <span>View More</span>
               <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

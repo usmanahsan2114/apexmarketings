@@ -372,7 +372,7 @@
         </a>
       </div><!-- .cs-isotop_item -->
       <div class="cs-isotop_item web">
-        <a href="https://usman.apexitsolutions.co/" target="_blank" rel="noopener" class="cs-portfolio cs-style1 cs-type1">
+        <a href="https://www.apexitsolutions.co/usman/founder/" target="_blank" rel="noopener" class="cs-portfolio cs-style1 cs-type1">
           <div class="cs-portfolio_hover"></div>
           <div class="cs-portfolio_bg cs-bg" data-src="../assets/img/portfolio/mockups/usman-apexitsolutions-co/hero-mockup-1600x1000.webp"></div>
           <div class="cs-portfolio_info">

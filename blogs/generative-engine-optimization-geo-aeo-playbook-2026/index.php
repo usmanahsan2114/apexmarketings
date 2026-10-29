@@ -296,3 +296,4 @@ $seo_type = "article";
   <?php include_once('../../include/script2.php'); ?>
 </body>
 </html>
+

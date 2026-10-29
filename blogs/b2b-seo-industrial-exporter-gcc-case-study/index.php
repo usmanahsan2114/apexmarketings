@@ -1,6 +1,6 @@
 ﻿<?php
 $seo_title = "B2B SEO for an Industrial Exporter: A GCC Case Study";
-$seo_desc = "How to rank a technical industrial exporter in the GCC: answer-first content, country and Arabic landing pages, flawless technical SEO, and the off-site authority work that actually moves competitive rankings.";
+$seo_desc = "How to rank an industrial exporter in the GCC: answer-first content, country and Arabic pages, clean technical SEO, and the off-site authority that moves rankings.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">

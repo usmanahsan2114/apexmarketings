@@ -1,5 +1,5 @@
 <?php
-$seo_title = "From Zero to Page One in the GCC: The 2-Month B2B SEO Playbook (With Real Numbers)";
+$seo_title = "Zero to Page One in the GCC: A 2-Month B2B SEO Playbook";
 $seo_desc = "How a B2B exporter went from 0 organic visitors to 124 sessions/month and page-1 GCC rankings in two months — the answer-first SEO playbook, with real GA4 & GSC numbers.";
 ?>
 <!DOCTYPE html>

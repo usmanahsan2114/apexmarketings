@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $seo_title = "Free Marketing Tools | Apex Marketings";
 $seo_desc = "Free, no-signup marketing tools from Apex Marketings — including a marketing budget calculator built from our published rates. More tools added over time.";
 ?>
@@ -37,10 +37,10 @@ $seo_desc = "Free, no-signup marketing tools from Apex Marketings — including 
               </a>
             </div>
             <div class="col-md-6 mb-4">
-              <div style="padding:28px;background:#1a1a1a;border:1px dashed #ddd;border-radius:12px;height:100%;">
-                <h3 style="font-size:20px;margin:0 0 10px;color:#999;">More tools coming</h3>
-                <p style="font-size:15px;color:#999;margin:0;">We add tools as clients ask for them. Want one? <a href="../contact/" style="color:rgb(20,120,190);text-decoration:underline;">Tell us</a>.</p>
-              </div>
+              <a href="roi-calculator/" class="d-block" style="padding:28px;background:#1a1a1a;border:1px solid #333;border-radius:12px;color:inherit;text-decoration:none;height:100%;">
+                <h3 style="font-size:20px;margin:0 0 10px;">ROI & MER Calculator</h3>
+                <p style="font-size:15px;color:#bbb;margin:0;">See ROAS, MER, profit-based ROI and the break-even ROAS your campaigns need to beat.</p>
+              </a>
             </div>
           </div>
           <div style="margin-top:30px;text-align:center;">

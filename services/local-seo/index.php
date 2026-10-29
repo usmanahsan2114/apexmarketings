@@ -83,6 +83,7 @@ $seo_desc = "Local SEO from Apex Marketings: Google Business Profile optimizatio
 
             <h2 class="cs-font_36 mb-4">Related resources</h2>
             <ul style="line-height:1.8;padding-left:20px;margin:20px 0;">
+              <li><a href="../../blogs/digital-marketing-for-small-businesses-rawalpindi-islamabad/">Digital marketing for small businesses in Rawalpindi &amp; Islamabad</a></li>
               <li><a href="../../blogs/local-seo-pakistani-businesses/">Local SEO for Pakistani businesses: a practical guide</a></li>
               <li><a href="../../industries/local-businesses/">Marketing for local businesses</a></li>
               <li><a href="../seo-services/">Full SEO services</a> · <a href="../../glossary/local-seo/">What is local SEO? (glossary)</a></li>

@@ -8,6 +8,21 @@
   $seo_desc = 'Practical guides on SEO, Google Ads, Meta Ads, social media, and e-commerce growth from the Apex Marketings team.';
 
   $apex_posts = array(
+      array('slug' => 'whatsapp-marketing-guide-pakistan-uae', 'cat' => 'WhatsApp', 'date' => 'September 2026',
+          'title' => 'WhatsApp Marketing for Businesses in Pakistan and the UAE: The 2026 Playbook',
+          'desc' => 'How to use WhatsApp Business, the Business Platform and click-to-WhatsApp ads to win customers in Pakistan and the UAE, without spamming or breaking the rules.'),
+      array('slug' => 'seo-first-90-days-what-to-expect', 'cat' => 'SEO', 'date' => 'September 2026',
+          'title' => 'What to Expect in the First 90 Days of SEO: A Month-by-Month Plan',
+          'desc' => 'A month-by-month look at the first 90 days of SEO: what gets done, which results are realistic by day 90, the KPIs to track, and red flags to watch for.'),
+      array('slug' => 'real-estate-lead-generation-pakistan-dubai', 'cat' => 'Real Estate', 'date' => 'September 2026',
+          'title' => 'Real Estate Lead Generation in Pakistan and Dubai: A Digital Marketing Playbook',
+          'desc' => 'How property developers and agencies in Pakistan and Dubai can generate qualified buyer leads with Google Ads, Meta, WhatsApp and landing pages.'),
+      array('slug' => 'digital-marketing-for-small-businesses-rawalpindi-islamabad', 'cat' => 'Local Marketing', 'date' => 'September 2026',
+          'title' => 'Digital Marketing for Small Businesses in Rawalpindi and Islamabad: A Practical 2026 Guide',
+          'desc' => 'A practical guide for small businesses in Rawalpindi and Islamabad: Google Business Profile, local SEO, area-targeted Meta ads and WhatsApp follow-up.'),
+      array('slug' => 'meta-ads-b2b-lead-generation-2026', 'cat' => 'Paid Social', 'date' => 'September 2026',
+          'title' => 'Meta Ads for B2B Lead Generation: The 2026 Playbook',
+          'desc' => 'When Facebook and Instagram ads work for B2B lead generation, how to target and qualify business buyers, and how to optimise for qualified leads.'),
       array('slug' => 'performance-marketing-vs-traditional-digital-marketing', 'cat' => 'Performance Marketing', 'date' => 'September 2026',
           'title' => 'Performance Marketing vs Traditional Digital Marketing: The 2026 ROI Playbook',
           'desc' => 'Why traditional vanity metrics are failing, how to track true Blended MER, attribution modeling, and running high-accountability paid acquisition.'),

@@ -3,7 +3,7 @@
    paths so there is ONE head to maintain. $seo_title/$seo_desc are set by each page
    BEFORE its head include. Entity JSON-LD lives in schema-org.php. */
 if (!isset($p)) { $p = ''; }
-$asset_version = '20260820-aurora1';
+$asset_version = '20260927-quote1';
 ?>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -22,20 +22,22 @@ $current_url = "https://apexmarketings.com" . preg_replace('~(index\.php)?([?#].
 $current_url = strtok($current_url, '?');
 $page_title = isset($seo_title) ? $seo_title : "Apex Marketings – Digital Marketing Agency";
 $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Marketings. We specialize in e-commerce, SEO, social media, and PPC.";
+$page_image = isset($seo_image) ? $seo_image : "https://apexmarketings.com/assets/img/home/hero_bg_2.webp";
+$page_type = isset($seo_type) ? $seo_type : "website";
 ?>
 <title><?php echo htmlspecialchars($page_title); ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($page_desc); ?>">
 <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>">
 <meta property="og:description" content="<?php echo htmlspecialchars($page_desc); ?>">
 <meta property="og:url" content="<?php echo htmlspecialchars($current_url); ?>">
-<meta property="og:image" content="https://apexmarketings.com/assets/img/home/hero_bg_2.webp">
-<meta property="og:type" content="website">
+<meta property="og:image" content="<?php echo htmlspecialchars($page_image); ?>">
+<meta property="og:type" content="<?php echo htmlspecialchars($page_type); ?>">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Apex Marketings">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo htmlspecialchars($page_title); ?>">
 <meta name="twitter:description" content="<?php echo htmlspecialchars($page_desc); ?>">
-<meta name="twitter:image" content="https://apexmarketings.com/assets/img/home/hero_bg_2.webp">
+<meta name="twitter:image" content="<?php echo htmlspecialchars($page_image); ?>">
 <link rel="canonical" href="<?php echo htmlspecialchars($current_url); ?>">
 <link rel="alternate" hreflang="en" href="<?php echo htmlspecialchars($current_url); ?>" />
 <!-- Resource hints for performance -->
@@ -107,8 +109,8 @@ document.addEventListener('click', function (e) {
     gtag('event', 'phone_click', { link_url: h });
   } else if (h.indexOf('mailto:') === 0) {
     gtag('event', 'email_click', { link_url: h });
-  } else if (h.indexOf('calendly.com') > -1 || h.indexOf('/quote/') > -1 || h.indexOf('/contact/') > -1) {
-    gtag('event', 'booking_initiated', { destination: h });
+  } else if (h.indexOf('calendly.com') > -1 || /(^|\/)quote\/?(\?|#|$)/.test(h) || h.indexOf('/contact/') > -1) {
+    gtag('event', 'booking_initiated', { destination: h, cta_location: (a.classList.contains('apex-frame-cta') || a.classList.contains('apex-header-cta')) ? 'header' : 'content' });
   }
 }, true);
 

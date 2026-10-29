@@ -289,3 +289,50 @@ html.apex-webgl-on .interactive-scene { display: none !important; }
 .cs-spacing:not([style*="background"]) p a:hover {
   color: #ffce47;
 }
+/* Buttons inside articles must keep their own colours - the gold link rule above
+   turned the amber .cs-btn text amber (invisible 'Request a Quote' CTAs). */
+.cs-spacing article a.cs-btn, .cs-spacing p a.cs-btn,
+.cs-spacing article a.cs-btn:hover, .cs-spacing p a.cs-btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.cs-spacing article a.cs-btn.cs-style1.cs-type1, .cs-spacing article a.cs-btn.cs-style1.cs-type1:hover { color: #fff; }
+
+/* Persistent "Get a Free Quote" call to action in the sticky header (all pages). */
+.cs-main_header_right { display: flex; align-items: center; gap: 22px; }
+.apex-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #e6ad02;
+  color: #111 !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  text-decoration: none !important;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(230, 173, 2, 0.28);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.apex-header-cta:hover { background: #ffc21a; color: #111 !important; transform: translateY(-1px); }
+.apex-header-cta:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@media (max-width: 1199px) {
+  .cs-main_header_right { gap: 0; }
+  .apex-header-cta { position: absolute; left: 0; top: calc(50% - 19px); height: 38px; padding: 0 16px; font-size: 13px; z-index: 5; }
+  .apex-header-cta:hover { transform: none; }
+}
+@media (min-width: 481px) and (max-width: 1199px) {
+  .apex-header-cta { left: auto; right: 64px; }
+}
+
+/* Stand-alone newsletter forms (/downloads/, /subscribe/) use the input/button
+   classes without the .cs-newsletter wrapper, so the button fell back to a grey
+   browser button with white text. */
+:not(.cs-newsletter) > form.cs-newsletter_form { display: flex; flex-wrap: wrap; gap: 10px; }
+:not(.cs-newsletter) > form.cs-newsletter_form .cs-newsletter_input { flex: 1 1 220px; min-height: 48px; padding: 0 16px; border-radius: 10px; border: 1px solid #444; background: #111; color: #fff; }
+:not(.cs-newsletter) > form.cs-newsletter_form .cs-newsletter_btn { min-height: 48px; padding: 0 24px; border: 0; border-radius: 10px; background: #e6ad02; color: #111; font-weight: 700; cursor: pointer; }
+:not(.cs-newsletter) > form.cs-newsletter_form .cs-newsletter_btn:hover { background: #ffc21a; }

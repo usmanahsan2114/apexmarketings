@@ -1,6 +1,6 @@
 ﻿<?php
 $seo_title = "Digital Marketing for Canada (Toronto, Vancouver)";
-$seo_desc = "Digital marketing for Canada-based brands — SEO, Google & Meta Ads, and social media from Apex Marketings, delivered remotely with CASL-compliant outreach, morning overlap, and CAD invoicing.";
+$seo_desc = "SEO, Google and Meta Ads, and social media for Canadian brands from Apex Marketings, delivered remotely with CASL-aware outreach, morning overlap and CAD invoicing.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">

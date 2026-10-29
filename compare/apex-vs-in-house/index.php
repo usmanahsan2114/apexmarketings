@@ -1,5 +1,5 @@
 ﻿<?php
-$seo_title = "Apex Marketings vs In-House Marketing Team: Which Is Right for You? | 2026";
+$seo_title = "Apex Marketings vs an In-House Marketing Team (2026)";
 $seo_desc = "When to hire an in-house marketer vs an agency like Apex Marketings. Honest cost comparison, hiring timeline, capability breadth, and which fits each business stage.";
 ?>
 <!DOCTYPE html>

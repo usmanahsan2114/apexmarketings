@@ -6,7 +6,7 @@ $apex_quote_error = null;
 $apex_q_types = array('SEO services', 'Google Ads / PPC management', 'Meta Ads (Facebook + Instagram)', 'Social media management', 'E-commerce marketing', 'Lead generation campaign', 'Branding and positioning', 'Website development', 'Marketing automation', 'Full digital strategy', 'Not sure / other');
 $apex_q_budgets = array('Under USD 500 / month', 'USD 500 - 1,500 / month', 'USD 1,500 - 5,000 / month', 'USD 5,000 - 15,000 / month', 'USD 15,000+ / month', 'One-time project budget (no monthly commit)', 'Need help estimating');
 $apex_q_timelines = array('ASAP — within 2 weeks', '1 month', '2-3 months', '3-6 months', 'Flexible');
-$apex_q_locations = array('Pakistan', 'United States', 'United Kingdom', 'UAE', 'Canada', 'Other');
+$apex_q_locations = array('Pakistan', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia', 'Canada', 'Other');
 $apex_old = array('project_type' => '', 'budget' => '', 'timeline' => '', 'location' => '', 'description' => '', 'name' => '', 'email' => '', 'company' => '', 'phone' => '');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $apex_old['project_type'] = apex_str(isset($_POST['project_type']) ? $_POST['project_type'] : '', 80);
@@ -103,9 +103,8 @@ $seo_desc = "Get a free digital marketing project quote from Apex Marketings. An
             <p style="font-size: 15px; color: #555; font-weight: 500; margin-bottom: 20px;">
               <span style="color:#25D366;">✔</span> No commitment required &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#25D366;">⚡</span> We reply within 24 hours
             </p>
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:24px;background:#f9f9f9;padding:10px 16px;border-radius:8px;display:inline-flex;">
-              <span style="color:#e6ad02;font-size:18px;letter-spacing:2px;">★★★★★</span>
-              <span style="font-size:14px;color:#ddd;font-weight:600;">4.9/5 Average Rating from 50+ Global Clients</span>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-bottom:24px;padding:12px 16px;border-radius:10px;border:1px solid rgba(230,173,2,0.4);background:rgba(230,173,2,0.08);font-size:14px;font-weight:600;color:#eee;">
+                <span>&#10003; Published pricing</span><span>&#10003; You own your ad accounts</span><span>&#10003; Free 30-minute discovery call</span><span>&#10003; <a href="../case-studies/" style="color:#e6ad02;text-decoration:underline;">Real case studies</a></span>
             </div>
 <?php if ($apex_quote_error): ?>
 <div role="alert" style="background:#fdecea;border:1px solid #f5c6cb;color:#721c24;padding:12px 16px;border-radius:6px;max-width:760px;margin:0 auto 20px;">

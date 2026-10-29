@@ -85,6 +85,7 @@ $seo_desc = "Facebook and Instagram ad campaigns with real creative testing and 
 
             <h2 class="cs-font_36 mb-4">Related resources</h2>
             <ul style="line-height:1.8;padding-left:20px;margin:20px 0;">
+              <li><a href="../../blogs/whatsapp-marketing-guide-pakistan-uae/">WhatsApp marketing for Pakistan &amp; UAE businesses</a></li>
               <li><a href="../../blogs/google-ads-vs-meta-ads-which-platform-converts-better/">Google Ads vs Meta Ads: which converts better?</a></li>
               <li><a href="../../blogs/ecommerce-marketing-strategy-traffic-repeat-customers/">E-commerce marketing strategy: visit to repeat customer</a></li>
               <li><a href="../../blogs/instagram-growth-for-brands-2026/">Instagram growth playbook for brands</a></li>

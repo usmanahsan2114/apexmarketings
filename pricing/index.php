@@ -1,5 +1,5 @@
 <?php
-$seo_title = "Marketing Retainer Pricing | Transparent Rates in USD, PKR, AED, GBP | Apex Marketings";
+$seo_title = "Digital Marketing Pricing: Published Rates | Apex Marketings";
 $seo_desc = "Transparent digital marketing pricing by Apex Marketings. Live currency switching across USD, PKR, AED, and GBP for SEO, Google Ads, Meta Ads, and e-commerce retainers.";
 ?>
 <!DOCTYPE html>

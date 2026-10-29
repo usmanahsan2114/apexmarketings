@@ -1,5 +1,5 @@
 <?php
-$seo_title = "Digital Marketing Budget & ROAS Calculator (Free 2026 Tool) | Apex Marketings";
+$seo_title = "Marketing Budget & ROAS Calculator (Free) | Apex Marketings";
 $seo_desc = "Free interactive marketing budget calculator: estimate your optimal monthly ad spend, agency management retainer, projected CPL, and target ROAS by industry. No signup required.";
 ?>
 <!DOCTYPE html>

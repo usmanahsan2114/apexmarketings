@@ -5,7 +5,7 @@
             <div class="cs-main_header_in">
                 <div class="cs-main_header_left">
                     <a class="cs-site_branding" href="../../">
-                        <img src="../../assets/img/icons/logo.svg" alt="Apex Marketings logo" width="350" height="350" decoding="async" loading="lazy">
+                        <img src="../../assets/img/icons/logo.svg" alt="Apex Marketings logo" width="350" height="350" decoding="async">
                     </a>
                 </div>
                 <div class="cs-main_header_center">
@@ -34,7 +34,8 @@
                     </div>
                 </div>
                 <div class="cs-main_header_right">
-                    <div class="cs-toolbox">
+                    <a href="../../quote/" class="apex-header-cta" aria-label="Get a free marketing quote">Free Quote</a>
+<div class="cs-toolbox">
                         <span class="cs-icon_btn">
                             <span class="cs-icon_btn_in">
                                 <span></span>

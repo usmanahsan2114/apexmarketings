@@ -1,6 +1,6 @@
 <?php
-$seo_title = "Digital Marketing Agency in Karachi | B2B, Industrial & SEO | Apex Marketings";
-$seo_desc = "Apex Marketings delivers high-ROI performance marketing, B2B industrial export SEO, Google Ads, and e-commerce growth for Karachi enterprises across SITE, Port Qasim, and Clifton.";
+$seo_title = "Digital Marketing Agency in Karachi | Apex Marketings";
+$seo_desc = "Performance marketing for Karachi businesses: B2B and export SEO, Google Ads and e-commerce growth from Apex Marketings, a Rawalpindi-based agency.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -151,7 +151,7 @@ $seo_desc = "Apex Marketings delivers high-ROI performance marketing, B2B indust
                 <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
                   <h3 class="cs-font_20" style="margin-top:0;color:#1478be;">High-Intent Paid Search (Google Ads)</h3>
                   <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
-                    Capture high-intent commercial search queries with disciplined negative keyword filtering, conversion tracking, and landing page testing that reduces cost-per-lead by 38%.
+                    Capture high-intent commercial search queries with disciplined negative keyword filtering, conversion tracking, and landing page testing aimed at lowering cost per qualified lead.
                   </p>
                 </div>
               </div>
@@ -175,23 +175,23 @@ $seo_desc = "Apex Marketings delivers high-ROI performance marketing, B2B indust
 
             <!-- Featured Case Study: Pak Gusu -->
             <div style="background:linear-gradient(135deg, rgba(20,120,190,0.12), rgba(0,0,0,0.6));border:1px solid rgba(20,120,190,0.4);border-radius:12px;padding:32px;margin:40px 0;">
-              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">PROVEN B2B CLIENT OUTCOME</span>
+              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">B2B CLIENT CASE STUDY</span>
               <h2 class="cs-font_28 cs-white_color" style="margin-top:8px;margin-bottom:16px;">Pak Gusu Cleanroom Engineering: Scaling B2B Industrial Export Inquiries</h2>
               <p style="color:#cbd5e1;line-height:1.8;font-size:15px;">
-                Pak Gusu, a specialized engineering manufacturer of cleanroom HVAC and HEPA filtration systems, partnered with Apex Marketings to expand market share into GCC markets. We rebuilt their digital visibility around high-ticket engineering specifications, technical whitepapers, and international search crawl equity.
+                Pak Gusu, a Pakistani cleanroom solutions manufacturer, wanted enquiries from GCC buyers. Starting from zero organic visibility, the work combined a rebuilt, fast website, country and Arabic landing pages, answer-first content and clean technical SEO. The numbers below are from the first two months; clicks and leads lag behind rankings, so this is a strong foundation rather than a finished story.
               </p>
               <div class="row text-center" style="margin:20px 0;">
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">+280%</div>
-                  <div style="font-size:13px;color:#94a3b8;">Export Lead Volume</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">0 &rarr; 124</div>
+                  <div style="font-size:13px;color:#94a3b8;">Organic sessions per month, by month two</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">Top 3</div>
-                  <div style="font-size:13px;color:#94a3b8;">GCC High-Intent Rankings</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">~4,600</div>
+                  <div style="font-size:13px;color:#94a3b8;">Monthly search impressions, from zero</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">4.4x</div>
-                  <div style="font-size:13px;color:#94a3b8;">Inquiry Pipeline Value</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Page 1</div>
+                  <div style="font-size:13px;color:#94a3b8;">Average positions for core GCC searches</div>
                 </div>
               </div>
               <p style="margin-bottom:0;font-size:14px;">
@@ -201,7 +201,7 @@ $seo_desc = "Apex Marketings delivers high-ROI performance marketing, B2B indust
 
             <h2 class="cs-font_36 mb-4">Karachi Regional Coverage &amp; Delivery Model</h2>
             <p>
-              Our agency delivers services remotely from our central engineering operations in Rawalpindi with on-site deployment across Karachi for strategic quarterly reviews, technical shoots, and stakeholder alignment.
+              We deliver remotely from our Rawalpindi office, with weekly video check-ins and shared dashboards. On-site visits in Karachi can be arranged when a project needs them.
             </p>
             <ul style="line-height:2;padding-left:20px;">
               <li><strong>Industrial Corridors:</strong> SITE, Port Qasim Industrial Area, Korangi Industrial Area, Federal B Area</li>
@@ -247,6 +247,9 @@ $seo_desc = "Apex Marketings delivers high-ROI performance marketing, B2B indust
     </div>
   </section>
 
-  <?php include_once('../../include/footernew.php'); ?>
+  <?php include_once('../../include/footer2.php'); ?>
+
+  <script src="../../assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
 </body>
 </html>

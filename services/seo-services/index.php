@@ -85,6 +85,7 @@ $seo_desc = "Technical, local, and content SEO retainers from USD 800/month. Hon
 
             <h2 class="cs-font_36 mb-4">Related resources</h2>
             <ul style="line-height:1.8;padding-left:20px;margin:20px 0;">
+              <li><a href="../../blogs/seo-first-90-days-what-to-expect/">What to expect in the first 90 days of SEO</a></li>
               <li><a href="../../blogs/local-seo-pakistani-businesses/">Local SEO for Pakistani businesses: a practical guide</a></li>
               <li><a href="../../blogs/seo-vs-paid-ads-which-growth-channel/">SEO vs paid ads: which growth channel to start with</a></li>
               <li><a href="../../blogs/digital-marketing-cost-pakistan-usa-uk-uae/">What digital marketing costs in Pakistan, USA, UK, UAE</a></li>

@@ -1,6 +1,6 @@
 <?php
-$seo_title = "Digital Marketing Agency UAE | Dubai & Abu Dhabi Real Estate SEO & Ads | Apex Marketings";
-$seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE brands in Dubai, Abu Dhabi, and Sharjah. Specializing in off-plan real estate lead generation, bilingual paid ads, and luxury brand growth.";
+$seo_title = "Digital Marketing Agency in the UAE (Dubai & Abu Dhabi)";
+$seo_desc = "Digital marketing for UAE brands in Dubai, Abu Dhabi and Sharjah: real estate lead generation, bilingual paid ads, SEO and social media from Apex Marketings.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -20,7 +20,7 @@ $seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE bran
         ]
       },
       {
-        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@type": "ProfessionalService",
         "@id": "https://apexmarketings.com/locations/uae/#agency",
         "name": "Apex Marketings — UAE Digital Marketing & Real Estate Growth",
         "description": "Enterprise performance marketing, off-plan real estate lead funnels, bilingual Google & Meta advertising, and SEO for brands across Dubai, Abu Dhabi, and Sharjah.",
@@ -38,12 +38,7 @@ $seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE bran
           {"@type": "City", "name": "Abu Dhabi", "sameAs": "https://en.wikipedia.org/wiki/Abu_Dhabi"},
           {"@type": "City", "name": "Sharjah", "sameAs": "https://en.wikipedia.org/wiki/Sharjah"}
         ],
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "25.2048",
-          "longitude": "55.2708"
-        },
-        "hasMap": "https://maps.google.com/?q=25.2048,55.2708",
+
         "parentOrganization": {
           "@id": "https://apexmarketings.com/#agency"
         }
@@ -175,23 +170,23 @@ $seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE bran
 
             <!-- UAE Lead Generation Blueprint -->
             <div style="background:linear-gradient(135deg, rgba(20,120,190,0.12), rgba(0,0,0,0.6));border:1px solid rgba(20,120,190,0.4);border-radius:12px;padding:32px;margin:40px 0;">
-              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">GULF PROPERTY ACQUISITION BLUEPRINT</span>
+              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">HOW WE QUALIFY PROPERTY LEADS</span>
               <h2 class="cs-font_28 cs-white_color" style="margin-top:8px;margin-bottom:16px;">Multi-Channel Lead Architecture for Dubai Brokerages &amp; Developers</h2>
               <p style="color:#cbd5e1;line-height:1.8;font-size:15px;">
                 In the competitive Dubai property market (Downtown, Dubai Marina, Business Bay, Palm Jumeirah), general form fills yield uncontactable leads. We engineer multi-step interactive qualification funnels that capture investor nationality, investment horizon, budget tier, and instant WhatsApp verification prior to CRM ingestion.
               </p>
               <div class="row text-center" style="margin:20px 0;">
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">AED 120</div>
-                  <div style="font-size:13px;color:#94a3b8;">Average Qualified Lead CAC</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Investor profile</div>
+                  <div style="font-size:13px;color:#94a3b8;">Nationality, residency and purpose</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">68%</div>
-                  <div style="font-size:13px;color:#94a3b8;">Contact Rate via WhatsApp</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Budget &amp; payment plan</div>
+                  <div style="font-size:13px;color:#94a3b8;">Budget tier and financing needs</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">AED 2.4M</div>
-                  <div style="font-size:13px;color:#94a3b8;">Avg Investor Ticket Size</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Timeline</div>
+                  <div style="font-size:13px;color:#94a3b8;">Ready now, within 6 months, or researching</div>
                 </div>
               </div>
               <p style="margin-bottom:0;font-size:14px;">
@@ -248,6 +243,9 @@ $seo_desc = "Apex Marketings delivers high-intent digital marketing for UAE bran
     </div>
   </section>
 
-  <?php include_once('../../include/footernew.php'); ?>
+  <?php include_once('../../include/footer2.php'); ?>
+
+  <script src="../../assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
 </body>
 </html>

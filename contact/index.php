@@ -109,9 +109,8 @@ $seo_desc = 'Ready to grow your business? Contact Apex Marketings for expert dig
           <p style="margin-top: 15px; font-size: 15px; color: #555; font-weight: 500;">
             <span style="color:#25D366;">✔</span> No commitment required &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#25D366;">⚡</span> We reply within 24 hours
           </p>
-          <div style="display:flex;align-items:center;gap:8px;margin-top:20px;background:#f9f9f9;padding:10px 16px;border-radius:8px;display:inline-flex;">
-            <span style="color:#e6ad02;font-size:18px;letter-spacing:2px;">★★★★★</span>
-            <span style="font-size:14px;color:#ddd;font-weight:600;">4.9/5 Average Rating from 50+ Global Clients</span>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:24px;padding:12px 16px;border-radius:10px;border:1px solid rgba(230,173,2,0.4);background:rgba(230,173,2,0.08);font-size:14px;font-weight:600;color:#eee;">
+              <span>&#10003; Published pricing</span><span>&#10003; You own your ad accounts</span><span>&#10003; Free 30-minute discovery call</span><span>&#10003; <a href="../case-studies/" style="color:#e6ad02;text-decoration:underline;">Real case studies</a></span>
           </div>
         </div>
         <div class="cs-height_55 cs-height_lg_30"></div>

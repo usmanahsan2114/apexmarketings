@@ -42,7 +42,7 @@ $seo_desc = "Complete 2026 B2B eCommerce strategy: architecting gated wholesale 
             <div style="background:#1a1a1a;border-left:4px solid #e6ad02;padding:26px;border-radius:0 10px 10px 0;margin-bottom:40px;">
               <h3 style="margin-top:0;font-size:20px;color:#fff;margin-bottom:10px;">Executive Summary: Scaling B2B Digital Commerce</h3>
               <p style="margin:0;line-height:1.7;color:#bbb;">
-                B2B digital commerce is rapidly shifting away from offline PDF quote exchanges to automated <strong>wholesale self-service portals</strong>. By architecting customer-specific pricing tiers, automated Request-for-Quote (RFQ) engines, and high-intent technical SEO, manufacturers and distributors reduce administrative sales cycle times by up to 60% while capturing high-margin wholesale reorders. See our <a href="../../services/ecommerce-solutions/" style="color:#e6ad02;text-decoration:underline;">E-Commerce Solutions & Marketing</a>.
+                B2B digital commerce is rapidly shifting away from offline PDF quote exchanges to automated <strong>wholesale self-service portals</strong>. By architecting customer-specific pricing tiers, automated Request-for-Quote (RFQ) engines, and high-intent technical SEO, manufacturers and distributors reduce administrative sales cycle times by up to 60% while capturing high-margin wholesale reorders. See our <a href="../../services/e-commerce-services/" style="color:#e6ad02;text-decoration:underline;">E-Commerce Solutions & Marketing</a>.
               </p>
             </div>
 
@@ -108,7 +108,7 @@ $seo_desc = "Complete 2026 B2B eCommerce strategy: architecting gated wholesale 
             <div style="margin-top:60px;padding:32px;background:#1a1a1a;border-radius:12px;border:1px solid #333;text-align:center;">
               <h3 style="color:#fff;margin-bottom:12px;">Modernize Your Wholesale B2B Commerce</h3>
               <p style="color:#bbb;max-width:560px;margin:0 auto 20px;">Transform manual order taking into an automated, 24/7 revenue-generating wholesale portal.</p>
-              <a href="../../services/ecommerce-solutions/" class="cs-btn cs-style1" style="display:inline-flex;margin-right:12px;"><span>E-Commerce Services</span></a>
+              <a href="../../services/e-commerce-services/" class="cs-btn cs-style1" style="display:inline-flex;margin-right:12px;"><span>E-Commerce Services</span></a>
               <a href="../../contact/" class="cs-btn cs-style1 cs-type1" style="display:inline-flex;"><span>Discuss Your Project</span></a>
             </div>
           </article>

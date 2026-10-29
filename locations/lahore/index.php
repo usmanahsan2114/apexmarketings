@@ -1,6 +1,6 @@
 <?php
-$seo_title = "Digital Marketing Agency in Lahore | D2C, Meta Ads & SEO | Apex Marketings";
-$seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. We scale D2C fashion, e-commerce, and tech startups across Gulberg and DHA with Meta ROAS, Google Ads, and technical SEO.";
+$seo_title = "Digital Marketing Agency in Lahore | Apex Marketings";
+$seo_desc = "Performance marketing for Lahore brands: Meta and Google Ads, SEO and e-commerce growth for D2C, fashion and tech businesses, from Apex Marketings.";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -58,7 +58,7 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
             "name": "How does Apex Marketings scale Meta Ads (Facebook & Instagram) ROAS for Lahore D2C brands?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We implement full-funnel creative testing frameworks, combining broad Advantage+ audience targeting with dynamic catalog ads and retention remarketing. We test 15-20 creative hooks monthly (UGC, founder stories, comparison tables) to scale monthly ad spend efficiently from PKR 500k to PKR 5M+ while sustaining a 3.5x to 5.0x ROAS."
+              "text": "We implement full-funnel creative testing frameworks, combining broad Advantage+ audience targeting with dynamic catalog ads and retention remarketing. We test 15-20 creative hooks monthly (UGC, founder stories, comparison tables) to scale monthly ad spend step by step while keeping ROAS above your break-even point."
             }
           },
           {
@@ -66,7 +66,7 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
             "name": "What conversion optimization services do you provide for Shopify and WooCommerce stores?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We conduct full quantitative UX audits, checkout funnel streamlining, sub-2-second mobile speed optimization, and automated abandoned cart recovery flows (SMS and WhatsApp integration) that typically increase e-commerce conversion rates by 22% to 40%."
+              "text": "We conduct full quantitative UX audits, checkout funnel streamlining, sub-2-second mobile speed optimization, and automated abandoned cart recovery flows (SMS and WhatsApp integration) that remove friction between product page and payment."
             }
           },
           {
@@ -144,7 +144,7 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
                 <div style="background:#161616;padding:24px;border-radius:10px;border:1px solid #2a2a2a;height:100%;">
                   <h3 class="cs-font_20" style="margin-top:0;color:#e6ad02;">D2C Meta Ads Scaling (FB &amp; IG)</h3>
                   <p style="font-size:14px;line-height:1.7;margin:0;color:#ccc;">
-                    Scale from test budgets to millions in monthly ad spend. We design modular creative iterations, video hooks, and catalog remarketing that consistently maintain 3.5x+ ROAS.
+                    Grow from test budgets to larger monthly spend with modular creative iterations, video hooks and catalog remarketing, scaling only while ROAS stays above your break-even.
                   </p>
                 </div>
               </div>
@@ -176,23 +176,23 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
 
             <!-- E-Commerce Transformation Proof -->
             <div style="background:linear-gradient(135deg, rgba(20,120,190,0.12), rgba(0,0,0,0.6));border:1px solid rgba(20,120,190,0.4);border-radius:12px;padding:32px;margin:40px 0;">
-              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">PROVEN E-COMMERCE PERFORMANCE</span>
+              <span style="font-size:12px;letter-spacing:1.5px;color:#e6ad02;font-weight:700;">HOW WE RUN E-COMMERCE GROWTH</span>
               <h2 class="cs-font_28 cs-white_color" style="margin-top:8px;margin-bottom:16px;">Scaling D2C Fashion &amp; Lifestyle Stores Across Pakistan &amp; Overseas</h2>
               <p style="color:#cbd5e1;line-height:1.8;font-size:15px;">
-                For leading apparel and lifestyle stores in Lahore, our integrated approach of aggressive creative testing and CRO transformed acquisition efficiency. By addressing website friction and deploying dynamic customer catalog feeds, we scaled store revenues during key Eid and seasonal sale cycles with record-breaking margins.
+                For D2C fashion and lifestyle stores, three levers usually decide whether paid growth is profitable: a steady pipeline of new creative, catalog and retargeting campaigns that bring shoppers back, and a checkout that does not leak sales. We plan all three around Eid and seasonal sale peaks, when competition and ad costs rise.
               </p>
               <div class="row text-center" style="margin:20px 0;">
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">4.8x</div>
-                  <div style="font-size:13px;color:#94a3b8;">Average Meta ROAS</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Creative testing</div>
+                  <div style="font-size:13px;color:#94a3b8;">New hooks and formats every month</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">-28%</div>
-                  <div style="font-size:13px;color:#94a3b8;">Cost Per Acquisition</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Catalog &amp; retargeting</div>
+                  <div style="font-size:13px;color:#94a3b8;">Bring browsers back to buy</div>
                 </div>
-                <div class="col-4">
-                  <div style="font-size:26px;font-weight:700;color:#fff;">+34%</div>
-                  <div style="font-size:13px;color:#94a3b8;">Repeat Purchase Rate</div>
+                <div class="col-md-4" style="margin-bottom:12px;">
+                  <div style="font-size:18px;font-weight:700;color:#fff;">Checkout CRO</div>
+                  <div style="font-size:13px;color:#94a3b8;">Fix the leaks before scaling spend</div>
                 </div>
               </div>
               <p style="margin-bottom:0;font-size:14px;">
@@ -215,12 +215,12 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
             <div style="margin-top:24px;">
               <h3 class="cs-font_22 mb-2">How does Apex Marketings scale Meta Ads (Facebook &amp; Instagram) ROAS for Lahore D2C brands?</h3>
               <p>
-                We implement full-funnel creative testing frameworks, combining broad Advantage+ audience targeting with dynamic catalog ads and retention remarketing. We test 15-20 creative hooks monthly (UGC, founder stories, comparison tables) to scale monthly ad spend efficiently from PKR 500k to PKR 5M+ while sustaining a 3.5x to 5.0x ROAS.
+                We implement full-funnel creative testing frameworks, combining broad Advantage+ audience targeting with dynamic catalog ads and retention remarketing. We test 15-20 creative hooks monthly (UGC, founder stories, comparison tables) to scale monthly ad spend step by step while keeping ROAS above your break-even point.
               </p>
 
               <h3 class="cs-font_22 mb-2">What conversion optimization services do you provide for Shopify and WooCommerce stores?</h3>
               <p>
-                We conduct full quantitative UX audits, checkout funnel streamlining, sub-2-second mobile speed optimization, and automated abandoned cart recovery flows (SMS and WhatsApp integration) that typically increase e-commerce conversion rates by 22% to 40%.
+                We conduct full quantitative UX audits, checkout funnel streamlining, sub-2-second mobile speed optimization, and automated abandoned cart recovery flows (SMS and WhatsApp integration) that remove friction between product page and payment.
               </p>
 
               <h3 class="cs-font_22 mb-2">How does your agency serve clients in DHA, Gulberg, and Johar Town?</h3>
@@ -249,6 +249,9 @@ $seo_desc = "Apex Marketings is Lahore's leading performance marketing agency. W
     </div>
   </section>
 
-  <?php include_once('../../include/footernew.php'); ?>
+  <?php include_once('../../include/footer2.php'); ?>
+
+  <script src="../../assets/js/plugins/jquery-3.6.0.min.js"></script>
+  <script src="../../assets/js/main.js?v=20260820-aurora1"></script>
 </body>
 </html>

@@ -65,39 +65,6 @@
     <a href="#service" class="cs-down_btn" aria-label="Scroll down to content"></a>
   </div>
   <!-- End Hero -->
-  <!-- Start Cloverly Product Launch -->
-  <section id="cloverly" style="background:linear-gradient(135deg,#0c1f16 0%,#141414 60%);" aria-labelledby="cloverly-heading">
-    <div class="container">
-      <div class="cs-height_75 cs-height_lg_60"></div>
-      <div class="cs-section_heading cs-style1 text-center">
-        <h3 class="cs-section_subtitle" style="color:#4ade80;letter-spacing:2px;">New — HR software by Apex</h3>
-        <h2 id="cloverly-heading" class="cs-section_title cs-white_color">Meet Cloverly &mdash; your global HR in one command center</h2>
-      </div>
-      <div class="cs-height_30 cs-height_lg_20"></div>
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 text-center">
-          <p class="cs-m0" style="color:#cfcfcf;font-size:18px;line-height:1.7;">Cloverly unifies <strong style="color:#fff;">Payroll, Biometric Attendance &amp; Leave, ATS Recruitment, Employee Self-Service,</strong> and <strong style="color:#fff;">Work Management</strong> into one web-based platform &mdash; multi-currency, role-based, and self-hosted on your own infrastructure via Docker or cPanel.</p>
-          <div class="cs-height_30 cs-height_lg_25"></div>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Multi-currency Payroll</li>
-            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Biometric Attendance &amp; Leave</li>
-            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">ATS Recruitment</li>
-            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Employee Self-Service</li>
-            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Work Management</li>
-          </ul>
-          <div class="cs-height_40 cs-height_lg_30"></div>
-          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-            <a href="https://cloverly.apexitsolutions.co" target="_blank" rel="noopener" class="cs-btn cs-style1"><span>Try the free live demo</span></a>
-            <a href="https://cloverlyhr.apexitsolutions.co" target="_blank" rel="noopener" class="cs-btn cs-style1 cs-color1"><span>Explore Cloverly</span></a>
-          </div>
-          <div class="cs-height_25 cs-height_lg_20"></div>
-          <p class="cs-m0" style="color:#9a9a9a;font-size:14px;">Free demo available at <a href="https://cloverly.apexitsolutions.co" target="_blank" rel="noopener" style="color:#4ade80;text-decoration:underline;">cloverly.apexitsolutions.co</a> &mdash; <a href="contact/" style="color:#4ade80;text-decoration:underline;">request your login email &amp; password</a> to explore the full platform.</p>
-        </div>
-      </div>
-      <div class="cs-height_75 cs-height_lg_60"></div>
-    </div>
-  </section>
-  <!-- End Cloverly Product Launch -->
   <!-- Start Video Block Section -->
   <section class="cs-shape_wrap_4 cs-parallax">
     <div class="cs-shape_4 cs-to_up"></div>
@@ -195,7 +162,7 @@
     <div class="container">
       <div class="cs-section_heading cs-style1 text-center">
         <h3 class="cs-section_subtitle">Services &amp; Visibility</h3>
-        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Search Engine Optimization (SEO) &amp; Local Twin Cities Visibility</h2>
+        <h2 class="cs-section_title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Search Engine Optimization (SEO) &amp; High-Growth Search Visibility</h2>
         <div style="max-width:700px;margin:15px auto 0;font-size:15px;color:#bbb;line-height:1.7;">
           Apex Marketings engineers technical search engine optimization, high-intent Google Ads PPC, and full-funnel paid social campaigns that dominate local and international B2B buyer queries.
         </div>
@@ -603,22 +570,22 @@
     <h2 class="text-center">Trusted By Leading Professionals</h2>
     <div class="cs-partner_logo_wrap">
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/1.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/1.svg" alt="Apex Marketing Partner - E-Commerce Retail Client" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/2.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/2.svg" alt="Apex Marketing Partner - B2B Technology Enterprise" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/3.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/3.svg" alt="Apex Marketing Partner - Healthcare &amp; Medical Brand" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/4.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/4.svg" alt="Apex Marketing Partner - Real Estate &amp; Construction Group" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/5.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/5.svg" alt="Apex Marketing Partner - FinTech Platform" width="300" height="200" decoding="async" loading="lazy">
       </div>
       <div class="cs-partner_logo">
-        <img src="assets/img/home/logo/6.svg" alt="Partner" width="300" height="200" decoding="async" loading="lazy">
+        <img src="assets/img/home/logo/6.svg" alt="Apex Marketing Partner - Education &amp; Training Academy" width="300" height="200" decoding="async" loading="lazy">
       </div>
     </div>
   </div>
@@ -700,6 +667,42 @@
       }
     }
   </style>
+
+  
+
+  <!-- Start Cloverly Product Launch -->
+  <section id="cloverly" style="background:linear-gradient(135deg,#0c1f16 0%,#141414 60%);" aria-labelledby="cloverly-heading">
+    <div class="container">
+      <div class="cs-height_75 cs-height_lg_60"></div>
+      <div class="cs-section_heading cs-style1 text-center">
+        <h3 class="cs-section_subtitle" style="color:#4ade80;letter-spacing:2px;">New — HR software by Apex</h3>
+        <h2 id="cloverly-heading" class="cs-section_title cs-white_color">Meet Cloverly &mdash; your global HR in one command center</h2>
+      </div>
+      <div class="cs-height_30 cs-height_lg_20"></div>
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <p class="cs-m0" style="color:#cfcfcf;font-size:18px;line-height:1.7;">Cloverly unifies <strong style="color:#fff;">Payroll, Biometric Attendance &amp; Leave, ATS Recruitment, Employee Self-Service,</strong> and <strong style="color:#fff;">Work Management</strong> into one web-based platform &mdash; multi-currency, role-based, and self-hosted on your own infrastructure via Docker or cPanel.</p>
+          <div class="cs-height_30 cs-height_lg_25"></div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Multi-currency Payroll</li>
+            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Biometric Attendance &amp; Leave</li>
+            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">ATS Recruitment</li>
+            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Employee Self-Service</li>
+            <li style="border:1px solid rgba(74,222,128,0.35);border-radius:999px;padding:8px 16px;color:#d1fae5;font-size:14px;">Work Management</li>
+          </ul>
+          <div class="cs-height_40 cs-height_lg_30"></div>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://cloverly.apexitsolutions.co" target="_blank" rel="noopener" class="cs-btn cs-style1"><span>Try the free live demo</span></a>
+            <a href="https://cloverlyhr.apexitsolutions.co" target="_blank" rel="noopener" class="cs-btn cs-style1 cs-color1"><span>Explore Cloverly</span></a>
+          </div>
+          <div class="cs-height_25 cs-height_lg_20"></div>
+          <p class="cs-m0" style="color:#9a9a9a;font-size:14px;">Free demo available at <a href="https://cloverly.apexitsolutions.co" target="_blank" rel="noopener" style="color:#4ade80;text-decoration:underline;">cloverly.apexitsolutions.co</a> &mdash; <a href="contact/" style="color:#4ade80;text-decoration:underline;">request your login email &amp; password</a> to explore the full platform.</p>
+        </div>
+      </div>
+      <div class="cs-height_75 cs-height_lg_60"></div>
+    </div>
+  </section>
+  <!-- End Cloverly Product Launch -->
 
   <!-- Start Testimonial Section -->
   <div class="cs-height_120 cs-height_lg_50"></div>
@@ -808,7 +811,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/1.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/1.webp" alt="Heath Martin, 678RidJunk USA client review">
                   </div>
                 </div>
               </div>
@@ -817,7 +820,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/2.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/2.webp" alt="Sheikh Hussein, Alpha Technical Services UAE client review">
                   </div>
                 </div>
               </div>
@@ -826,7 +829,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/3.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/3.webp" alt="Mehmood Ilyas, Fatima Home Decor client review">
                   </div>
                 </div>
               </div>
@@ -835,7 +838,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/4.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/4.webp" alt="Mishaal Butt, EduPak Consultancy client review">
                   </div>
                 </div>
               </div>
@@ -844,7 +847,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/5.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/5.webp" alt="Ajmal Abbas, SZK Technical Services client review">
                   </div>
                 </div>
               </div>
@@ -853,7 +856,7 @@
               <div class="slider-nav_item">
                 <div class="cs-rotate_img">
                   <div class="cs-rotate_img_in">
-                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/6.webp" alt="Nav Image">
+                    <img loading="lazy" decoding="async" width="261" height="261" src="assets/img/home/reviews/6.webp" alt="John Meune, Business Consultant USA client review">
                   </div>
                 </div>
               </div>
@@ -877,7 +880,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">Heath Martin</h2>
+                <div class="cs-testimonial_avatar_name">Heath Martin</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">678RidJunk (Junk Removal Company, USA)
                 </div>
               </div>
@@ -897,7 +900,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">Sheikh Hussein</h2>
+                <div class="cs-testimonial_avatar_name">Sheikh Hussein</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">Alpha Technical Services (Construction and Tech.)</div>
               </div>
             </div>
@@ -916,7 +919,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">Mehmood Ilyas</h2>
+                <div class="cs-testimonial_avatar_name">Mehmood Ilyas</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">Fatima Home Decor (E-commerce Store,
                   Pakistan)</div>
               </div>
@@ -936,7 +939,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">Mishaal Butt</h2>
+                <div class="cs-testimonial_avatar_name">Mishaal Butt</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">EduPak (Educational Consultancy)</div>
               </div>
             </div>
@@ -955,7 +958,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">Ajmal Abbas</h2>
+                <div class="cs-testimonial_avatar_name">Ajmal Abbas</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">SZK Technical Services (UAE)</div>
               </div>
             </div>
@@ -974,7 +977,7 @@
                   <div class="cs-rating_bg" data-src="assets/img/rating.svg"></div>
                   <div class="cs-rating_percentage" data-src="assets/img/rating.svg"></div>
                 </div>
-                <div class="cs-testimonial_avatar_name">John Meune</h2>
+                <div class="cs-testimonial_avatar_name">John Meune</div>
                 <div class="cs-testimonial_avatar_designation text-uppercase">678RidJunk (Business Consultant, USA)
                 </div>
               </div>

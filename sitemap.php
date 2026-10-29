@@ -17,6 +17,9 @@ $BRAND  = 'Apex Marketings';
 $ROOT   = __DIR__;
 
 $excludeDirs = array(
+    // Subdomain / separate-app docroots that live inside public_html on the server.
+    // They are NOT pages of this site (they canonicalise to their own hosts).
+    'usman', 'devops', 'cloverly', 'cloverlyhr', 'inventory', 'hr', 'websites', 'apexit', 'apexmarketings',
     '_dev_archive', 'audit-output', 'include', 'private', 'css', 'js', 'img',
     'assets', 'scss', 'node_modules', '.git', '.codex', 'sitemap-html',
     'thank-you', 'subscribe', 'search',
@@ -28,6 +31,9 @@ $excludeDirs = array(
 function apex_sm_excluded($rel, array $excludeDirs)
 {
     $cleanRel = trim($rel, '/');
+    if ($cleanRel !== '' && apex_sm_is_foreign_app(__DIR__ . '/' . $cleanRel)) {
+        return true;
+    }
     foreach ($excludeDirs as $e) {
         $cleanE = trim($e, '/');
         if ($cleanRel === $cleanE || strpos($cleanRel, $cleanE . '/') === 0) {
@@ -35,6 +41,51 @@ function apex_sm_excluded($rel, array $excludeDirs)
         }
     }
     return false;
+}
+
+/**
+ * A sub-directory that carries its own .htaccess / framework bootstrap is a
+ * separate site (subdomain docroot, app, client microsite) - never list it.
+ */
+function apex_sm_is_foreign_app($absDir)
+{
+    static $cache = array();
+    if (isset($cache[$absDir])) return $cache[$absDir];
+    $foreign = false;
+    if (basename($absDir) !== 'private') {
+        foreach (array('.htaccess', 'artisan', 'wp-config.php', 'composer.json', 'package.json') as $marker) {
+            if (is_file($absDir . '/' . $marker)) { $foreign = true; break; }
+        }
+    }
+    return $cache[$absDir] = $foreign;
+}
+
+/** True when the page declares itself noindex (meta tag or $apex_robots). */
+function apex_sm_is_noindex($file)
+{
+    $head = @file_get_contents($file, false, null, 0, 8000);
+    if ($head === false) return false;
+    return (bool) preg_match('/<meta\s+name=["\']robots["\']\s+content=["\'][^"\']*noindex|\$apex_robots\s*=\s*["\'][^"\']*noindex/i', $head);
+}
+
+/** Readable fallback label from a URL path, e.g. /case-studies/tyremart-site/ -> Tyremart.site */
+function apex_sm_pretty($path)
+{
+    $seg = basename(trim($path, '/'));
+    $seg = preg_replace('/-(com|co|pk|net|org|io|site|store)$/', '.$1', $seg);
+    return ucfirst(str_replace('-', ' ', $seg));
+}
+
+/** Page title (from $seo_title or <title>) for the human sitemap. */
+function apex_sm_title($file, $fallback)
+{
+    $head = @file_get_contents($file, false, null, 0, 12000);
+    if ($head !== false && (preg_match('/\$seo_title\s*=\s*(["\'])(.+?)\1\s*;/', $head, $m) || preg_match('/<title>()([^<]+)<\/title>/i', $head, $m))) {
+        $t = html_entity_decode(trim(preg_replace('/\s+/', ' ', $m[2])), ENT_QUOTES, 'UTF-8');
+        $t = preg_replace('/\s*[|\x{2014}-]\s*(Apex IT Solutions|Apex Marketings)(\s+Glossary)?\s*$/u', '', $t);
+        if ($t !== '' && strpos($t, '<?') === false && strpos($t, '$') === false) return $t;
+    }
+    return $fallback;
 }
 
 /**
@@ -65,6 +116,9 @@ function apex_sm_pages($scanRoot, $urlBase, array $excludeDirs, $applyExclude)
                 continue;
             }
             if ($applyExclude && apex_sm_excluded($relDir, $excludeDirs)) {
+                continue;
+            }
+            if (apex_sm_is_noindex($file->getPathname())) {
                 continue;
             }
             $urls[$urlBase . $relDir . '/'] = $file->getMTime();
@@ -162,7 +216,7 @@ function apex_sm_html($urls, $DOMAIN, $BRAND)
     foreach ($groups as $name => $paths) {
         $html .= '<h2>' . htmlspecialchars($name) . "</h2>\n<ul>\n";
         foreach ($paths as $p) {
-            $label = $p === '/' ? 'Homepage' : trim($p, '/');
+            $label = $p === '/' ? 'Homepage' : apex_sm_title(__DIR__ . $p . 'index.php', apex_sm_pretty($p));
             $html .= '<li><a href="' . htmlspecialchars($p) . '">' . htmlspecialchars($label) . "</a></li>\n";
         }
         $html .= "</ul>\n";

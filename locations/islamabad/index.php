@@ -66,6 +66,12 @@ $seo_desc = "Digital Marketing Agency in Islamabad. SEO, paid ads, social media,
       <h2 class="cs-font_36 text-center mb-5">Related Resources</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
+          <a href="../../blogs/digital-marketing-for-small-businesses-rawalpindi-islamabad/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
+            <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Small Business Marketing Guide</h4>
+            <p style="margin:0;font-size:14px;opacity:0.75;">Rawalpindi &amp; Islamabad playbook</p>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
           <a href="../../pricing/" class="d-block aur-linkcard" style="padding:24px;background:#1a1a1a;border-radius:12px;border:1px solid #333;color:inherit;text-decoration:none;height:100%;transition:transform 0.2s,box-shadow 0.2s;">
             <h4 class="cs-font_20" style="margin:0 0 8px;font-weight:600;">Pricing</h4>
             <p style="margin:0;font-size:14px;opacity:0.75;">Transparent rates</p>

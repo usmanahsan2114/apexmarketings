@@ -156,6 +156,16 @@
       transform: translateX(5px);
     }
   </style>
+  <style>
+    /* 3D background-less floating icons */
+    .cs-iconbox_3_list.cs-style2 .cs-image_layer_in::after {
+      display: none !important;
+    }
+    .cs-iconbox_3_list.cs-style2 .cs-image_layer.cs-style1 img {
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
+      background: transparent !important;
+    }
+  </style>
   <!-- Start services Project -->
   <section>
     <div class="cs-height_145 cs-height_lg_75"></div>
@@ -175,7 +185,7 @@
           <a href="services/branding-consultation/" class="cs-iconbox cs-style3">
             <div class="cs-image_layer cs-style1 cs-size_md">
               <div class="cs-image_layer_in">
-                <img loading="lazy" decoding="async" width="424" height="620" src="assets/img/home/marketing.webp" alt="Illustration" class="w-100 cs-radius_15">
+                <img loading="lazy" decoding="async" width="400" height="400" src="assets/img/home/brand-identity.webp" alt="Brand Identity &amp; Corporate Design Visual Systems" class="w-100 cs-radius_15">
               </div>
             </div>
             <span class="cs-iconbox_icon cs-center">
@@ -196,7 +206,7 @@
           <a href="services/website-development/" class="cs-iconbox cs-style3">
             <div class="cs-image_layer cs-style1 cs-size_md">
               <div class="cs-image_layer_in">
-                <img loading="lazy" decoding="async" width="424" height="620" src="assets/img/home/ecom.webp" alt="Illustration" class="w-100 cs-radius_15">
+                <img loading="lazy" decoding="async" width="400" height="400" src="assets/img/home/web-development.webp" alt="Web Design, Front-End Architecture and Development" class="w-100 cs-radius_15">
               </div>
             </div>
             <span class="cs-iconbox_icon cs-center">
@@ -216,7 +226,7 @@
           <a href="services/digital-marketing-strategy/" class="cs-iconbox cs-style3">
             <div class="cs-image_layer cs-style1 cs-size_md">
               <div class="cs-image_layer_in">
-                <img loading="lazy" decoding="async" width="424" height="620" src="assets/img/home/branding.webp" alt="Illustration" class="w-100 cs-radius_15">
+                <img loading="lazy" decoding="async" width="400" height="400" src="assets/img/home/digital-marketing.webp" alt="Digital Marketing, SEO Search Ranking and Performance Growth" class="w-100 cs-radius_15">
               </div>
             </div>
             <span class="cs-iconbox_icon cs-center">
@@ -236,7 +246,7 @@
           <a href="services/e-commerce-services/" class="cs-iconbox cs-style3">
             <div class="cs-image_layer cs-style1 cs-size_md">
               <div class="cs-image_layer_in">
-                <img loading="lazy" decoding="async" width="424" height="620" src="assets/img/home/website.webp" alt="Illustration" class="w-100 cs-radius_15">
+                <img loading="lazy" decoding="async" width="400" height="400" src="assets/img/home/ecommerce-strategy.webp" alt="E-Commerce Strategy, Store Conversion Rate and Sales Management" class="w-100 cs-radius_15">
               </div>
             </div>
             <span class="cs-iconbox_icon cs-center">

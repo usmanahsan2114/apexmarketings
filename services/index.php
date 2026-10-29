@@ -143,7 +143,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/digital-marketing-strategy/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/digitaln.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/digitaln.webp" alt="Digital Marketing Strategy and Growth Planning">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -157,7 +157,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/e-commerce-services/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/ecomn.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/ecomn.webp" alt="E-Commerce Strategy and Online Store Management">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -170,7 +170,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/website-development/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/websiten.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/websiten.webp" alt="Custom Website Development and Responsive Web Design">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -184,7 +184,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/performance-marketing/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/performancen.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/performancen.webp" alt="Performance Marketing and Paid Advertising Campaigns">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -199,7 +199,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/instagram-growth/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/instagramn.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/instagramn.webp" alt="Instagram Growth and Visual Content Marketing">
 
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
@@ -214,7 +214,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/lead-generation/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/leadn.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/leadn.webp" alt="B2B Lead Generation and Client Acquisition Funnels">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -227,7 +227,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/branding-consultation/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/brandingn.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/brandingn.webp" alt="Brand Consultation and Visual Identity Strategy">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>
@@ -241,7 +241,7 @@
             <div class="col-lg-3 col-sm-6">
               <div class="cs-hobble">
                 <a href="../services/social-media-management/" class="cs-card cs-style1 cs-hover_layer1">
-                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/socialmedian.webp" alt="Service">
+                  <img loading="lazy" decoding="async" width="500" height="500" src="../assets/img/services/socialmedian.webp" alt="Social Media Management and Community Engagement">
                   <div class="cs-card_overlay"></div>
                   <div class="cs-card_info">
                     <span class=" cs-hover_layer3 cs-accent_bg"></span>

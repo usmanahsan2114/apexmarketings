@@ -364,7 +364,7 @@
         <div class="col-xl-5 col-lg-6">
           <div class="cs-image_layer cs-style1">
             <div class="cs-image_layer_in">
-              <img loading="lazy" decoding="async" width="636" height="636" src="../assets/img/about/about_img_4.jpg" alt="Illustration" class="w-100 cs-radius_15">
+              <img loading="lazy" decoding="async" width="636" height="636" src="../assets/img/about/about_img_4.jpg" alt="Usman Ahsan Pervez - Director at Apex Marketings" class="w-100 cs-radius_15">
             </div>
           </div>
           <div class="cs-height_0 cs-height_lg_40"></div>
@@ -435,7 +435,7 @@
               <div class="cs-team cs-style1">
                 <div class="cs-member_thumb">
                   <div class="black-filter">
-                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/hamza.webp" alt="Hamza">
+                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/hamza.webp" alt="Hamza Khan - Marketing Head at Apex Marketings">
                   </div>
                   <div class="cs-member_overlay"></div>
                 </div>
@@ -503,7 +503,7 @@
               <div class="cs-team cs-style1">
                 <div class="cs-member_thumb">
                   <div class="black-filter">
-                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/sohaib.webp" alt="Sohaib">
+                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/sohaib.webp" alt="Sohaib Aftab - Project Manager at Apex Marketings">
                   </div>
                   <div class="cs-member_overlay"></div>
                 </div>
@@ -527,7 +527,7 @@
               <div class="cs-team cs-style1">
                 <div class="cs-member_thumb">
                   <div class="black-filter">
-                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/ahmed.webp" alt="Ahmed">
+                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/ahmed.webp" alt="Ahmed Ehtesam - Development Head at Apex Marketings">
                   </div>
                   <div class="cs-member_overlay"></div>
                 </div>
@@ -544,7 +544,7 @@
               <div class="cs-team cs-style1">
                 <div class="cs-member_thumb">
                   <div class="black-filter">
-                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/salman.webp" alt="Salman">
+                    <img loading="lazy" decoding="async" width="312" height="360" src="../assets/img/about/team/salman.webp" alt="Salman Saeed - CG Generalist at Apex Marketings">
                   </div>
                   <div class="cs-member_overlay"></div>
                 </div>

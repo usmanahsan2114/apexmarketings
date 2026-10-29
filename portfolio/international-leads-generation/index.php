@@ -52,7 +52,7 @@
   <div class="cs-height_150 cs-height_lg_80"></div>
   <div class="container">
     <div class="cs-portfolio_details">
-      <img width="872" height="500" src="../../assets/img/portfolio/marketing/submarketing/3.webp" alt="Illustration" class="cs-radius_15 w-100" loading="lazy" decoding="async">
+      <img width="872" height="500" src="../../assets/img/portfolio/marketing/submarketing/3.webp" alt="International B2B lead generation metrics and global pipeline acquisition" class="cs-radius_15 w-100" loading="lazy" decoding="async">
       <div class="cs-height_90 cs-height_lg_40"></div>
       <div class="row">
         <div class="col-lg-6">

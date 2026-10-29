@@ -8,6 +8,9 @@
   $seo_desc = 'Practical guides on SEO, Google Ads, Meta Ads, social media, and e-commerce growth from the Apex Marketings team.';
 
   $apex_posts = array(
+      array('slug' => 'generative-engine-optimization-geo-aeo-playbook-2026', 'cat' => 'Search & AEO', 'date' => 'October 2026',
+          'title' => 'Generative Engine Optimization (GEO) & AEO Strategy: 2026 B2B Playbook',
+          'desc' => 'How B2B brands get cited in ChatGPT Search, Perplexity, Gemini, and Google AI Overviews. Actionable scoring rubric, structured data, and content patterns.'),
       array('slug' => 'whatsapp-marketing-guide-pakistan-uae', 'cat' => 'WhatsApp', 'date' => 'September 2026',
           'title' => 'WhatsApp Marketing for Businesses in Pakistan and the UAE: The 2026 Playbook',
           'desc' => 'How to use WhatsApp Business, the Business Platform and click-to-WhatsApp ads to win customers in Pakistan and the UAE, without spamming or breaking the rules.'),

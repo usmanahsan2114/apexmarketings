@@ -22,6 +22,7 @@ RewriteRule ^index\.(html|php)$ / [L,R=301]
 RewriteRule ^portfolio/contact/?$ /contact/ [L,R=301]
 RewriteRule ^portfolio/e-commerce-store-performances/?$ /portfolio/e-commerce-store-performance/ [L,R=301]
 RewriteRule ^case-studies/altrgroup-com/?$ /case-studies/altr/ [L,R=301]
+RewriteRule ^case-studies/ahtr/?$ /case-studies/altr/ [L,R=301]
 RewriteRule ^blogs/hiring-offshore-pakistan/?$ https://www.apexitsolutions.co/blogs/hiring-offshore-pakistan/ [L,R=301]
 
 # ---- Self-healing partitioned sitemaps ----
@@ -47,6 +48,15 @@ RewriteRule ^sitemap\.html$ sitemap.php [L]
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=!is_dev_host
+
+  # Exclude RSS feeds and raw downloadable PDFs from search index bloat
+  <Files "feed.xml">
+    Header set X-Robots-Tag "noindex, follow"
+  </Files>
+  <FilesMatch "\.pdf$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+
   Header unset X-Powered-By
   Header always unset X-Powered-By
 </IfModule>

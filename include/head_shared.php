@@ -18,8 +18,13 @@ $asset_version = '20260927-quote1';
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <?php
-$current_url = "https://apexmarketings.com" . preg_replace('~(index\.php)?([?#].*)?$~', '', $_SERVER['REQUEST_URI']);
-$current_url = strtok($current_url, '?');
+$raw_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+$raw_path = preg_replace('~/index\.(php|html?)$~i', '/', $raw_path);
+if ($raw_path === '' || $raw_path === false) { $raw_path = '/'; }
+if (substr($raw_path, -1) !== '/' && !preg_match('~\.[a-zA-Z0-9]+$~', $raw_path)) {
+    $raw_path .= '/';
+}
+$current_url = "https://apexmarketings.com" . $raw_path;
 $page_title = isset($seo_title) ? $seo_title : "Apex Marketings – Digital Marketing Agency";
 $page_desc = isset($seo_desc) ? $seo_desc : "Grow your business with Apex Marketings. We specialize in e-commerce, SEO, social media, and PPC.";
 $page_image = isset($seo_image) ? $seo_image : "https://apexmarketings.com/assets/img/home/hero_bg_2.webp";
